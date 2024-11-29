@@ -1,0 +1,66 @@
+// main: ../../../style.sass
+form
+  margin-top: 45px
+  position: relative
+
+.edit-link
+  display: none
+
+.EMAIL-label
+  width: 100%
+  float: left
+  input[type="email"]
+    width: 100% !important
+
+input[type="email"]
+  float: left
+  width: 100% !important
+  padding: 15px 0 !important
+  border: none !important
+  border-bottom: 2px solid rgba(255, 255, 255, 0.7) !important
+  background: none
+  opacity: 0.7
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  font-size: 18px
+  @include prefix(transition, 0.3s ease-out)
+  &:focus
+    outline: none !important
+    opacity: 1
+    border-bottom: 2px solid rgba(255, 255, 255, 1) !important
+    @include prefix(transition, 0.3s ease-out)
+
+button[type="submit"]
+  opacity: 0
+  width: 20px !important
+  position: absolute
+  top: 10px
+  right: 40px
+  border: none !important
+  margin: 0 !important
+  background: none
+  font-family: 'Material Icons'
+  font-size: 25px
+  @include prefix(transition, 0.3s ease-out)
+  &.e-on
+    opacity: 1
+    right: 20px
+  @include hover
+    right: 10px
+    @include prefix(transition, 0.3s ease-out)
+
+.wrapper-bleu button[type="submit"]
+  color: #fff4d2
+
+.wrapper-jaune
+  button[type="submit"]
+    color: #3f3b8f
+  input[type="email"]
+    border-bottom: 2px solid rgba(63, 59, 143, 0.3) !important
+
+.wrapper-blanc input[type="email"]
+  border-bottom: 2px solid rgba(63, 59, 143, 0.3) !important
+
+.wrapper-jaune input[type="email"]:focus, .wrapper-blanc input[type="email"]:focus
+  border-bottom: 2px solid rgba(63, 59, 143, 1) !important

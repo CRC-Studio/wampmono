@@ -1,0 +1,58 @@
+// main: ../../../style.sass
+
+/// Le module Cover permet de créer rapidement
+/// des couvertures en haut des pages.
+///
+/// Attention : pensez à activer le module Cover
+/// dans le fichier assets/js/monobloc.js
+///
+/// Exemple de HTML :
+///   <div class="m-cvr m-cvr-s m-bga">
+///     <img>
+///     <div class="m-cvr-btn m-btn m-btn-p">Scroll</div>
+///   </div>
+
+.m-cvr
+  position: relative
+  min-height: vh(100)
+  
+  @include respond('m')
+    height: auto
+
+  .m-cvr__img
+    img
+      opacity: 0.7
+
+.m-cvr-s
+  min-height: vh(50)
+
+.m-cvr-xs
+  min-height: vh(33) 
+
+.m-cvr__image
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  opacity: 0.7
+
+.m-cvr-btn
+  position: absolute
+  width: 50px
+  height: 50px
+  bottom: 60px
+  cursor: pointer
+
+.m-cvr__overlay
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 50%
+  z-index: $zindex__nega
+
+

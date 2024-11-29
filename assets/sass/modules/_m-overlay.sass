@@ -1,0 +1,24 @@
+// main: ../../../style.sass
+
+/// Le module Overlay permet de gérer une div capable de recouvrir tout l'écran.
+/// Cet Overlay est notament utilisé par les volets, les ligthbox, le mode dev.
+///
+/// Attention : pensez à activer l'effet SASS e-fll.
+///
+/// Exemple de HTML :
+///   <footer>
+///     <div class="m-ovl e-fll e-off e-ice"></div>
+///   </footer>
+
+.m-ovl
+  position: fixed !important
+  transition: $fast
+  z-index: $zindex__overlay
+
+  // if:not .is--glass 😉
+  // background: color('grey', 1000, 0.5)
+
+  // permet de fermer les volets, etc.
+  &.e-on
+    pointer-events: auto
+    cursor: pointer

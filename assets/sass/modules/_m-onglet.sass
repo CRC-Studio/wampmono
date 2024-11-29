@@ -1,0 +1,33 @@
+// main: ../../../style.sass
+
+/// Le module Onglet permet d'afficher du contenu
+/// sous forme d'onglets.
+///
+/// Attention : pensez à activer le module Onglet
+/// dans le fichier assets/js/monobloc.js
+///
+/// Exemple de HTML :
+///   <div class="m-ongs">
+///     <ul class="m-ong-nav m-flx m-flg1">
+///       <li class="m-ong-btn e-on"></li>
+///       <li class="m-ong-btn"></li>
+///       <li class="m-ong-btn"></li>
+///     </ul>
+///     <div class="m-ong-wrp">
+///       <div class="m-ong-txt e-on"></div>
+///       <div class="m-ong-txt"></div>
+///       <div class="m-ong-txt"></div>
+///     </div>
+///   </div>
+
+.m-ongs
+
+.m-ong-btn
+  cursor: pointer
+  &.e-on
+    font-weight: 800
+
+.m-ong-txt
+  display: none
+  &.e-on
+    display: block

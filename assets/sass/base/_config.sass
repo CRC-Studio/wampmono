@@ -1,0 +1,99 @@
+// main: ../../../style.sass
+
+/// Le fichier Config centralise la majorité
+/// des variable utilisées dans Monobloc.
+
+/// $breakpoints définit les 'Tailles' nécessaire au système responsive de Monobloc.
+/// Ces 'Tailles' peuvent être utilisées avec la fonction respond()
+///
+/// Exemple de SASS :
+///  div
+///    display: none
+///    @include respond('m')
+///      display: block
+
+$breakpoints: ('xxs': 0px, 'xs': 500px, 's': 768px, 'm': 900px, 'l': 1024px, 'xl': 1280px, 'xxl': 1440px, 'xxxl': 1600px)
+
+/// Définition des variables de marges et de height du site
+
+$header__height: var(--hh)
+$header__height-scroll: var(--hhs)
+$row__mx: var(--mx)
+$row__mt: var(--mt)
+$row__mb: var(--mb)
+
+// La variable borderRadius controle le radius de bp d'image
+
+$borderRadius: var(--br)
+$borderRadiusHover: var(--brh)
+
+\:root
+  --vh: 1vh 
+  @include respond('l', 'max')
+    @include getModulor(10px)
+  // Header height
+  --hh:  #{m(3)}
+  --hhs: #{m(2)}
+  // Marges de .m-rom
+  --mx:  #{m(1)}
+  --mt:  #{m(1)}
+  --mb:  #{m(2)}
+  // Border radius
+  --br:  #{m(3)}
+  --brh: #{m(.5)}
+  @include respond('l')
+    @include getModulor()
+    // Header height
+    --hh: #{m(18)}
+    --hhs:#{m(6)}
+    // Marges de .m-rom
+    --mx: #{m(3)}
+    --mt: #{m(2)}
+    --mb: #{m(4)}
+
+
+/// Ajout des Fonts grâce à la fonction font-face() de Monobloc.
+/// 
+/// Exemple de SASS :
+///   @include font-face('Graphik', './assets/fonts/graphik/graphik', 400, normal, [eot, woff, woff2] )
+///   @include font-face('Graphik', './assets/fonts/graphik/graphik', bold, italic, [eot, woff, woff2] )
+
+@include font-face('Graphik', './assets/fonts/graphik/graphik', 400, normal, [eot, woff, woff2] )
+@include font-face('Monico', './assets/fonts/monico/monico', normal,  normal, [eot, svg, ttf,  woff] )
+
+
+/// La fonction font() permet d'ajouter de gérer les font-family de façon systémique.
+/// 
+/// Exemple de SASS :
+///   div
+///     font-family: font('sans-serif')
+
+@function font($family)
+  @if $family == 'display'
+    @return 'Termina', Helvetica, sans-serif
+  @else if $family == 'serif'
+    @return 'Times New Roman', Georgia, serif
+  @else if $family == 'sans-serif'
+    @return 'Graphik', Arial, Helvetica, sans-serif
+  @else if $family == 'ico'
+    @return Monico
+  // @else if $family == cursive
+  //   @return 'Knewave', 'cursive'
+  // @else if $family == 'mono'
+  //   @return 'Lucida Console', Courier, monospace
+
+
+/// Les variables $fast et $slow permettre d'uniformiser
+/// les vitesses des transitions de Monobloc
+/// 
+/// Exemple de SASS :
+///   div
+///     transition: $fast
+
+$veryfast: .2s
+$fast: .5s
+$norm: 1s
+$slow: 2s
+$veryslow: 3s
+$veryslow: 10s
+$infiniteslow: 15s

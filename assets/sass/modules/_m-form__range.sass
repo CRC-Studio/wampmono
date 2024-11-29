@@ -1,0 +1,50 @@
+
+// main: ../../../style.sass
+
+/// Le module Form__range permet de modifier l'aspect des input de type range
+/// pour les faire ressembler aux autres inputs.
+///
+/// Attention : pensez à activer le module m-form dans le fichier style.sass
+///
+/// Exemple de HTML :
+///   <form class="m-frm">
+///     <div class="m-frm-grp">
+///       <label class="m-frm-rdo">
+///         Something
+///         <input type="radio" checked>
+///         <span class="m-frm-chk"></span>
+///       </label>
+///       <label class="m-frm-rdo">
+///         Something else
+///         <input type="radio">
+///         <span class="m-frm-chk"></span>
+///       </label>
+///     </div>
+///   </form>
+
+.m-frm
+  input[type="range"].form__range
+    -webkit-appearance: none
+    width: 100%
+    height: m()
+    border-radius: m(0.5)
+    padding: 0
+    margin-bottom: m()
+    background: color('acc')
+    outline: none
+
+    &::-webkit-slider-thumb
+      -webkit-appearance: none
+      appearance: none
+      width: m(2)
+      height: m(2)
+      border-radius: 50%
+      background: color('txt')
+      cursor: pointer
+
+    &::-moz-range-thumb
+      width: 25px
+      height: 25px
+      border-radius: 50%
+      background: color('txt')
+      cursor: pointer

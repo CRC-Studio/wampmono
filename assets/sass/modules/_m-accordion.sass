@@ -1,0 +1,70 @@
+// main: ../../../style.sass
+
+/// Le Module Accordion permet de créer des accordion
+/// rapidement
+///
+/// Attention : pensez à activer le module accordion
+/// dans le fichier assets/js/monobloc.js
+///
+/// Exemple de HTML :
+///   <ul class="m-acds">
+///     <li class="m-acd m-flc">
+///       <div class="m-acd-ttl">
+///         <h3>Ici, le titre de l'accordion</h3>
+///         <div class="m-acd-ico">
+///           <?php the_ico('more') ?>
+///         </div>
+///       </div>
+///       <div class="m-acd-wrp">
+///         Ici, le contenu de l'accordion
+///       </div>
+///     </li>
+///   </ul>
+
+.m-acds
+
+.m-acd
+  &.e-on
+    .m-acd-ico
+      transform: rotate(0deg)
+      transition: transform $fast
+
+    .m-acd-wrp
+      opacity: 1
+      max-height: 1000vh
+      margin: m() 0 m(2) 0
+      transition: all $norm
+
+// Stylise le title
+
+.m-acd-ttl
+  display: flex
+  justify-content: space-between
+  float: left
+  width: 100%
+  cursor: pointer
+  padding: m() 0
+  border-bottom: 1px solid color('grey', 300)
+
+// Stylise l'icone
+
+.m-acd-ico
+  display: flex
+  justify-content: center
+  width: m(2)
+  transform: rotate(-90deg)
+  transition: transform $fast
+  svg
+    fill: none
+    stroke: color('grey', 500)
+    stroke-width: 3
+    width: m()
+
+// Stylise le Wrapper
+
+.m-acd-wrp
+  max-height: 0
+  margin: 0
+  opacity: 0
+  overflow: hidden
+  transition: all $norm

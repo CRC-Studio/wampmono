@@ -1,0 +1,75 @@
+// main: ../../../style.sass
+
+/// Le module Volet contrôle la mise en page, l'ouverture et la fermeture
+/// des volets de Monobloc.
+///
+/// Attention : pensez à activer le module m-overlay dans le fichier style.sass
+/// et le module Volet dans le fichier assets/js/monobloc.js.
+///
+/// Exemple de HTML :
+///   <main>
+///
+///   <button class="m-btn m-btn-o m-vlt-btn" data-vltid="m-vlt-01"><button>
+///
+///     <div id="m-vlt-01" class="m-vlt m-vlt-l">
+///       <ul>
+///         <li></li>
+///         <li></li>
+///         <li></li>
+///       </ul>
+///     </div>
+///  
+///     <div id="m-vlt-02" class="m-vlt m-vlt-r">
+///       <ul>
+///         <li></li>
+///         <li></li>
+///         <li></li>
+///       </ul>
+///     </div>
+///
+///   </main>
+///
+///   <footer>
+///      <div class="m-overlay e-fll"></div>
+///   </footer>
+
+// Variables
+
+$mx-volet: m(2)
+
+// Stylise les volet
+
+.m-vlt
+  position: fixed
+  width: 83.33vw
+  top: 0
+  bottom: 0
+  padding: $row__mx
+  background: color('back')
+  @include box-shadow(30, 'grey', 1000)
+  transition: $fast cubic-bezier(0.36, 0.79, 0.7, 0.93)
+  z-index: $zindex__volet
+  @include respond('m')
+    width: 75vw
+  @include respond('l')
+    width: 66vw
+  @include respond('xl')
+    width: 50vw
+  @include respond('xxl')
+    width: 33vw
+
+// Stylise les volets situé à gauche de l'écran
+
+.m-vlt-l
+  border-right: 1px solid color('txt')
+  left: -100vw
+  &.e-on
+    left: 0
+
+// Stylise les volets sité à droite de l'écran
+
+.m-vlt-r
+  border-left: 1px solid color('txt')
+  right: -100vw
+  &.e-on
+    right: 0

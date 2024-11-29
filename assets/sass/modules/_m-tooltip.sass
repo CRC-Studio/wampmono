@@ -1,0 +1,60 @@
+// main: ../../../style.sass
+
+/// Le module Tooltip permet d'afficher des petites bulles
+/// d'informations aux survols d'élèments.
+///
+/// Exemple de HTML :
+///   <a href="" class="btn m-ttip--hover">Mon lien
+///     <div class="m-ttip m-ttip__is--tl">
+///       <div class="m-ttip__cntnt"><?php _e("Fullscreen","monobloc") ?></div>
+///     </div>
+///   </a>
+
+.m-ttip--hover
+  position: relative
+
+.m-ttip--hover
+  @include hover
+    .m-ttip
+      visibility: initial
+      top: m(3)
+      @include box-shadow(4, 'grey')
+      transition: $fast
+      opacity: 0
+      @include respond('xs')
+        opacity: 1
+
+.m-ttip
+  top: m(2)
+  left: 50%
+  pointer-events: none
+  visibility: hidden
+  position: absolute
+  padding: m() m(1.5)
+  border-radius: m(2)
+  background: color('acc')
+  border: 2px solid color('acc')
+  transform: translate(-50%, 0%)
+  opacity: 0
+  z-index: $zindex__tooltip
+  transition: $fast
+
+.m-ttip__cntnt
+  white-space: nowrap
+  font-family: font('sans-serif')
+  font-size: m()
+  color: color('txt')
+  line-height: m()
+  font-weight: 600
+  letter-spacing: 1px
+
+.m-ttip:before
+  content: ""
+  display: block
+  position: absolute
+  top: 100%
+  left: 50%
+  margin-left:  m(-.5)
+  border-width: m(.5)
+  border-style: solid
+  border-color: color('acc') transparent transparent transparent

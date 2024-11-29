@@ -1,0 +1,38 @@
+// main: ../../../style.sass
+
+/// Le module Form__error permet de modfier l'aspect
+/// des champs qui ne sont pas correctement remplis
+///
+/// Attention : pensez à activer le module m-form dans le fichier style.sass
+/// Attention : pensez à activer le module Form Error dans le fichier assets/js/monobloc.js
+///
+/// Exemple de HTML :
+///   <form class="m-frm">
+///     <div class="m-frm-wrp">
+///       <div class="m-frm-grp">
+///         <input type="text" required>
+///       </div>
+///     </div>
+///   </form>
+
+.m-frm-err
+  border-bottom: 1px solid color('acc') !important
+  &:focus
+    border: 1px solid color('acc') !important
+
+.m-frm-msg
+  opacity: 0
+  position: absolute
+  color: color('acc')
+  top: m(4)
+  left: 0
+
+  // Controle les Checkbox
+
+  // .m-form__checkbox:has(input.m-form__error)
+  //   .checkmark
+  //     border: $rose-saumon 4px solid
+  //
+  //   .m-form__error-msg
+  //     top: m(1.5)
+  //     left: m(3)

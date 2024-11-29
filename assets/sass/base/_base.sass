@@ -1,0 +1,49 @@
+// main: ../../../style.sass
+
+/// Le fichier Base stylise les principales balise HTML
+/// de Monobloc
+
+::selection
+  background-color: color('grey',0,0.99) !important
+  color: color('grey',1000,0.99) !important
+
+html
+  height: 100%
+  scroll-behavior: smooth
+
+@media screen and (prefers-reduced-motion: reduce)
+  html
+    scroll-behavior: auto
+
+body
+  display: flex !important
+  flex-direction: column
+  height: 100%
+  
+/// Si overlayscrollbars.min.js est utlisé, pensez à appliquer display; flex
+/// aussi sur la class .os-content
+
+// body, .os-content
+//   display: flex !important
+//   flex-direction: column
+//   height: 100%
+
+body, main
+  width: 100%
+  float: left
+  background: color('back')
+
+footer
+  flex-shrink: 0
+
+main
+  flex: 1 0 auto
+  overflow: clip
+
+  // Applique une marge sur la première section sauf s'il s'agit d'une couverture.
+
+  section:first-of-type:not(.m-cvr)
+    padding-top: $header__height
+
+svg
+  fill: color('acc')

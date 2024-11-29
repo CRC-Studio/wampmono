@@ -1,0 +1,34 @@
+// main: ../../../style.sass
+
+/// Le module Form Number permet de styliser les inputs de type number
+///
+/// Attention : pensez à activer le module m-form dans le fichier style.sass
+/// le module m-form select dans le fichier assets/js/monobloc.js
+///
+/// Exemple de HTML :
+///  <form class="m-frm" action="<?php echo get_stylesheet_directory_uri(); ?>/scripts/s__mailto.php" method="post">
+///    <div class="m-frm-wrp">
+///      <div class="m-frm-grp">
+///        <div class="m-frm-lbl">
+///          <label for="nom">Code postal</label>
+///          <input type="number" name="Code postal" placeholder="Code postal" value="" class="m-frn-nospin" maxlength="5">
+///        </div>
+///        <div class="m-frm-lbl">
+///          <label for="phone">Téléphone</label>
+///          <input type="number" name="phone" placeholder="Téléphone" value="" class="m-frn-nospin">
+///        </div>
+///      </div>
+///    </div>
+///  </form> 
+
+
+// Stylise les champs numbers
+
+.m-frn-nospin
+  -moz-appearance: textfield
+  appearance: textfield
+
+.m-frn-nospin::-webkit-outer-spin-button,
+.m-frn-nospin::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0

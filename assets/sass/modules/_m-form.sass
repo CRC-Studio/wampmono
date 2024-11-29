@@ -1,0 +1,150 @@
+// main: ../../../style.sass
+
+/// Le module Form permet de styliser les formulaires
+///
+/// Exemple de HTML :
+///  <form class="m-frm" action="<?php echo get_stylesheet_directory_uri(); ?>/scripts/s__mailto.php" method="post">
+///    <div class="m-frm-wrp">
+///      <div class="m-frm-grp">
+///        <div class="m-frm-lbl">
+///          <label for="prenom">Prénom</label>
+///          <input type="text" name="prenom" placeholder="Prénom" value="">
+///        </div>
+///        <div class="m-frm-lbl">
+///          <label for="nom">Nom</label>
+///          <input type="text" name="nom" placeholder="Nom" value="">
+///        </div>
+///      </div>
+///      <div class="m-frm-grp">
+///        <div class="m-frm-lbl">
+///          <label for="mail">Courriel</label>
+///          <input type="text" name="mail" placeholder="Courriel" value="">
+///        </div>
+///        <div class="m-frm-lbl">
+///          <label for="phone">Téléphone</label>
+///          <input type="text" name="phone" placeholder="Téléphone" value="">
+///        </div>
+///      </div>
+///    </div>
+///  </form>
+
+
+// Définition de qq variables pour faciliter
+// les évolutions de design de tous les modules form
+
+$inputHeight: m(5)
+$inputPadding: m(1.5)
+$inputMarginTop: m(3)
+
+$inputBackground: color('grey', 0,0)
+$inputFocusBackground: color('grey', 200)
+$inputBorderWidth: 1px
+$inputFocusBorderWidth: 1px
+$inputBorderColor: color('grey', 500)
+$inputFocusBorderColor: color('grey', 500)
+$inputBorderRadius: m(3)
+
+$inputFontSize: m(1.5)
+$inputColor: color('grey',1000)
+$inputFocusColor: color('grey',1000)
+$labelFontSize: m()
+$labelColor: color('grey',400)
+
+
+.m-frm
+  float: left
+  width: 100%
+  .m-frm-wrp > *,
+  .m-frm-wrp,
+  input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
+  textarea
+    float: left
+    width: 100%
+
+.m-frm-grp
+  align-items: center
+  display: flex
+  &>div
+    width: 100%
+
+.m-frm
+  .m-frm-inp,
+  input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]):not([type="range"]),
+  textarea
+    height: $inputHeight
+    padding: $inputPadding 0
+    margin-top: $inputMarginTop
+    border: $inputBorderWidth solid $inputBackground
+    border-bottom: $inputBorderWidth solid $inputBorderColor
+    resize: none
+    font-size: $inputFontSize
+    color: $inputColor
+    background: $inputBackground
+    transition: $fast
+
+    &:focus
+      padding: $inputPadding m(2)
+      color: $inputFocusColor
+      border-radius: $inputBorderRadius
+      border: $inputFocusBorderWidth solid $inputFocusBorderColor
+      background: $inputFocusBackground
+
+  textarea
+    height: auto
+    overflow: hidden
+    resize: none
+    &:focus
+      outline: none
+
+  label
+    display: block
+    width: 100%
+    color: $labelColor
+    font-size: $labelFontSize
+    font-family: font('sans-serif')
+
+  input:disabled, input.e-dsbld
+    opacity: .33
+    color: color('grey', 70) !important
+    cursor: not-allowed
+
+.m-frm-wrp
+  margin-bottom: m(5)
+
+.m-frm-instructions
+  margin: m() 0
+  color: color('accent', 80)
+  em
+    color: color('accent', 80)
+
+  strong
+    color: color('accent', 50)
+
+// Stylise les Suggestion de Chome & Co.
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus
+  color : $inputColor !important
+  padding: $inputPadding 0 !important
+  -webkit-text-fill-color: $inputColor !important
+  -webkit-box-shadow: 0 0 0 1000px $inputBackground inset !important
+  -webkit-background-clip: text !important
+  background-clip: text !important
+
+// Stylise la couleur de l'icone Calendrier
+// des Input date sur Chrome & Co.
+
+::-webkit-calendar-picker-indicator
+  filter: invert(1)
+
+// Stylise les placeholder
+
+::placeholder
+  color: $inputBorderColor

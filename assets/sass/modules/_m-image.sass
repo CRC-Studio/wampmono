@@ -1,0 +1,101 @@
+// main: ../../../style.sass
+
+/// Le module Image permet de recardrer facilement
+/// des images dans leur div parent.
+///
+/// Attention : pensez à activer l'effet SASS e-fll.
+///
+/// Exemple de HTML :
+///   <div class="m-img-fll">
+///     <div class="m-img-wrp e-fll">
+///       <?= wp_get_attachment_image($image, $size, "", array('loading' => 'lazy')); ?>
+///     </div>
+///   </div>
+/// 
+///   <div class="m-img-1-1">
+///     <div class="m-img-wrp e-fll">
+///       <?= wp_get_attachment_image($image, $size, "", array('loading' => 'lazy')); ?>
+///     </div>
+///   </div>
+
+.m-img-fll
+  position: relative
+  width: 100%
+  height: 100%
+
+// .m-img-1-1
+//   position: relative
+//   width: 100%
+//   padding-top: 100%
+
+// .m-img-1-2
+//   position: relative
+//   width: 100%
+//   padding-top: 50%
+
+// .m-img-1-3
+//   position: relative
+//   width: 100%
+//   padding-top: 33%
+
+// .m-img-2-3
+//   position: relative
+//   width: 100%
+//   padding-top: 66.66%
+
+// .m-img-2-1
+//   position: relative
+//   width: 100%
+//   padding-top: 200%
+
+// .m-img-3-2
+//   position: relative
+//   width: 100%
+//   padding-top: 150%
+
+//  .m-img-3-5
+//   position: relative
+//   width: 100%
+//   padding-top: 60%
+
+//  .m-img-5-3
+//   position: relative
+//   width: 100%
+//   padding-top: 166.66% 
+
+// .m-img-5-4
+//   position: relative
+//   width: 100%
+//   padding-top: 80%
+
+// .m-img-8-6
+//   position: relative
+//   width: 100%
+//   padding-top: 133.33%
+
+
+
+.m-img-wrp
+  overflow: hidden
+  border-radius: m()
+
+  // Affiche Qq chose si l'image ne charge pas
+
+  background: color('acc')
+  background: linear-gradient(to right, color('acc') 5%, color('back') 50%, color('acc') 60%)
+  background-size: 300% 300%
+  animation: imgLoading $infiniteslow linear infinite
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.m-img-crcl
+  border-radius: 50%
+
+@keyframes imgLoading
+  0%
+    background-position: 300% 0
+  100%
+    background-position: -300% 0

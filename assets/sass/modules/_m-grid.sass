@@ -1,0 +1,109 @@
+// main: ../../../style.sass
+
+/// Le module Grid est l'un des plus ancien de Monobloc.
+/// Il gére le système de grille "à l'ancienne".
+///
+/// Exemple de HTML :
+///   <section class="m-row">
+///     <div class="m-col">
+///       <!-- content -->
+///     </div>
+///   </section>
+
+.m-row, .m-rox, .m-roy, .m-rom, .m-col
+  float: left
+  width: 100%
+  transition: padding $fast
+
+.m-rom
+  padding: $row__mt $row__mx $row__mb $row__mx
+
+.m-rox
+  padding-left: $row__mx
+  padding-right: $row__mx
+
+.m-roy
+  padding-top: $row__mt
+  padding-bottom: $row__mb
+
+  
+/// Les wrapper-center permettent de centrer le contenu
+/// de certaines sections de Monobloc
+///
+/// Exemple de HTML :
+///   <section class="m-rom">
+///     <div class="m-wrpc">
+///       <!-- content -->
+///     </div>
+///   </section>
+
+.m-wrpc
+  width: 100%
+  margin: 0 auto
+  transition: $fast
+  @include respond('xl')
+    width: 1140px
+
+.m-wrpc-s
+  width: 100%
+  margin: 0 auto
+  @include respond('m')
+    width: 66%
+  @include respond('l')
+    width: 760px
+
+  
+/// Les margin: auto sont très utilisé avec
+/// les grilles flex
+///
+/// Exemple de HTML :
+///   <div class="m-mta"></div>
+///   <div class="m-mba"></div>
+
+.m-mta
+  margin-top: auto
+
+.m-mtt
+  margin-top: $row__mt
+
+.m-mba
+  margin-bottom: auto
+
+.m-mya
+  margin: auto 0
+  
+.m-mla
+  margin-left: auto
+
+.m-mra
+  margin-right: auto
+
+.m-mxa
+  margin: 0 auto
+
+
+/// Cette fonction génére toutes les .class .m-marge-bottom,
+/// .m-marge-top, .m-marge-left et .m-marge-right
+///
+/// Exemple de HTML :
+///   <div class="m-mt3"></div>
+///   <div class="m-my2"></div>
+
+@for $i from 1 through 6
+  .m-mt#{$i}
+    margin-top: m(#{$i})
+
+  .m-mb#{$i}
+    margin-bottom: m(#{$i})
+
+  .m-my#{$i}
+    margin: m(#{$i}) 0
+
+  .m-ml#{$i}
+    margin-left: m(#{$i})
+
+  .m-mr#{$i}
+    margin-right: m(#{$i})
+
+  .m-mx#{$i}
+    margin: 0 m(#{$i})

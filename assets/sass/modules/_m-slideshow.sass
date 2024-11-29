@@ -1,0 +1,93 @@
+// main: ../../../style.sass
+
+/// Le module Slideshow permet d'ajouter des carrousels
+///
+/// Attention : pensez à activer le module Slideshow
+/// dans le fichier assets/js/monobloc.js
+///
+///
+/// Exemple de HTML :
+/// <div class="m-sld__sdls">
+///   <div class="m-mdl__wrp m-rom">
+///   </div>
+/// 
+///   <div class="m-sld__btns">
+///     <div class="m-sld__btn-prv"></div>
+///     <div class="m-sld__btn-nxt"></div>
+///   </div>
+///     
+///   <div class="m-sld__pgs"></div>
+/// </div>
+
+
+.m-sld__sdls
+  width: 100%
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  flex: 1 1 auto
+
+.m-sld__sdl
+  position: absolute
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  flex: 1 1 auto
+  transition: $fast
+
+// Stylise la pagination
+
+.m-sld__pgs
+  position: absolute
+  bottom: 0
+  display: flex
+  justify-content: center
+  gap: m(.5)
+  margin: m(3) 0
+
+.m-sld__pg
+  width: m(.5)
+  height: m(.5)
+  border-radius: m()
+  background: color('txt')
+
+  &::after
+    content: ''
+    display: block
+    width: m(.5)
+    height: m(.5)
+    border-radius: m()
+    background: color('txt')
+    transition: width $norm
+
+  &.is--active::after
+    width: m(1.5)
+
+
+// Stylise les boutons
+
+.m-sld__btns
+  position: absolute
+  width: 100%
+  display: flex
+  padding: 0 m()
+  justify-content: space-between
+  align-items: center
+  pointer-events: none
+
+.m-sld__btn
+  padding: m()
+  border: 1px solid color('grey',100, 0)
+  border-radius: m()
+  cursor: pointer
+  transition: $fast
+  pointer-events: auto
+  @include hover
+    border: 1px solid color('txt',1)
+
+  svg
+    width: m(1.5)
+    height: m(1.5)
+    fill: color('txt')

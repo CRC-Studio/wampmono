@@ -1,0 +1,107 @@
+// main: ../../../style.sass
+
+/// Le module Button stylise les boutons. Il exite
+/// deux variantes : le bouton btn--plain et le btn--outline.
+///
+/// Exemple de HTML :
+///  <div class="m-btn__grp">
+///    <a href="<?php the_permalink(); ?>" class="m-btn m-btn-o">
+///      <?php _e("Annuler","monobloc") ?>
+///    </a>
+///    <a href="<?php the_permalink(); ?>" class="m-btn m-btn-p">
+///      <?php _e("Valider","monobloc") ?>
+///    </a>
+///  </div>
+
+// Variables
+
+$btnBorder: 2px
+
+
+// Stylise les groupes de boutons
+
+.m-btn__grp
+  display: inline-flex
+  flex-wrap: wrap
+  gap: m()
+  .m-btn
+    width: 100%
+  @include respond('m')
+    flex-direction: row
+    .m-btn
+      width: auto
+
+// .m-btn__grp
+//   margin: m() 0
+//   &>.m-btn:not(:first-child)
+//     margin-left: m(0.5)
+
+// Stylse tous les boutons
+
+.m-btn
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 0 m(2)
+  height: m(4)
+  font-size: m()
+  font-weight: 500
+  border-radius: $borderRadius
+  cursor: pointer
+  white-space: nowrap
+  @include box-shadow(0, 'grey')
+  transition: $slow
+  @include hover
+    border-radius: $borderRadiusHover
+    text-decoration: none
+    @include box-shadow(5, 'grey', 200)
+    transition: $fast
+
+// Stylise les boutons Plain
+// avec un fond
+
+.m-btn-p
+  background: color('txt')
+  color: color('back')
+  border: $btnBorder solid color('txt')
+
+// Stylise les boutons Outline
+// avec un simple contour
+
+.m-btn-o
+  background: none
+  color: color('grey', 1000)
+  border: $btnBorder solid color('grey', 1000)
+
+// Stylise les boutons Light
+// sans contour, ni fond
+
+.m-btn-l
+  color: color('txt')
+  background: color('grey',1000,0)
+  border: $btnBorder solid color('grey',1000,0)
+
+  @include hover
+    color: color('back')
+    background: color('txt')
+    border: $btnBorder solid color('txt')
+
+  &.e-on
+    color: color('back')
+    background: color('txt')
+    border: $btnBorder solid color('txt')
+
+// Stylise les boutons avec des icones
+
+.m-btn-ico
+  width: m(4)
+  padding: 0
+  svg
+    width: m(1.5)
+
+// Stylise les boutons temporairement désactivé
+
+.m-btn:disabled,
+.m-btn-load
+  pointer-events: none
+  opacity: .5

@@ -1,0 +1,32 @@
+// main: ../../../style.sass
+
+/// Le module Form Label permet de styliser
+/// l'animation des label
+///
+/// Attention : pensez à activer le module m-form dans le fichier style.sass
+/// le module m-form select dans le fichier assets/js/monobloc.js
+
+
+
+// Stylise les labels
+
+.m-frm-lbl
+  position: relative
+
+  label
+    position: absolute
+    left: 0
+    top: m(5)
+    pointer-events: none
+    transition: $fast
+
+    // Stylise la label lors du focus
+    &.e-fcs
+      top: m()
+
+    // Stylise la label si le champs est vide
+    &.e-fld
+      top: m(2)
+
+  ::placeholder
+    color: color('grey', 0, 0)

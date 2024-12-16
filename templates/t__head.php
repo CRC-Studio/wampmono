@@ -4,7 +4,7 @@
 // des pages. C'est ici que tout commence...
 
 // Ajoute le fichier de fonctions
-include  __DIR__ . '/fonctions.php';
+include  __DIR__ . '/../fonctions.php';
 
 // Ajoute les info Meta
 
@@ -89,7 +89,22 @@ $meta_img   = $meta_url . "assets/img/cover__rs.png";
     <?php // Style.css et script.js 
     ?>
     <link href='./style.min.css' media='all' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="./assets/js/monopage.js"></script>
+    <script type="module" src="<?php the_home_url() ?>/assets/js/mono.js"></script>
 </head>
 
-<body>
+<?php
+// Formate les class du <body> et selectionne le template
+$bodyClass = (is_admin()) ? 'l-body is--admin' : 'l-body';
+$bodyClass .= ' m-flx';
+?>
+
+<body class="<?= $bodyClass; ?>">
+
+
+    <?php
+    /**
+     * Ajoute du Header
+     */
+
+    //include  __DIR__ . '/t__header.php';
+    ?>

@@ -5,7 +5,7 @@
 /// Exemple de HTML :
 ///  <form class="m-frm" action="<?php echo get_stylesheet_directory_uri(); ?>/scripts/s__mailto.php" method="post">
 ///    <div class="m-frm-wrp">
-///      <div class="m-frm-grp">
+///      <div class="m-frm-grp m-flx m-flxc">
 ///        <div class="m-frm-lbl">
 ///          <label for="prenom">Prénom</label>
 ///          <input type="text" name="prenom" placeholder="Prénom" value="">
@@ -62,8 +62,6 @@ $labelColor: color('grey',400)
     width: 100%
 
 .m-frm-grp
-  align-items: center
-  display: flex
   &>div
     width: 100%
 

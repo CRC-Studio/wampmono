@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <rect x="140" y="170" width="20" height="20"/>
+  <rect x="200" y="130" width="20" height="40"/>
+  <rect x="20" y="130" width="20" height="40"/>
+  <rect x="80" y="170" width="20" height="20"/>
+  <path d="M160,90h-80v-20h-20v40h-20v20h20v40h20v-20h80v20h20v-40h20v-20h-20v-40h-20v20ZM80,130v-20h20v20h-20ZM160,130h-20v-20h20v20Z"/>
+  <rect x="180" y="50" width="20" height="20"/>
+  <rect x="200" y="70" width="20" height="20"/>
+  <rect x="40" y="50" width="20" height="20"/>
+  <rect x="20" y="70" width="20" height="20"/>
+</svg>

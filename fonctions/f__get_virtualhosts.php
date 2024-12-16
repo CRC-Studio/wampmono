@@ -44,5 +44,20 @@ function get_virtualhosts()
     }
   }
 
-  return $vhosts; // Retourne un tableau associatif des VirtualHost
+  // Tri alphabétique par le champ 'name'
+  usort($vhosts, function ($a, $b) {
+    return strcasecmp($a['name'], $b['name']);
+  });
+
+  // Grouper par première lettre
+  $groupedVhosts = [];
+  foreach ($vhosts as $vhost) {
+    $firstLetter = strtoupper($vhost['name'][0]); // Première lettre en majuscule
+    if (!isset($groupedVhosts[$firstLetter])) {
+      $groupedVhosts[$firstLetter] = [];
+    }
+    $groupedVhosts[$firstLetter][] = $vhost;
+  }
+
+  return $groupedVhosts; // Retourne un tableau associatif des VirtualHost
 }

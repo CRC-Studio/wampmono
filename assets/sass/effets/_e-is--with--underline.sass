@@ -1,0 +1,25 @@
+// main: ../../../style.sass
+
+/// L'effet Is--with--underline permet d'ajouter une
+/// animation de survole dans les menu.
+
+/// Exemple de HTML :
+///   <ul class="e-und">
+///     <li><a href></li>
+///     <li><a href></li>
+///     <li><a href></li>
+///   </ul>
+
+.e-und
+  a
+    &:link, &:visited
+      background-image: linear-gradient(90deg, color('acc'), color('acc'))
+      background-size: 0 1px
+      background-origin: content-box
+      background-repeat: no-repeat
+      background-position: 100% 100%
+      transition: background-size .2s cubic-bezier(.45,.34,.65,.96)
+
+    @include hover
+      background-size: 100% 1px
+      background-position: 0 100%

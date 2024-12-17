@@ -1,0 +1,13 @@
+// main: ../../../style.sass
+
+///  L'effet White Is Not White permet de créer un léger
+///  dégradé afin de souligner la frontière entre
+///  deux sections ayant un fond var(--color-back-100)
+///
+///  Exemple de HTML :
+///    <section class="e-wsntw">
+///      <span>Something</span>
+///    </section>
+
+.e-wsntw
+  background: linear-gradient(0deg, color('grey',10) 50%, color('grey',0) 90%)

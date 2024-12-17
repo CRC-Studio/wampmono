@@ -36,8 +36,6 @@ export const formLabelInit = () => {
   let $inputsLabel = document.querySelectorAll('.m-frm-lbl');
   $inputsLabel.forEach($inputLabel => {
 
-    console.log('hello 3');
-
     // Sélectionne les éléments
     let $input = $inputLabel.querySelector('input');
     let $label = $inputLabel.querySelector('label');

@@ -8,5 +8,22 @@
 
 .l-ftp
 
-.l-ftp-inp
-  flex: 0 0 auto
+// Stylise la barre à droite
+
+.l-ftp-asd
+  width: 33%
+
+// Stylise les effets hover des liens
+
+.l-ftp-url
+  @include hover
+    .m-txt-g
+      color: color('txt')
+    .l-ftp-ico
+      opacity: 1
+
+.l-ftp-ico
+  transition: 0s all
+  svg
+    fill: color('txt')
+    width: m(1.25)

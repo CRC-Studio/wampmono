@@ -1,0 +1,28 @@
+// main: ../../../style.sass
+
+/// L'effet is--noisy ajoute un effet de neige sur l'écran
+/// à l'image des vielles télé d'autrefois.
+///
+/// Exemple de HTML :
+///   <body class="is--noisy">
+///     <!-- content -->
+///   </body>
+
+.is--noisy::after
+  content: ''
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  z-index: $zindex__is--noisy
+  opacity: .2
+  background: url(./assets/img/back__is--noisy.png)
+  animation: is--noisy 1s steps(10) infinite
+  pointer-events: none
+
+@keyframes is--noisy
+  from
+    background-position: 0 0
+  to
+    background-position: m(5) m(20)

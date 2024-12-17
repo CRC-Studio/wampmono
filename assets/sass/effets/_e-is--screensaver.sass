@@ -1,0 +1,36 @@
+// main: ../../../style.sass
+
+/// L'effet is--ScreenSaver reprodruit les écrans de veilles à la façon
+/// de Windows 95 : si vous ne toucher pas l'écran pendant un certain temps,
+/// une annimation se lance.
+///
+/// Attention : pensez à activer le module is--ScreenSaver
+/// dans le fichier assets/js/monobloc.js
+///
+/// Exemple de HTML :
+///   <html class="is--screensaver">
+///     <!-- content -->
+///   </html>
+
+.is--screensaver
+  overflow: hidden
+  background: linear-gradient(273deg, color('back', 100), color('principale', 100))
+  background-size: 400% 400%
+  animation: background_gradient 18s ease infinite
+
+  body
+    float: left
+
+@keyframes background_gradient
+  0%
+    background-position: 0% 70%
+  50%
+    background-position: 100% 31%
+  100%
+    background-position: 0% 70%
+
+@keyframes screenSaver
+  0%
+    transform: rotate3d(1, 1, 1, 0deg)
+  100%
+    transform: rotate3d(1, 1, 1, 360deg)

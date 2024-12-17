@@ -1,0 +1,36 @@
+// main: ../../../style.sass
+
+/// L'effet is--transition permet d'ajouter des animations
+/// entre le chargement de 2 pages.
+///
+/// Attention : pensez à activer le module /effets/_e-transition.js
+/// dans le fichier assets/js/monobloc.js
+///
+/// Exemple de JS :
+///   $btn.addEventListener('click', () => {
+///     eTransition.transition('moveFromRight');
+///   });
+
+
+.e-trs
+  position: fixed
+  height: vh(100)
+  background: color('grey', 0)
+  z-index: $zindex__transition
+
+  &.moveFromRight
+    right: 0
+    left: 100%
+    animation: trsMoveFromRight $slow ease-in forwards
+
+
+@keyframes trsMoveFromRight
+  0%
+    right: 0
+    left: 100%
+  50%
+    right: 0
+    left: 0
+  100%
+    right: 100%
+    left: 0

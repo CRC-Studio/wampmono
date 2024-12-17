@@ -526,6 +526,10 @@ p.m-j + p.m-j {
   color: hsl(var(--color-acc));
 }
 
+.m-txt-g {
+  color: hsl(var(--color-grey-500));
+}
+
 strong, strong *,
 b, b * {
   font-weight: 800 !important;
@@ -566,6 +570,11 @@ i, i * {
   float: left;
   width: 100%;
   cursor: pointer;
+}
+@media (hover) {
+  .m-acd-ttl:hover .m-acd-ico svg {
+    fill: hsl(var(--color-txt));
+  }
 }
 
 .m-acd-ico {
@@ -992,10 +1001,15 @@ i, i * {
 
 .m-btn-ico {
   width: calc(var(--m) * 4);
+  height: calc(var(--m) * 4);
   padding: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 .m-btn-ico svg {
   width: calc(var(--m) * 1.5);
+  fill: hsl(var(--color-back));
 }
 
 .m-btn:disabled,
@@ -1155,6 +1169,19 @@ select:-webkit-autofill:focus {
   color: hsla(var(--color-grey-0), 0);
 }
 
+.e-off {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.e-hde {
+  display: none;
+}
+
+.e-obo > * {
+  opacity: 0;
+}
+
 .l-hdr {
   width: calc(var(--m) * 6);
   height: calc(var(--vh) * 100);
@@ -1162,8 +1189,24 @@ select:-webkit-autofill:focus {
   padding: var(--2m);
 }
 
-.l-ftp-inp {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+.l-ftp-asd {
+  width: 33%;
+}
+
+@media (hover) {
+  .l-ftp-url:hover .m-txt-g {
+    color: hsl(var(--color-txt));
+  }
+  .l-ftp-url:hover .l-ftp-ico {
+    opacity: 1;
+  }
+}
+
+.l-ftp-ico {
+  -webkit-transition: 0s all;
+  transition: 0s all;
+}
+.l-ftp-ico svg {
+  fill: hsl(var(--color-txt));
+  width: calc(var(--m) * 1.25);
 }

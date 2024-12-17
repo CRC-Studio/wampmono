@@ -1,0 +1,31 @@
+// main: ../../../style.sass
+
+/// L'effet Is--float permet de créer une légère
+/// animation de flottement à l'apparition d'un élément ;
+/// comme si l'élément glissait à la surface de la page.
+///
+/// Attention : pensez à activer le module is--float
+/// dans le fichier assets/js/monobloc.js
+///
+/// Exemple de HTML :
+///   <?php  $isf__vit = random_int(1, 6); ?>
+///   <div class="is--float <?php if (isset($isf__vit)) {echo "isf__vit".$isf__vit;}; ?>">
+///     <!-- content -->
+///   </div>
+
+.is--float
+  position: relative
+  @include prefix(transition, top 3s ease-out)
+
+.isf__vit1
+  top: m(3)
+.isf__vit2
+  top: m(6)
+.isf__vit3
+  top: m(9)
+.isf__vit4
+  top: m(12)
+.isf__vit5
+  top: m(15)
+.isf__vit6
+  top: m(18)

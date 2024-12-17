@@ -1,0 +1,32 @@
+// main: ../../../style.sass
+
+///  Le module Is--Fade permet à un contenu d'apparaitre
+///  à l'écran avec un léger fondu
+///
+///  Attention : pensez à activer le module is--fade
+///  dans le fichier assets/js/monobloc.js
+///
+///  Exemple de HTML :
+///    <div class="is--fade">
+///      <!-- content -->
+///    </div>
+
+.is--fade
+  opacity: 0
+  height: 0
+  transition: $fast ease-in-out
+
+
+/// Effet CSS fadeIn (à l'ancienne)
+///
+///  Exemple de SASS :
+///    div
+///      opacity: 0
+///      animation: fadeIn 2s forwards 0.5s
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1

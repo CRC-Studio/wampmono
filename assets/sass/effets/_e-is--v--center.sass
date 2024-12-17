@@ -1,0 +1,27 @@
+// main: ../../../style.sass
+
+/// L'effet Is--V--Center permet de centrer verticalement un div enfant
+/// dans une div parent. Ajouter soir la class isv--parent sur le parent,
+/// soit la div isv--child sur la div enfant.
+///
+/// Exemple de HTML :
+///   <div class="isv--parent">
+///     <div>
+///       <!-- content -->
+///     </div>
+///   </div>
+
+.isv--parent
+  display: flex
+  align-items: center
+
+/// Exemple de HTML :
+///   <div>
+///     <div  class="isv--child">
+///       <!-- content -->
+///     </div>
+///   </div>
+
+.isv--child
+  display: flex
+  margin: auto

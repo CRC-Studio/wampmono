@@ -1,0 +1,44 @@
+// main: ../../../style.sass
+
+///  L'effet e-denkoKeijiban permet de faire défiler
+///  le contenu de <li> à la façon d'un panneau à LED.
+///
+///  Attention : pensez à activer le module e-dnk
+///  dans le fichier assets/js/monobloc.js
+///
+///  Exemple de HTML :
+///    <div class="e-dnks m-row m-flx">
+///      <ul class="e-dnk m-flx">
+///        <li>
+///          <span>Something</span><span>Something else</span>
+///        </li>
+///        <li>
+///          <span>Something else</span>
+///        </li>
+///      </ul>
+///    </div>
+///    <div class="e-dnks m-row m-flx">
+///      <ul class="e-dnk m-flx" data-speed="2">
+///        <li>
+///          <span>Something completely different</span>
+///      </ul>
+///    </div>
+
+.e-dnks
+  overflow: hidden
+
+.e-dnk
+  padding: m() 0
+  white-space: nowrap
+  animation: denkoAnim 100s linear infinite
+
+  li
+    display: flex
+    margin-right: m()
+
+@keyframes denkoAnim
+  0%
+    transform: translateX(0%)
+
+  100%
+    transform: translateX(-100%)

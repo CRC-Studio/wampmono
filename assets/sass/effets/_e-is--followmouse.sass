@@ -1,0 +1,24 @@
+// main: ../../../style.sass
+
+/// L'effet Is--Followmouse permet à un contenu suivre
+/// le cursor
+///
+/// Attention : pensez à activer le module _m-tooltip.sass
+/// dans le fichier style.sass, ainsi que l'effet is--followmouse
+/// dans le fichier assets/js/monobloc.js
+///
+/// Exemple de HTML :
+///   <article class="m-ttip--hover">
+///     <!-- content -->
+///     <div class="m-ttip is--followmouse">
+///       <div class="m-ttip__cntnt">
+///         <?php _e("En savoir plus","monobloc") ?>
+///       </div>
+///     </div>
+///   </article>
+
+.is--followmouse
+  position: fixed
+  z-index: $zindex__tooltip
+  pointer-events: none
+  transition: top 0s, left 0s !important

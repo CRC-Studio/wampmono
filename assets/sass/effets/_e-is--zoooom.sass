@@ -1,0 +1,31 @@
+// main: ../../../style.sass
+
+/// L'effet Is--zoooom permet de créer une légère
+/// animation de survol des images.
+///
+/// Exemple de HTML :
+///   <article class="is--zoooom">
+///     <p>Something Else</p>
+///     <div class="is--zoooom--box">
+///       <?php echo wp_get_attachment_image($image, $size, "", array('loading' => 'lazy')); ?>
+///     </div>
+///   </article>
+
+.is--zoooom--box
+  overflow: hidden
+  box-shadow: 0 0 0 rgba(var(--color-principale-100),0)
+  @include prefix(transition, .5s)
+
+  img
+    transform: scale(1)
+    @include prefix(transition, 3s ease-in)
+
+.is--zoooom
+  @include hover()
+    .is--zoooom--box
+      box-shadow: 0 2.8px 2.2px rgba(var(--color-principale-100), 0.034),0 6.7px 5.3px rgba(var(--color-principale-100), 0.048),0 12.5px 10px rgba(var(--color-principale-100), 0.06),0 22.3px 17.9px rgba(var(--color-principale-100), 0.072),0 41.8px 33.4px rgba(var(--color-principale-100), 0.086),0 100px 80px rgba(var(--color-principale-100), 0.12)
+      @include prefix(transition, .5s)
+
+  img
+    transform: scale(1.1)
+    @include prefix(transition, 15s ease-out)

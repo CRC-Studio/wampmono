@@ -16,7 +16,7 @@ include  __DIR__ . '/templates/t__head.php';
     <div class="m-rom m-flx m-flg1">
       <form class="m-row m-frm m-flx">
         <div class="m-row m-frm-grp m-flx m-flxc m-flg1">
-          <a href="http://localhost/?skin=origine" class="m-btn m-btn-p m-btn-ico m-mta" target="_blank"><?php the_ico('arrow_left'); ?></a>
+          <a href="http://localhost/?monowamp=no" class="m-btn m-btn-p m-btn-ico m-mta" target="_blank"><?php the_ico('arrow_left'); ?></a>
           <div class="l-ftp-inp">
             <div class="m-frm-lbl">
               <label for="vhost">Rechercher un virtual hosts</label>

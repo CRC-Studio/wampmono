@@ -12,7 +12,8 @@ function get_virtualhosts()
 {
 
   // Chemin vers le fichier de configuration des VirtualHost
-  $vhostFile = __DIR__ . '/../../../bin/apache/apache2.4.62.1/conf/extra/httpd-vhosts.conf';
+  $apache_version = get_last_apache_version();
+  $vhostFile = __DIR__ . '/../../../bin/apache/' . $apache_version . '/conf/extra/httpd-vhosts.conf';
 
   // Vérifie si le fichier existe
   if (!file_exists($vhostFile)) {
@@ -40,7 +41,8 @@ function get_virtualhosts()
         'name' => $currentHost,
         'url' => "http://$currentHost/",
       ];
-      $currentHost = null; // Réinitialise pour éviter les doublons
+      // Réinitialise pour éviter les doublons
+      $currentHost = null;
     }
   }
 
@@ -52,12 +54,14 @@ function get_virtualhosts()
   // Grouper par première lettre
   $groupedVhosts = [];
   foreach ($vhosts as $vhost) {
-    $firstLetter = strtoupper($vhost['name'][0]); // Première lettre en majuscule
+    // Première lettre en majuscule
+    $firstLetter = strtoupper($vhost['name'][0]);
     if (!isset($groupedVhosts[$firstLetter])) {
       $groupedVhosts[$firstLetter] = [];
     }
     $groupedVhosts[$firstLetter][] = $vhost;
   }
 
-  return $groupedVhosts; // Retourne un tableau associatif des VirtualHost
+  // Retourne un tableau associatif des VirtualHost
+  return $groupedVhosts;
 }

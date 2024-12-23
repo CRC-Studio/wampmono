@@ -2,14 +2,6 @@
 
 WampMono is a lightweight manager designed to enhance your WampServer experience. Created by **CRC Studio**, a design and development studio, WampMono simplifies local development by offering an easy-to-use interface and seamless management of virtual hosts.
 
----
-
-## Features
-- **Automatic Virtual Host Creation**: Adds a virtual host `wampmono.lcl` for streamlined access.
-- **Customizable Redirection**: Automatically redirects to WampMono, with an option to display the standard WampServer homepage using a query string.
-- **Lightweight Design**: Minimalistic and efficient, focused on usability.
-
----
 
 ## Installation
 
@@ -34,7 +26,7 @@ WampMono is a lightweight manager designed to enhance your WampServer experience
    ```php
    // Redirects to MonoWamp™, a light Manager for WampServer
    // by CRC Studio: A design & development studio
-   if (!isset($_GET['skin']) || $_GET['skin'] !== 'origine') {
+   if (!isset($_GET['monowamp']) || $_GET['monowamp'] !== 'no') {
        header("Location: http://wampmono.lcl/");
        exit;
    }
@@ -48,11 +40,11 @@ WampMono is a lightweight manager designed to enhance your WampServer experience
 ## Usage
 
 - Access the WampMono Manager by visiting [http://wampmono.lcl/](http://wampmono.lcl/) in your browser.
-- To view the standard WampServer homepage, add `?skin=origine` to the URL (e.g., `http://localhost/index.php?skin=origine`).
+- To view the standard WampServer homepage, add `?monowamp=no` to the URL (e.g., `http://localhost/?monowamp=no`).
 
 ---
 
 ## About CRC Studio
 
-**CRC Studio** is a creative design and development studio specializing in web solutions and user-centric tools. Learn more at [crc.studio](https://crc.studio/).
+[crc.studio](https://crc.studio/) is a design & development studio founded in 2019 by Yoko Homareda and Rémi B. Loizeau. Based in France, we travel all over the world to discover beauty and good ideas. For each project, such as visual identities, websites, posters, books, packaging or merchandise, we enjoy working as a team with other artists and designers.
 

@@ -32,7 +32,6 @@ export const formLabelfocus = ($input, $label) => {
 // Initialise le module
 
 export const formLabelInit = () => {
-
   let $inputsLabel = document.querySelectorAll('.m-frm-lbl');
   $inputsLabel.forEach($inputLabel => {
 
@@ -43,6 +42,11 @@ export const formLabelInit = () => {
     if ($input && $label) {
       // Vérifie si l'input est préremplie
       formLabelUpdate($input, $label);
+
+      // Vérifie si l'input est déjà focus
+      if ($input === document.activeElement) {
+        formLabelfocus($input, $label);
+      }
 
       // Définit les gestionnaires d'événements
       const onFocus = () => formLabelfocus($input, $label);

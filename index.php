@@ -20,7 +20,7 @@ include  __DIR__ . '/templates/t__head.php';
           <div class="l-ftp-inp">
             <div class="m-frm-lbl">
               <label for="vhost">Rechercher un virtual hosts</label>
-              <input type="text" name="vhost" placeholder="Rechercher un virtual hosts" autofocus>
+              <input type="text" name="vhost" placeholder="Rechercher un virtual hosts" class="m-sch-inp" autofocus>
             </div>
           </div>
           <a href="http://localhost/add_vhost.php?lang=french" class="m-btn m-btn-p m-btn-ico m-mta"><?php the_ico('more'); ?></a>
@@ -42,7 +42,7 @@ include  __DIR__ . '/templates/t__head.php';
             <h2 class="m-body m-txt-g m-mt3 m-mb1"><?= $letter ?></h2>
             <ul class="m-flc m-flg05">
               <?php foreach ($vhosts as $vhost): ?>
-                <li class="m-row">
+                <li class="l-ftp-vhost m-row">
                   <a href="<?= $vhost['url'] ?>" target="_blank" class="m-flx m-lead e-txtsble"><?= $vhost['name'] ?></a>
                 </li>
               <?php endforeach; ?>

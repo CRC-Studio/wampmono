@@ -12,7 +12,7 @@ function get_virtualhosts()
 {
 
   // Chemin vers le fichier de configuration des VirtualHost
-  $vhostFile = __DIR__ . '/../../../bin/apache/apache2.4.62.1/conf/extra/httpd-vhosts.conf'; // Ajustez selon votre installation
+  $vhostFile = __DIR__ . '/../../../bin/apache/apache2.4.62.1/conf/extra/httpd-vhosts.conf';
 
   // Vérifie si le fichier existe
   if (!file_exists($vhostFile)) {

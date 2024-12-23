@@ -16,13 +16,14 @@ include  __DIR__ . '/templates/t__head.php';
     <div class="m-rom m-flx m-flg1">
       <form class="m-row m-frm m-flx">
         <div class="m-row m-frm-grp m-flx m-flxc m-flg1">
+          <a href="http://localhost/?skin=origine" class="m-btn m-btn-p m-btn-ico m-mta" target="_blank"><?php the_ico('arrow_left'); ?></a>
           <div class="l-ftp-inp">
             <div class="m-frm-lbl">
               <label for="vhost">Rechercher un virtual hosts</label>
               <input type="text" name="vhost" placeholder="Rechercher un virtual hosts" autofocus>
             </div>
           </div>
-          <a href="http://localhost/add_vhost.php?lang=french" class="m-btn m-btn-p m-btn-ico m-mta" target="_blank"><?php the_ico('more'); ?></a>
+          <a href="http://localhost/add_vhost.php?lang=french" class="m-btn m-btn-p m-btn-ico m-mta"><?php the_ico('more'); ?></a>
         </div>
       </form>
     </div>

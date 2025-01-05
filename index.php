@@ -12,9 +12,13 @@ include  __DIR__ . '/templates/t__head.php';
 ?>
 
 <main class="main l-ftp" role="main">
-  <section class="m-wrpc-s">
-    <div class="m-rom m-flx m-flg1">
-      <form class="m-row m-frm m-flx">
+
+  <?php // Ajout la barre de recherches
+  ?>
+
+  <section class="l-ftp-top m-row">
+    <div class="m-wrpc-s m-flx m-flg1">
+      <form class="m-rom m-frm m-flx">
         <div class="m-row m-frm-grp m-flx m-flxc m-flg1">
           <a href="http://localhost/?monowamp=no" class="m-btn m-btn-p m-btn-ico m-mta" target="_blank"><?php the_ico('arrow_left'); ?></a>
           <div class="l-ftp-inp">
@@ -27,7 +31,13 @@ include  __DIR__ . '/templates/t__head.php';
         </div>
       </form>
     </div>
+  </section>
 
+
+  <?php // Ajout le wrapper principal
+  ?>
+
+  <section class="l-ftp-wrp m-wrpc-s">
     <div class="m-rom m-flx m-flg2">
 
       <?php // Ajout des Virtual Hosts
@@ -65,11 +75,11 @@ include  __DIR__ . '/templates/t__head.php';
             </div>
           </div>
           <div class="m-acd-wrp">
-            <div class="m-flc m-flg05">
+            <div class="l-ftp-lnks m-flc m-flg05">
               <?php
               $projects = get_projects();
               foreach ($projects as $projectData): ?>
-                <a href="<?= $projectData['url'] ?>" target="_blank" class="l-ftp-url m-flx m-flg05">
+                <a href="<?= $projectData['url'] ?>" target="_blank" class="l-ftp-lnk m-flx m-flg05">
                   <span class="m-body m-txt-g"><?= $projectData['name'] ?></span>
                   <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
                 </a>
@@ -82,7 +92,7 @@ include  __DIR__ . '/templates/t__head.php';
         <?php // Ajout des Outils
         ?>
 
-        <li class="m-acd m-flc">
+        <li class="m-acd m-flc e-on">
           <div class="m-acd-ttl">
             <h2 class="m-lead">Outils</h2>
             <div class="m-acd-ico">
@@ -90,20 +100,20 @@ include  __DIR__ . '/templates/t__head.php';
             </div>
           </div>
           <div class="m-acd-wrp">
-            <div class="m-flc m-flg05">
-              <a href="https://road.crc.studio/" target='_blank' class="l-ftp-url m-flx m-flg05">
+            <div class="l-ftp-lnks m-flc m-flg05">
+              <a href="https://road.crc.studio/" target='_blank' class="l-ftp-lnk m-flx m-flg05">
                 <span class="m-body m-txt-g">Roadmapper</span>
                 <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
               </a>
-              <a href="http://localhost/nadine/" target='_blank' class="l-ftp-url m-flx m-flg05">
+              <a href="http://localhost/nadine/" target='_blank' class="l-ftp-lnk m-flx m-flg05">
                 <span class="m-body m-txt-g">Nadine</span>
                 <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
               </a>
-              <a href="http://localhost/phpmyadmin/" target='_blank' class="l-ftp-url m-flx m-flg05">
+              <a href="http://localhost/phpmyadmin/" target='_blank' class="l-ftp-lnk m-flx m-flg05">
                 <span class="m-body m-txt-g">phpMyAdmin</span>
                 <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
               </a>
-              <a href="https://wampserver.aviatechno.net/" target='_blank' class="l-ftp-url m-flx m-flg05">
+              <a href="https://wampserver.aviatechno.net/" target='_blank' class="l-ftp-lnk m-flx m-flg05">
                 <span class="m-body m-txt-g">WampUpdate</span>
                 <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
               </a>

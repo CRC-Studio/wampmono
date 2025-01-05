@@ -623,7 +623,7 @@ i, i * {
 
 @media (hover) {
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--color-acc));
+    background: hsl(var(--color-grey-500));
   }
 }
 
@@ -1189,15 +1189,27 @@ select:-webkit-autofill:focus {
   padding: var(--2m);
 }
 
+.l-ftp-top {
+  position: fixed;
+  background: hsl(var(--color-back));
+}
+
+.l-ftp-wrp {
+  padding-top: calc(var(--m) * 15);
+}
+
 .l-ftp-asd {
   width: 33%;
 }
 
 @media (hover) {
-  .l-ftp-url:hover .m-txt-g {
+  .l-ftp-lnk:hover {
+    padding-left: calc(var(--m) * 0.5);
+  }
+  .l-ftp-lnk:hover .m-txt-g {
     color: hsl(var(--color-txt));
   }
-  .l-ftp-url:hover .l-ftp-ico {
+  .l-ftp-lnk:hover .l-ftp-ico {
     opacity: 1;
   }
 }

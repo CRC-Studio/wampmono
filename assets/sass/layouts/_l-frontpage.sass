@@ -8,6 +8,17 @@
 
 .l-ftp
 
+// Stylise la barre de recherche
+
+.l-ftp-top
+  position: fixed
+  background: color('back')
+
+// Stylise la barre à droite
+ 
+.l-ftp-wrp
+  padding-top: m(15)
+
 // Stylise la barre à droite
 
 .l-ftp-asd
@@ -15,8 +26,9 @@
 
 // Stylise les effets hover des liens
 
-.l-ftp-url
+.l-ftp-lnk
   @include hover
+    padding-left: m(.5) 
     .m-txt-g
       color: color('txt')
     .l-ftp-ico

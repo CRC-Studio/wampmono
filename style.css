@@ -1192,6 +1192,7 @@ select:-webkit-autofill:focus {
 .l-ftp-top {
   position: fixed;
   background: hsl(var(--color-back));
+  z-index: 1300;
 }
 
 .l-ftp-wrp {

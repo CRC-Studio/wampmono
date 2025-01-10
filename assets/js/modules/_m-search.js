@@ -3,6 +3,30 @@
 */
 
 
+/**
+ * Permet de cacher les parents si tous les enfants sont cachés
+*/
+
+function searchHideParents() {
+  // Cherche tous les parents
+  let $vhostss = document.querySelectorAll('.l-ftp-vhosts');
+
+  $vhostss.forEach($vhosts => {
+    // Cherche tous les enfants
+    let $vhost = $vhosts.querySelectorAll('.l-ftp-vhost');
+
+    // Vérifie si tous les enfants ont `display: none`
+    let allHidden = Array.from($vhost).every(child => {
+      return window.getComputedStyle(child).display === 'none';
+    });
+
+    // Affiche ou cache le parent en conséquence
+    $vhosts.style.display = allHidden ? 'none' : 'block';
+  });
+}
+searchHideParents();
+
+
 
 /**
  * Permet de faire des recherches
@@ -23,6 +47,9 @@ export const searchAndHide = (string, $els) => {
     } else {
       $el.style.display = 'none';
     }
+
+    // Cache les parents si tous les enfants sont cachés
+    searchHideParents();
   });
 };
 

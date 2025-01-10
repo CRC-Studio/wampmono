@@ -43,12 +43,12 @@ include  __DIR__ . '/templates/t__head.php';
       <?php // Ajout des Virtual Hosts
       ?>
 
-      <div class="m-row m-flx">
-        <ul class="m-row m-flc e-obo">
-          <?php
-          $vhostsGrouped = get_virtualhosts();
+      <div class="m-row m-flc e-obo">
+        <?php
+        $vhostsGrouped = get_virtualhosts();
 
-          foreach ($vhostsGrouped as $letter => $vhosts): ?>
+        foreach ($vhostsGrouped as $letter => $vhosts): ?>
+          <div class="l-ftp-vhosts m-flc">
             <h2 class="m-body m-txt-g m-mt3 m-mb1"><?= $letter ?></h2>
             <ul class="m-flc m-flg05">
               <?php foreach ($vhosts as $vhost): ?>
@@ -57,8 +57,8 @@ include  __DIR__ . '/templates/t__head.php';
                 </li>
               <?php endforeach; ?>
             </ul>
-          <?php endforeach; ?>
-        </ul>
+          </div>
+        <?php endforeach; ?>
       </div>
 
 

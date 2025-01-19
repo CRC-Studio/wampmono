@@ -20,14 +20,28 @@ include  __DIR__ . '/templates/t__head.php';
     <div class="m-wrpc-s m-flx m-flg1">
       <form class="m-rom m-frm m-flx">
         <div class="m-row m-frm-grp m-flx m-flxc m-flg1">
-          <a href="http://localhost/?monowamp=no" class="m-btn m-btn-p m-btn-ico m-mta" target="_blank"><?php the_ico('arrow_left'); ?></a>
+
+          <a href="http://localhost/?monowamp=no" class="m-btn m-btn-p m-btn-ico m-mta m-ttip-lnk" target="_blank">
+            <?php the_ico('arrow_left'); ?>
+            <div class="m-ttip m-ttip__is--tl">
+              <div class="m-ttip-wrp m-body-s"><?= _('Back to Wamp') ?></div>
+            </div>
+          </a>
+
           <div class="l-ftp-inp">
             <div class="m-frm-lbl">
               <label for="vhost">Rechercher un virtual hosts</label>
               <input type="text" name="vhost" placeholder="Rechercher un virtual hosts" class="m-sch-inp" autofocus>
             </div>
           </div>
-          <a href="http://localhost/add_vhost.php?lang=french" class="m-btn m-btn-p m-btn-ico m-mta"><?php the_ico('more'); ?></a>
+
+          <a href="http://localhost/add_vhost.php?lang=french" class="m-btn m-btn-p m-btn-ico m-mta m-ttip-lnk">
+            <?php the_ico('more'); ?>
+            <div class="m-ttip m-ttip__is--tl">
+              <div class="m-ttip-wrp m-body-s"><?= _('Add a new Vhost') ?></div>
+            </div>
+          </a>
+
         </div>
       </form>
     </div>
@@ -69,7 +83,7 @@ include  __DIR__ . '/templates/t__head.php';
 
         <li class="m-acd m-flc">
           <div class="m-acd-ttl">
-            <h2 class="m-lead">Explorer</h2>
+            <h2 class="m-lead"><?= _('Folders') ?></h2>
             <div class="m-acd-ico">
               <?php the_ico('more') ?>
             </div>
@@ -80,7 +94,7 @@ include  __DIR__ . '/templates/t__head.php';
               $projects = get_projects();
               foreach ($projects as $projectData): ?>
                 <a href="<?= $projectData['url'] ?>" target="_blank" class="l-ftp-lnk m-flx m-flg05">
-                  <span class="m-body m-txt-g"><?= $projectData['name'] ?></span>
+                  <span class="m-body m-txt-g">/<?= $projectData['name'] ?></span>
                   <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
                 </a>
               <?php endforeach ?>
@@ -94,7 +108,7 @@ include  __DIR__ . '/templates/t__head.php';
 
         <li class="m-acd m-flc e-on">
           <div class="m-acd-ttl">
-            <h2 class="m-lead">Outils</h2>
+            <h2 class="m-lead"><?= _('Tools') ?></h2>
             <div class="m-acd-ico">
               <?php the_ico('more') ?>
             </div>

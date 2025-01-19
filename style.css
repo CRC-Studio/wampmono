@@ -545,8 +545,8 @@ i, i * {
 }
 
 .m-acd.e-on .m-acd-ico {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
@@ -625,6 +625,62 @@ i, i * {
   ::-webkit-scrollbar-thumb:hover {
     background: hsl(var(--color-grey-500));
   }
+}
+
+.m-ttip-lnk {
+  position: relative;
+}
+
+@media (hover) {
+  .m-ttip-lnk:hover .m-ttip {
+    visibility: initial;
+    top: calc(var(--m) * 4.5);
+    -webkit-box-shadow: 0px 8px 4px 1.6666666667px rgba(var(--color-rgb-grey-500), 0.4183333333), 0px 16px 8px 1.3333333333px rgba(var(--color-rgb-grey-500), 0.3366666667), 0px 24px 12px 1px rgba(var(--color-rgb-grey-500), 0.255), 0px 32px 16px 0.6666666667px rgba(var(--color-rgb-grey-500), 0.1733333333), 0px 40px 20px 0.3333333333px rgba(var(--color-rgb-grey-500), 0.0916666667), 0px 48px 24px 0px rgba(var(--color-rgb-grey-500), 0.01);
+            box-shadow: 0px 8px 4px 1.6666666667px rgba(var(--color-rgb-grey-500), 0.4183333333), 0px 16px 8px 1.3333333333px rgba(var(--color-rgb-grey-500), 0.3366666667), 0px 24px 12px 1px rgba(var(--color-rgb-grey-500), 0.255), 0px 32px 16px 0.6666666667px rgba(var(--color-rgb-grey-500), 0.1733333333), 0px 40px 20px 0.3333333333px rgba(var(--color-rgb-grey-500), 0.0916666667), 0px 48px 24px 0px rgba(var(--color-rgb-grey-500), 0.01);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    opacity: 0;
+  }
+}
+@media screen and (hover) and (min-width: 500px) {
+  .m-ttip-lnk:hover .m-ttip {
+    opacity: 1;
+  }
+}
+
+.m-ttip {
+  top: calc(var(--m) * 2.5);
+  left: 50%;
+  pointer-events: none;
+  visibility: hidden;
+  position: absolute;
+  padding: var(--m) calc(var(--m) * 1.5);
+  border-radius: var(--2m);
+  background: hsl(var(--color-txt));
+  border: 2px solid hsl(var(--color-txt));
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  opacity: 0;
+  z-index: 900;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.m-ttip-wrp {
+  white-space: nowrap;
+  color: hsl(var(--color-back));
+}
+
+.m-ttip:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: calc(var(--m) * -0.5);
+  border-width: calc(var(--m) * 0.5);
+  border-style: solid;
+  border-color: hsl(var(--color-acc)) transparent transparent transparent;
 }
 
 .m-row, .m-rox, .m-roy, .m-rom, .m-col {

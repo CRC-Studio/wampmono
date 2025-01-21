@@ -30,8 +30,8 @@ include  __DIR__ . '/templates/t__head.php';
 
           <div class="l-ftp-inp">
             <div class="m-frm-lbl">
-              <label for="vhost">Rechercher un virtual hosts</label>
-              <input type="text" name="vhost" placeholder="Rechercher un virtual hosts" class="m-sch-inp" autofocus>
+              <label for="vhost"><?= _('Filter virtual hosts') ?></label>
+              <input type="text" name="vhost" placeholder="<?= _('Filter virtual hosts') ?>" class="m-sch-inp" autofocus>
             </div>
           </div>
 

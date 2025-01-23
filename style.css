@@ -671,18 +671,6 @@ i, i * {
   color: hsl(var(--color-back));
 }
 
-.m-ttip:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: calc(var(--m) * -0.5);
-  border-width: calc(var(--m) * 0.5);
-  border-style: solid;
-  border-color: hsl(var(--color-acc)) transparent transparent transparent;
-}
-
 .m-row, .m-rox, .m-roy, .m-rom, .m-col {
   float: left;
   width: 100%;

@@ -21,7 +21,7 @@ function searchHideParents() {
     });
 
     // Affiche ou cache le parent en conséquence
-    $vhosts.style.display = allHidden ? 'none' : 'block';
+    $vhosts.style.display = allHidden ? 'none' : 'flex';
   });
 }
 searchHideParents();

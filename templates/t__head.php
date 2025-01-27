@@ -39,23 +39,19 @@ $meta_img   = $meta_url . "assets/img/cover__rs.png";
     <meta name="googlebot" content="index, follow, all">
     <meta name="googlebot-image" content="index, follow, all">
 
-    <?php
-    // Ou désactivé les robots
-    // <meta name="robots" content="noindex, nofollow"> 
-    ?>
-
     <?php // Favicon 
     ?>
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Wampmono" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
     <?php // Themes colors 
     ?>
-    <meta name="msapplication-TileColor" content="#ffd400">
-    <meta name="theme-color" content="#ffd400">
+    <meta name="msapplication-TileColor" content="#ff4800">
+    <meta name="theme-color" content="#ff4800">
 
     <?php // Facebook Meta Tags
     ?>

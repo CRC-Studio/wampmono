@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1200" height="1200"><svg id="SvgjsSvg1021" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #ff4800;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" x="-7.09" y="-7.09" width="1214.17" height="1214.17" transform="translate(1200 1200) rotate(-180)"></rect>
+  <g>
+    <polygon class="cls-1" points="808.9 800.31 909.22 800.31 808.88 400 708.55 400 808.9 800.31"></polygon>
+    <polygon class="cls-1" points="708.55 800.31 608.23 800.31 708.57 400 808.9 400 708.55 800.31"></polygon>
+    <polygon class="cls-1" points="608.25 800.31 708.57 800.31 608.23 400 507.91 400 608.25 800.31"></polygon>
+    <polygon class="cls-1" points="507.91 800.31 407.58 800.31 507.93 400 608.25 400 507.91 800.31"></polygon>
+    <polygon class="cls-1" points="407.6 800.31 507.93 800.31 407.58 400 307.26 400 407.6 800.31"></polygon>
+  </g>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>

@@ -2,8 +2,7 @@
 
 WampMono is a lightweight manager designed to enhance your WampServer experience. Created by **CRC Studio**, a design and development studio, WampMono simplifies local development by offering an easy-to-use interface and seamless management of virtual hosts.
 
-![001](https://github.com/user-attachments/assets/21406d6a-3fcd-4213-b5e3-344730d72fe2)
-![002](https://github.com/user-attachments/assets/09ebd364-8d2d-4418-b1a2-80848e2a90ed)
+![Wampmono](https://github.com/user-attachments/assets/2e82ac8b-ad9c-407a-bfd9-eea908a5ffab)
 
 
 ## Installation

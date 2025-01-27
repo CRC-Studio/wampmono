@@ -21,7 +21,7 @@ include  __DIR__ . '/templates/t__head.php';
       <form class="m-rom m-frm m-flx">
         <div class="m-row m-frm-grp m-flx m-flxc m-flg1">
 
-          <a href="http://localhost/?monowamp=no" class="m-btn m-btn-p m-btn-ico m-mta m-ttip-lnk" target="_blank">
+          <a href="http://localhost/?wampmono=no" class="m-btn m-btn-p m-btn-ico m-mta m-ttip-lnk" target="_blank">
             <?php the_ico('arrow_left'); ?>
             <div class="m-ttip m-ttip__is--tl">
               <div class="m-ttip-wrp m-body-s"><?= _('Back to Wamp') ?></div>

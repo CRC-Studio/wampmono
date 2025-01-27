@@ -26,9 +26,9 @@ WampMono is a lightweight manager designed to enhance your [WampServer](https://
    Update the `index.php` file in your WampServer root directory (typically `C:/wamp64/www/`) with the following lines at the top:
 
    ```php
-   // Redirects to MonoWamp™, a light Manager for WampServer
+   // Redirects to WampMono™, a light Manager for WampServer
    // by CRC Studio: A design & development studio
-   if (!isset($_GET['monowamp']) || $_GET['monowamp'] !== 'no') {
+   if (!isset($_GET['wampmono']) || $_GET['wampmono'] !== 'no') {
        header("Location: http://wampmono.lcl/");
        exit;
    }
@@ -42,7 +42,7 @@ WampMono is a lightweight manager designed to enhance your [WampServer](https://
 ## Usage
 
 - Access the WampMono Manager by visiting [http://wampmono.lcl/](http://wampmono.lcl/) in your browser.
-- To view the standard WampServer homepage, add `?monowamp=no` to the URL (e.g., `http://localhost/?monowamp=no`).
+- To view the standard WampServer homepage, add `?wampmono=no` to the URL (e.g., `http://localhost/?wampmono=no`).
 
 ---
 

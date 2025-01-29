@@ -43,6 +43,7 @@ html {
   --color-grey-0: 0deg, 0%, 100%;
   --color-grey-1000: 0deg, 0%, 0%;
   --color-back: var(--color-grey-0);
+  --color-lback: var(--color-grey-200);
   --color-txt: var(--color-grey-1000);
   --color-acc: var(--color-orange-500);
 }
@@ -50,6 +51,7 @@ html {
 @media (prefers-color-scheme: dark) {
   html {
     --color-back: var(--color-grey-1000);
+    --color-lback: var(--color-grey-800);
     --color-txt: var(--color-grey-500);
     --color-acc: var(--color-orange-800);
   }
@@ -1084,12 +1086,12 @@ i, i * {
   height: calc(var(--m) * 5);
   padding: calc(var(--m) * 1.5) 0;
   margin-top: var(--3m);
-  border: 1px solid hsla(var(--color-grey-0), 0);
+  border: 1px solid hsl(var(--color-back));
   border-bottom: 1px solid hsl(var(--color-grey-500));
   resize: none;
   font-size: calc(var(--m) * 1.5);
-  color: hsl(var(--color-grey-1000));
-  background: hsla(var(--color-grey-0), 0);
+  color: hsl(var(--color-txt));
+  background: hsl(var(--color-back));
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -1097,10 +1099,10 @@ i, i * {
 .m-frm input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=range]):focus,
 .m-frm textarea:focus {
   padding: calc(var(--m) * 1.5) var(--2m);
-  color: hsl(var(--color-grey-1000));
+  color: hsl(var(--color-txt));
   border-radius: var(--3m);
   border: 1px solid hsl(var(--color-grey-500));
-  background: hsl(var(--color-grey-200));
+  background: hsl(var(--color-lback));
 }
 .m-frm textarea {
   height: auto;
@@ -1113,7 +1115,7 @@ i, i * {
 .m-frm label {
   display: block;
   width: 100%;
-  color: hsl(var(--color-grey-400));
+  color: hsl(var(--color-grey-500));
   font-size: var(--m);
   font-family: "Graphik", Arial, Helvetica, sans-serif;
 }
@@ -1147,10 +1149,10 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  color: hsl(var(--color-grey-1000)) !important;
+  color: hsl(var(--color-txt)) !important;
   padding: calc(var(--m) * 1.5) 0 !important;
-  -webkit-text-fill-color: hsl(var(--color-grey-1000)) !important;
-  -webkit-box-shadow: 0 0 0 1000px hsla(var(--color-grey-0), 0) inset !important;
+  -webkit-text-fill-color: hsl(var(--color-txt)) !important;
+  -webkit-box-shadow: 0 0 0 1000px hsl(var(--color-back)) inset !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
 }

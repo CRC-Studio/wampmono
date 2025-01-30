@@ -3,12 +3,12 @@
 // Permet de récupérer les VirtualHost de WampServer
 //
 // Exemple de PHP :
-//   $vhosts = get_virtualhosts();
+//   $vhosts = get_vhosts();
 //   foreach ($vhosts as $vhost) { 
 //     echo "<a href='{$vhost['url']}' class='m-body'>{$vhost['name']}</a><br>";
 //   }
 
-function get_virtualhosts()
+function get_vhosts()
 {
 
   // Chemin vers le fichier de configuration des VirtualHost
@@ -26,6 +26,7 @@ function get_virtualhosts()
   // Initialisation
   $vhosts = [];
   $currentHost = null;
+  $documentRoot = null;
 
   foreach ($lines as $line) {
     $line = trim($line);
@@ -35,14 +36,23 @@ function get_virtualhosts()
       $currentHost = substr($line, strlen('ServerName '));
     }
 
+    // Récupération du DocumentRoot
+    if (stripos($line, 'DocumentRoot') === 0) {
+      $documentRoot = trim(substr($line, strlen('DocumentRoot')));
+      // Suppression des guillemets éventuels
+      $documentRoot = trim($documentRoot, '"');
+    }
+
     // Ajout d'une URL
     if ($currentHost) {
       $vhosts[] = [
-        'name' => $currentHost,
-        'url' => "http://$currentHost/",
+        'name'   => $currentHost,
+        'folder' => $documentRoot,
+        'url'    => "http://$currentHost/",
       ];
       // Réinitialise pour éviter les doublons
       $currentHost = null;
+      $documentRoot = null;
     }
   }
 

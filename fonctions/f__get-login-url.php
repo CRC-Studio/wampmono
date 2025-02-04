@@ -28,7 +28,7 @@ function get_vhost_login_url($vhost)
     }
     // Formate le résultat
     if ($loginUrl != '') {
-        $loginlink = '<a href=' . $loginUrl . ' target="_blank">' . get_ico('logout') . 'a</a>';
+        $loginlink = '<a href=' . $loginUrl . ' target="_blank" class="m-btn m-btn-p m-btn-ico e-hde">' . get_ico('login') . '</a>';
 
         // Retourne le resultat au template
         return $loginlink;

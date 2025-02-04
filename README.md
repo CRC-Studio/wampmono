@@ -4,6 +4,22 @@ WampMono is a lightweight manager designed to enhance your [WampServer](https://
 
 ![Wampmono](https://github.com/user-attachments/assets/2e82ac8b-ad9c-407a-bfd9-eea908a5ffab)
 
+# Table of Contents  
+1. [Introduction](#wampmono-a-light-manager-for-wampserver)  
+2. [Features](#features)  
+3. [Installation](#installation)  
+4. [Usage](#usage)  
+5. [About CRC Studio](#about-crc-studio)  
+
+## Features
+
+WampMono provides several useful features to enhance your local development environment:
+
+- Virtual Host Management – View and manage all your virtual hosts effortlessly.
+- Dark Theme / Light Theme – Customize the interface to your preference.
+- Custom Tool Section – Easily manage and access your development tools.
+- 🆕 Link to Login – Quickly access your CMS or admin login pages.
+
 
 ## Installation
 
@@ -37,14 +53,11 @@ WampMono is a lightweight manager designed to enhance your [WampServer](https://
 3. **Restart Apache**:
    Restart your WampServer's Apache service to apply the changes.
 
----
 
 ## Usage
 
 - Access the WampMono Manager by visiting [http://wampmono.lcl/](http://wampmono.lcl/) in your browser.
 - To view the standard WampServer homepage, add `?wampmono=no` to the URL (e.g., `http://localhost/?wampmono=no`).
-
----
 
 ## About CRC Studio
 

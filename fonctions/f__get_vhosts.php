@@ -10,68 +10,56 @@
 
 function get_vhosts()
 {
-
   // Chemin vers le fichier de configuration des VirtualHost
   $apache_version = get_last_apache_version();
   $vhostFile = __DIR__ . '/../../../bin/apache/' . $apache_version . '/conf/extra/httpd-vhosts.conf';
 
-  // Vérifie si le fichier existe
   if (!file_exists($vhostFile)) {
     return [];
   }
 
-  // Lit le fichier ligne par ligne
-  $lines = file($vhostFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+  // Lire tout le contenu du fichier
+  $config = file_get_contents($vhostFile);
 
-  // Initialisation
+  // Expression régulière pour capturer chaque VirtualHost
+  preg_match_all('/<VirtualHost[^>]*>(.*?)<\/VirtualHost>/is', $config, $matches, PREG_SET_ORDER);
+
   $vhosts = [];
-  $currentHost = null;
-  $documentRoot = null;
 
-  foreach ($lines as $line) {
-    $line = trim($line);
+  foreach ($matches as $match) {
+    $block = $match[1];
 
     // Récupération du ServerName
-    if (stripos($line, 'ServerName') === 0) {
-      $currentHost = substr($line, strlen('ServerName '));
+    if (preg_match('/ServerName\s+(.+)/i', $block, $serverNameMatch)) {
+      $serverName = trim($serverNameMatch[1]);
+    } else {
+      continue; // Si pas de ServerName, on ignore ce bloc
     }
 
     // Récupération du DocumentRoot
-    if (stripos($line, 'DocumentRoot') === 0) {
-      $documentRoot = trim(substr($line, strlen('DocumentRoot')));
-      // Suppression des guillemets éventuels
-      $documentRoot = trim($documentRoot, '"');
-    }
-
-    // Ajout d'une URL
-    if ($currentHost) {
-      $vhosts[] = [
-        'name'   => $currentHost,
-        'folder' => $documentRoot,
-        'url'    => "http://$currentHost/",
-      ];
-      // Réinitialise pour éviter les doublons
-      $currentHost = null;
+    if (preg_match('/DocumentRoot\s+"?([^"\r\n]+)"?/i', $block, $docRootMatch)) {
+      $documentRoot = trim($docRootMatch[1]);
+    } else {
       $documentRoot = null;
     }
+
+    // Ajouter l'entrée au tableau des vhosts
+    $vhosts[] = [
+      'name'   => $serverName,
+      'folder' => $documentRoot,
+      'url'    => "http://$serverName/",
+    ];
   }
 
   // Tri alphabétique par le champ 'name'
-  usort($vhosts, function ($a, $b) {
-    return strcasecmp($a['name'], $b['name']);
-  });
+  usort($vhosts, fn($a, $b) => strcasecmp($a['name'], $b['name']));
 
   // Grouper par première lettre
   $groupedVhosts = [];
   foreach ($vhosts as $vhost) {
-    // Première lettre en majuscule
     $firstLetter = strtoupper($vhost['name'][0]);
-    if (!isset($groupedVhosts[$firstLetter])) {
-      $groupedVhosts[$firstLetter] = [];
-    }
     $groupedVhosts[$firstLetter][] = $vhost;
   }
 
-  // Retourne un tableau associatif des VirtualHost
   return $groupedVhosts;
 }

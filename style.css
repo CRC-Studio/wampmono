@@ -1269,3 +1269,15 @@ select:-webkit-autofill:focus {
   fill: hsl(var(--color-txt));
   width: calc(var(--m) * 1.25);
 }
+
+.l-ftp-vhost .m-btn-ico {
+  width: calc(var(--m) * 2.5);
+  height: calc(var(--m) * 2.5);
+}
+@media (hover) {
+  .l-ftp-vhost:hover .m-btn-ico {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}

@@ -43,7 +43,7 @@ export const searchAndHide = (string, $els) => {
 
     // Compare le contenu de l'élèment et la chaine de caractère
     if (content.indexOf(string) !== -1) {
-      $el.style.display = 'block';
+      $el.style.display = 'flex';
     } else {
       $el.style.display = 'none';
     }

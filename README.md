@@ -10,7 +10,7 @@ WampMono is a lightweight manager designed to enhance your [WampServer](https://
 3. [Installation](#installation)
 4. [Usage](#usage)
 5. [About ToolToy](#about-tooltoy)
-6. [About CRC Studio](#about-crc-studio)
+6. [About crc.studio](#about-crcstudio)
 
 ## Features
 
@@ -62,6 +62,6 @@ WampMono provides several useful features to enhance your local development envi
 
 WampMono is one of [crc.studio](https://crc.studio/)’s ToolToys, small web apps designed to make design and development faster, easier, and more joyful.
 
-## About CRC Studio
+## About crc.studio
 
 [crc.studio](https://crc.studio/) is a design & development studio founded in 2019 by Yoko Homareda and Rémi B. Loizeau. Based in France, we collaborate with artists and designers worldwide to design timeless visual identities, websites, posters, books, packaging, and merchandise. Our work explores the intersections of print and digital, tradition and innovation, guided by a strong sense of composition, materiality, and code.

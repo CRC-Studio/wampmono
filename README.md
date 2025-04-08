@@ -5,11 +5,12 @@ WampMono is a lightweight manager designed to enhance your [WampServer](https://
 ![Wampmono](https://github.com/user-attachments/assets/2e82ac8b-ad9c-407a-bfd9-eea908a5ffab)
 
 # Table of Contents  
-1. [Introduction](#wampmono-a-light-manager-for-wampserver)  
-2. [Features](#features)  
-3. [Installation](#installation)  
-4. [Usage](#usage)  
-5. [About CRC Studio](#about-crc-studio)  
+1. [Introduction](#wampmono-a-light-manager-for-wampserver)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [About ToolToy](#about-tooltoy)
+6. [About CRC Studio](#about-crc-studio)
 
 ## Features
 
@@ -19,7 +20,6 @@ WampMono provides several useful features to enhance your local development envi
 - Dark Theme / Light Theme – Customize the interface to your preference.
 - Custom Tool Section – Easily manage and access your development tools.
 - 🆕 Link to Login – Quickly access your CMS or admin login pages.
-
 
 ## Installation
 
@@ -53,13 +53,15 @@ WampMono provides several useful features to enhance your local development envi
 3. **Restart Apache**:
    Restart your WampServer's Apache service to apply the changes.
 
-
 ## Usage
 
 - Access the WampMono Manager by visiting [http://wampmono.lcl/](http://wampmono.lcl/) in your browser.
 - To view the standard WampServer homepage, add `?wampmono=no` to the URL (e.g., `http://localhost/?wampmono=no`).
 
+## About ToolToys
+
+WampMono is one of [crc.studio](https://crc.studio/)’s ToolToys, small web apps designed to make design and development faster, easier, and more joyful.
+
 ## About CRC Studio
 
-[crc.studio](https://crc.studio/) is a design & development studio founded in 2019 by Yoko Homareda and Rémi B. Loizeau. Based in France, we travel all over the world to discover beauty and good ideas. For each project, such as visual identities, websites, posters, books, packaging or merchandise, we enjoy working as a team with other artists and designers.
-
+[crc.studio](https://crc.studio/) is a design & development studio founded in 2019 by Yoko Homareda and Rémi B. Loizeau. Based in France, we collaborate with artists and designers worldwide to design timeless visual identities, websites, posters, books, packaging, and merchandise. Our work explores the intersections of print and digital, tradition and innovation, guided by a strong sense of composition, materiality, and code.

@@ -149,7 +149,7 @@ include  __DIR__ . '/templates/t__head.php';
 
     <div class="m-rom">
       <div class="m-flc">
-        <span class="m-body-s"><i>MonoWamp™</i>, a light Manager for <a href="https://wampserver.aviatechno.net/" target="_blank">Wampserver</a></span>
+        <span class="m-body-s"><i>Wampmono™</i>, a light Manager for <a href="https://wampserver.aviatechno.net/" target="_blank">Wampserver</a></span>
         <span class="m-body-s">by <a href="https://crc.studio/" title="Meet CRC Studio ● Our design &amp; developement studio" target='_blank'>CRC Studio:</a></span>
         <span class="m-body-s">A design & developement studio</span>
         <span class="m-body-s">グラフィックデザインとプログラミング</span>

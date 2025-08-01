@@ -8,7 +8,7 @@
  * Ajoute du Header
  */
 
-include  __DIR__ . '/templates/t__head.php';
+include  __DIR__ . '/parts/p__head.php';
 ?>
 
 <main class="main l-ftp" role="main">
@@ -83,9 +83,9 @@ include  __DIR__ . '/templates/t__head.php';
         ?>
 
         <li class="m-acd m-flc">
-          <div class="m-acd-ttl">
+          <div class="m-acd-ttl  m-row m-flx m-flyc">
             <h2 class="m-lead"><?= _('Folders') ?></h2>
-            <div class="m-acd-ico">
+            <div class="m-acd-ico m-flx m-flyc m-flxc m-mla">
               <?php the_ico('arrow_right') ?>
             </div>
           </div>
@@ -107,25 +107,24 @@ include  __DIR__ . '/templates/t__head.php';
         <?php // Ajout des Outils
         ?>
 
-        <li class="m-acd m-flc e-on">
-          <div class="m-acd-ttl">
+        <li class="l-ftp-lnks m-acd m-flc e-on">
+          <div class="m-acd-ttl  m-row m-flx m-flyc">
             <h2 class="m-lead"><?= _('Tools') ?></h2>
-            <div class="m-acd-ico">
+            <div class="m-acd-ico m-flx m-flyc m-flxc m-mla">
               <?php the_ico('arrow_right') ?>
+            </div>
+            <div id="l-ftp-mdy" class="m-flx m-flyc m-flxc m-mla m-vlt-btn e-hde" data-vltid="m-vlt-01">
+              <?php the_ico('edit'); ?>
             </div>
           </div>
           <div class="m-acd-wrp">
-            <div class="l-ftp-lnks m-flc m-flg05">
+            <div class="m-flc m-flg05">
               <?php foreach (get_links() as $link): ?>
                 <a href="<?= get_link_url($link) ?>" target="_blank" class="l-ftp-lnk m-flx m-flg05">
                   <span class="m-body m-txt-g"><?= get_link_title($link) ?></span>
                   <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
-                  <span class="l-ftp-ico m-mta m-mla e-off"><?php the_ico('more_vert'); ?></span>
                 </a>
               <?php endforeach; ?>
-              <a href="" class="m-btn m-btn-p m-btn-ico m-mta">
-                <?php the_ico('more'); ?>
-              </a>
             </div>
           </div>
         </li>
@@ -150,7 +149,15 @@ include  __DIR__ . '/templates/t__head.php';
 
   <?php
   /**
+   * Ajoute le volet de modification des liens
+   */
+  include  __DIR__ . '/parts/p__volet-links.php';
+  ?>
+
+
+  <?php
+  /**
    * Ajoute du Footer
    */
-  include  __DIR__ . '/templates/t__footer.php';
+  include  __DIR__ . '/parts/p__footer.php';
   ?>

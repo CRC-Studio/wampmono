@@ -6,5 +6,5 @@
 ?>
 
 <header class="l-hdr m-flc">
-    <h1 class="m-title">MonoWamp</h1>
+    <h1 class="m-title">WampMono™</h1>
 </header>

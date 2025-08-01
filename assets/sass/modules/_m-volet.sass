@@ -41,7 +41,7 @@ $mx-volet: m(2)
 
 .m-vlt
   position: fixed
-  width: 83.33vw
+  width: 80vw
   top: 0
   bottom: 0
   padding: $row__mx
@@ -49,22 +49,8 @@ $mx-volet: m(2)
   @include box-shadow(30, 'grey', 1000)
   transition: $fast cubic-bezier(0.36, 0.79, 0.7, 0.93)
   z-index: $zindex__volet
-  @include respond('m')
-    width: 75vw
-  @include respond('l')
-    width: 66vw
   @include respond('xl')
     width: 50vw
-  @include respond('xxl')
-    width: 33vw
-
-// Stylise les volets situé à gauche de l'écran
-
-.m-vlt-l
-  border-right: 1px solid color('txt')
-  left: -100vw
-  &.e-on
-    left: 0
 
 // Stylise les volets sité à droite de l'écran
 

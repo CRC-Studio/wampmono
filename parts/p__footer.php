@@ -11,6 +11,9 @@
 </main>
 
 <footer class="l-fot">
+  <?php // Module Overlay 
+  ?>
+  <div class="m-ovl e-fll e-off"></div>
 </footer>
 
 

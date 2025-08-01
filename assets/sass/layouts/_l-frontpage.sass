@@ -13,7 +13,7 @@
 .l-ftp-top
   position: fixed
   background: color('back')
-  z-index: $zindex__top
+  z-index: $zindex__header
 
 // Stylise la barre à droite
  
@@ -26,6 +26,21 @@
   width: 33%
 
 // Stylise les effets hover des liens
+
+.l-ftp-lnks.e-on
+  @include hover
+    #l-ftp-mdy
+      display: flex
+    .m-acd-ico
+      display: none
+
+#l-ftp-mdy
+  width: m(1)
+  svg
+    fill: color('grey')
+  @include hover
+    svg
+      fill: color('txt')
 
 .l-ftp-lnk
   @include hover

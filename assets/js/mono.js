@@ -30,9 +30,9 @@ import * as eOneByOne from './effets/_e-one-by-one.js';
 //import * as lHeader from './layouts/_l-header.js';
 
 // Import les modules
-//import * as mOverlay from './modules/_m-overlay.js';
+import * as mOverlay from './modules/_m-overlay.js';
 //import * as mSwiper from './modules/_m-swiper.js';
-//import * as mVolet from './modules/_m-volet.js';
+import * as mVolet from './modules/_m-volet.js';
 //import * as mOnglet from './modules/_m-onglet.js';
 import * as mSearch from './modules/_m-search.js';
 //import * as mCover from './modules/_m-cover.js';

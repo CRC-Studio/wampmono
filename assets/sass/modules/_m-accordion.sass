@@ -9,9 +9,9 @@
 /// Exemple de HTML :
 ///   <ul class="m-acds">
 ///     <li class="m-acd m-flc">
-///       <div class="m-acd-ttl">
+///       <div class="m-acd-ttl m-row m-flx m-flyc">
 ///         <h3>Ici, le titre de l'accordion</h3>
-///         <div class="m-acd-ico">
+///         <div class="m-acd-ico m-flx m-fly cm-flxc m-mla">
 ///           <?php the_ico('more') ?>
 ///         </div>
 ///       </div>
@@ -25,38 +25,32 @@
 
 .m-acd
   &.e-on
-    .m-acd-ico
+    .m-acd-ico svg
       transform: rotate(45deg)
       transition: transform $fast
 
     .m-acd-wrp
       opacity: 1
       max-height: 1000vh
-      margin: m() 0
+      margin: m() 0 m(2) 0
       transition: all $norm
 
 // Stylise le title
 
 .m-acd-ttl
-  display: flex
-  justify-content: space-between
-  float: left
-  width: 100%
   cursor: pointer
-
+  padding: m() 0
   @include hover
-    .m-acd-ico svg
+    svg
       fill: color('txt')
 
 // Stylise l'icone
 
 .m-acd-ico
-  display: flex
-  justify-content: center
   width: m(2)
-  transform: rotate(-360deg)
-  transition: transform $fast
   svg
+    transform: rotate(-365deg)
+    transition: transform $fast
     fill: color('grey', 500)
     width: m()
 

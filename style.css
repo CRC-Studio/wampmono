@@ -524,7 +524,7 @@ p.m-j + p.m-j {
 }
 
 .m-txt-c {
-  color: hsl(var(--color-acc));
+  color: hsl(var(--color-grey-300));
 }
 
 .m-txt-g {
@@ -545,7 +545,7 @@ i, i * {
   text-transform: uppercase;
 }
 
-.m-acd.e-on .m-acd-ico {
+.m-acd.e-on .m-acd-ico svg {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transition: -webkit-transform 0.5s;
@@ -556,44 +556,31 @@ i, i * {
 .m-acd.e-on .m-acd-wrp {
   opacity: 1;
   max-height: 1000vh;
-  margin: var(--m) 0;
+  margin: var(--m) 0 var(--2m) 0;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 
 .m-acd-ttl {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  float: left;
-  width: 100%;
   cursor: pointer;
+  padding: var(--m) 0;
 }
 @media (hover) {
-  .m-acd-ttl:hover .m-acd-ico svg {
+  .m-acd-ttl:hover svg {
     fill: hsl(var(--color-txt));
   }
 }
 
 .m-acd-ico {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: var(--2m);
-  -webkit-transform: rotate(-360deg);
-          transform: rotate(-360deg);
+}
+.m-acd-ico svg {
+  -webkit-transform: rotate(-365deg);
+          transform: rotate(-365deg);
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
-}
-.m-acd-ico svg {
   fill: hsl(var(--color-grey-500));
   width: var(--m);
 }
@@ -626,6 +613,18 @@ i, i * {
   ::-webkit-scrollbar-thumb:hover {
     background: hsl(var(--color-grey-500));
   }
+}
+
+.m-ovl {
+  position: fixed !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 700;
+  background: hsl(var(--color-txt));
+}
+.m-ovl.e-on {
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .m-ttip-lnk {
@@ -670,6 +669,33 @@ i, i * {
 .m-ttip-wrp {
   white-space: nowrap;
   color: hsl(var(--color-back));
+}
+
+.m-vlt {
+  position: fixed;
+  width: 80vw;
+  top: 0;
+  bottom: 0;
+  padding: var(--mx);
+  background: hsl(var(--color-back));
+  -webkit-box-shadow: 0px 60px 30px 1.6666666667px rgba(var(--color-rgb-grey-1000), 0.4183333333), 0px 120px 60px 1.3333333333px rgba(var(--color-rgb-grey-1000), 0.3366666667), 0px 180px 90px 1px rgba(var(--color-rgb-grey-1000), 0.255), 0px 240px 120px 0.6666666667px rgba(var(--color-rgb-grey-1000), 0.1733333333), 0px 300px 150px 0.3333333333px rgba(var(--color-rgb-grey-1000), 0.0916666667), 0px 360px 180px 0px rgba(var(--color-rgb-grey-1000), 0.01);
+          box-shadow: 0px 60px 30px 1.6666666667px rgba(var(--color-rgb-grey-1000), 0.4183333333), 0px 120px 60px 1.3333333333px rgba(var(--color-rgb-grey-1000), 0.3366666667), 0px 180px 90px 1px rgba(var(--color-rgb-grey-1000), 0.255), 0px 240px 120px 0.6666666667px rgba(var(--color-rgb-grey-1000), 0.1733333333), 0px 300px 150px 0.3333333333px rgba(var(--color-rgb-grey-1000), 0.0916666667), 0px 360px 180px 0px rgba(var(--color-rgb-grey-1000), 0.01);
+  -webkit-transition: 0.5s cubic-bezier(0.36, 0.79, 0.7, 0.93);
+  transition: 0.5s cubic-bezier(0.36, 0.79, 0.7, 0.93);
+  z-index: 800;
+}
+@media screen and (min-width: 1280px) {
+  .m-vlt {
+    width: 50vw;
+  }
+}
+
+.m-vlt-r {
+  border-left: 1px solid hsl(var(--color-txt));
+  right: -100vw;
+}
+.m-vlt-r.e-on {
+  right: 0;
 }
 
 .m-row, .m-rox, .m-roy, .m-rom, .m-col {
@@ -1216,11 +1242,18 @@ select:-webkit-autofill:focus {
 
 .e-off {
   opacity: 0;
-  pointer-events: none;
 }
 
 .e-hde {
   display: none;
+}
+
+.e-fll {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .e-obo > * {
@@ -1237,7 +1270,7 @@ select:-webkit-autofill:focus {
 .l-ftp-top {
   position: fixed;
   background: hsl(var(--color-back));
-  z-index: 1300;
+  z-index: 600;
 }
 
 .l-ftp-wrp {
@@ -1246,6 +1279,29 @@ select:-webkit-autofill:focus {
 
 .l-ftp-asd {
   width: 33%;
+}
+
+@media (hover) {
+  .l-ftp-lnks.e-on:hover #l-ftp-mdy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .l-ftp-lnks.e-on:hover .m-acd-ico {
+    display: none;
+  }
+}
+
+#l-ftp-mdy {
+  width: var(--m);
+}
+#l-ftp-mdy svg {
+  fill: hsl(var(--color-grey-500));
+}
+@media (hover) {
+  #l-ftp-mdy:hover svg {
+    fill: hsl(var(--color-txt));
+  }
 }
 
 @media (hover) {

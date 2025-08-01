@@ -86,7 +86,7 @@ include  __DIR__ . '/templates/t__head.php';
           <div class="m-acd-ttl">
             <h2 class="m-lead"><?= _('Folders') ?></h2>
             <div class="m-acd-ico">
-              <?php the_ico('more') ?>
+              <?php the_ico('arrow_right') ?>
             </div>
           </div>
           <div class="m-acd-wrp">
@@ -111,30 +111,20 @@ include  __DIR__ . '/templates/t__head.php';
           <div class="m-acd-ttl">
             <h2 class="m-lead"><?= _('Tools') ?></h2>
             <div class="m-acd-ico">
-              <?php the_ico('more') ?>
+              <?php the_ico('arrow_right') ?>
             </div>
           </div>
           <div class="m-acd-wrp">
             <div class="l-ftp-lnks m-flc m-flg05">
-              <a href="https://app.keeweb.info/" target='_blank' class="l-ftp-lnk m-flx m-flg05">
-                <span class="m-body m-txt-g">KeeWeb</span>
-                <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
-              </a>
-              <a href="http://localhost/nadine/" target='_blank' class="l-ftp-lnk m-flx m-flg05">
-                <span class="m-body m-txt-g">Nadine</span>
-                <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
-              </a>
-              <a href="http://localhost/phpmyadmin/" target='_blank' class="l-ftp-lnk m-flx m-flg05">
-                <span class="m-body m-txt-g">phpMyAdmin</span>
-                <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
-              </a>
-              <a href="https://road.crc.studio/" target='_blank' class="l-ftp-lnk m-flx m-flg05">
-                <span class="m-body m-txt-g">Roadmapper</span>
-                <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
-              </a>
-              <a href="https://wampserver.aviatechno.net/" target='_blank' class="l-ftp-lnk m-flx m-flg05">
-                <span class="m-body m-txt-g">WampUpdate</span>
-                <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
+              <?php foreach (get_links() as $link): ?>
+                <a href="<?= get_link_url($link) ?>" target="_blank" class="l-ftp-lnk m-flx m-flg05">
+                  <span class="m-body m-txt-g"><?= get_link_title($link) ?></span>
+                  <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
+                  <span class="l-ftp-ico m-mta m-mla e-off"><?php the_ico('more_vert'); ?></span>
+                </a>
+              <?php endforeach; ?>
+              <a href="" class="m-btn m-btn-p m-btn-ico m-mta">
+                <?php the_ico('more'); ?>
               </a>
             </div>
           </div>
@@ -150,9 +140,10 @@ include  __DIR__ . '/templates/t__head.php';
     <div class="m-rom">
       <div class="m-flc">
         <span class="m-body-s"><i>Wampmono™</i>, a light Manager for <a href="https://wampserver.aviatechno.net/" target="_blank">Wampserver</a></span>
-        <span class="m-body-s">by <a href="https://crc.studio/" title="Meet CRC Studio ● Our design &amp; developement studio" target='_blank'>CRC Studio:</a></span>
+        <span class="m-body-s">by <a href="https://crc.studio/" title="Meet CRC Studio ● Our design &amp; developement studio" target='_blank'>crc.studio:</a></span>
         <span class="m-body-s">A design & developement studio</span>
         <span class="m-body-s">グラフィックデザインとプログラミング</span>
+        <span class="m-body-s">Contact us: <a href="mailto:hello@crc.studio" target="_blank" title="Contact us at hello@crc.studio">hello@crc.studio</a></span>
       </div>
     </div>
   </section>

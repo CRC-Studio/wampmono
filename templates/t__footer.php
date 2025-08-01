@@ -10,7 +10,7 @@
 ?>
 </main>
 
-<footer class="l-foot">
+<footer class="l-fot">
 </footer>
 
 

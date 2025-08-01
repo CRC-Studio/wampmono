@@ -1,0 +1,24 @@
+{
+  "LINKS": [
+    {
+      "TITLE": "KeeWeb",
+      "URL": "https://app.keeweb.info/"
+    },
+    {
+      "TITLE": "Nadine",
+      "URL": "http://localhost/nadine/"
+    },
+    {
+      "TITLE": "phpMyAdmin",
+      "URL": "http://localhost/phpmyadmin/"
+    },
+    {
+      "TITLE": "Roadmapper",
+      "URL": "https://road.crc.studio/"
+    },
+    {
+      "TITLE": "WampUpdate",
+      "URL": "https://wampserver.aviatechno.net/"
+    }
+  ]
+}

@@ -1019,7 +1019,7 @@ i, i * {
           justify-content: center;
   padding: 0 var(--2m);
   height: calc(var(--m) * 4);
-  font-size: var(--m);
+  font-size: calc(var(--m) * 1.25);
   font-weight: 500;
   border-radius: var(--br);
   cursor: pointer;
@@ -1043,31 +1043,31 @@ i, i * {
 .m-btn-p {
   background: hsl(var(--color-txt));
   color: hsl(var(--color-back));
-  border: 2px solid hsl(var(--color-txt));
+  border: 1px solid hsl(var(--color-txt));
 }
 
 .m-btn-o {
   background: none;
   color: hsl(var(--color-grey-1000));
-  border: 2px solid hsl(var(--color-grey-1000));
+  border: 1px solid hsl(var(--color-grey-1000));
 }
 
 .m-btn-l {
   color: hsl(var(--color-txt));
   background: hsla(var(--color-grey-1000), 0);
-  border: 2px solid hsla(var(--color-grey-1000), 0);
+  border: 1px solid hsla(var(--color-grey-1000), 0);
 }
 @media (hover) {
   .m-btn-l:hover {
     color: hsl(var(--color-back));
     background: hsl(var(--color-txt));
-    border: 2px solid hsl(var(--color-txt));
+    border: 1px solid hsl(var(--color-txt));
   }
 }
 .m-btn-l.e-on {
   color: hsl(var(--color-back));
   background: hsl(var(--color-txt));
-  border: 2px solid hsl(var(--color-txt));
+  border: 1px solid hsl(var(--color-txt));
 }
 
 .m-btn-ico {
@@ -1205,6 +1205,21 @@ select:-webkit-autofill:focus {
 
 ::placeholder {
   color: hsl(var(--color-grey-500));
+}
+
+.m-frm-err {
+  border-bottom: 1px solid hsl(var(--color-acc)) !important;
+}
+.m-frm-err:focus {
+  border: 1px solid hsl(var(--color-acc)) !important;
+}
+
+.m-frm-msg {
+  opacity: 0;
+  position: absolute;
+  color: hsl(var(--color-acc));
+  top: calc(var(--m) * 4);
+  left: 0;
 }
 
 .m-frm-lbl {

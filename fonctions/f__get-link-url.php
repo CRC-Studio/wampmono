@@ -11,5 +11,5 @@
 
 function get_link_url($link)
 {
-  return $link['URL'] ?? '#';
+  return $link['URL'] ?? '';
 }

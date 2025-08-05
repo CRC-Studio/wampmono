@@ -114,7 +114,7 @@ include  __DIR__ . '/parts/p__head.php';
               <?php the_ico('arrow_right') ?>
             </div>
             <div id="l-ftp-mdy" class="m-flx m-flyc m-flxc m-mla m-vlt-btn e-hde" data-vltid="m-vlt-01">
-              <?php the_ico('edit'); ?>
+              <?php the_ico('settings'); ?>
             </div>
           </div>
           <div class="m-acd-wrp">

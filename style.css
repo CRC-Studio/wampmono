@@ -295,10 +295,6 @@ main {
           flex: 1 0 auto;
 }
 
-svg {
-  fill: hsl(var(--color-acc));
-}
-
 html {
   font-family: "Graphik", Arial, Helvetica, sans-serif;
   color: hsl(var(--color-txt));
@@ -621,6 +617,7 @@ i, i * {
   transition: 0.5s;
   z-index: 700;
   background: hsl(var(--color-txt));
+  pointer-events: none;
 }
 .m-ovl.e-on {
   pointer-events: auto;
@@ -683,6 +680,7 @@ i, i * {
   -webkit-transition: 0.5s cubic-bezier(0.36, 0.79, 0.7, 0.93);
   transition: 0.5s cubic-bezier(0.36, 0.79, 0.7, 0.93);
   z-index: 800;
+  overflow-y: auto;
 }
 @media screen and (min-width: 1280px) {
   .m-vlt {
@@ -1261,6 +1259,10 @@ select:-webkit-autofill:focus {
 
 .e-hde {
   display: none;
+}
+
+.e-frz {
+  overflow: hidden;
 }
 
 .e-fll {

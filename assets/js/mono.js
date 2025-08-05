@@ -20,6 +20,9 @@ import * as eOneByOne from './effets/_e-one-by-one.js';
 // Import les layouts
 import * as lFrontpage from './layouts/_l-frontpage.js';
 
+// Import les layouts
+import * as lVoletLinks from './parts/_p-volet_links';
+
 // Import les modules
 import * as mOverlay from './modules/_m-overlay.js';
 import * as mVolet from './modules/_m-volet.js';

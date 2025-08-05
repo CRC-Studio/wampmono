@@ -91,7 +91,7 @@ $meta_img   = $meta_url . "assets/img/cover__rs.png";
 <?php
 // Formate les class du <body> et selectionne le template
 $bodyClass = (is_admin()) ? 'l-body is--admin' : 'l-body';
-$bodyClass .= ' m-flx';
+$bodyClass .= ' m-flc';
 ?>
 
 <body class="<?= $bodyClass; ?>">

@@ -15,7 +15,7 @@ function get_vhosts()
   $vhostFile = __DIR__ . '/../../../bin/apache/' . $apache_version . '/conf/extra/httpd-vhosts.conf';
 
   if (!file_exists($vhostFile)) {
-    return [];
+    return false;
   }
 
   // Lire tout le contenu du fichier

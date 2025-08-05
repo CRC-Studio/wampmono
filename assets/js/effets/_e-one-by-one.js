@@ -25,7 +25,7 @@ export const oboInit = () => {
   // Déclare qq variables
   const $obos = document.querySelectorAll('.e-obo > *');
   const fadeDuration = 1000;
-  const fadeDelay = 100;
+  const fadeDelay = 200;
 
   // Options pour l'IntersectionObserver
   const observerOptions = {

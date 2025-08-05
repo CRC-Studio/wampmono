@@ -16,7 +16,7 @@ include  __DIR__ . '/parts/p__head.php';
   <?php // Ajout la barre de recherches
   ?>
 
-  <section class="l-ftp-top m-row">
+  <section class="l-ftp-top m-row e-off">
     <div class="m-wrpc-s m-flx m-flg1">
       <form class="m-rom m-frm m-flx">
         <div class="m-row m-frm-grp m-flx m-flxc m-flg1">
@@ -61,19 +61,23 @@ include  __DIR__ . '/parts/p__head.php';
         <?php
         $vhostsGrouped = get_vhosts();
 
-        foreach ($vhostsGrouped as $letter => $vhosts): ?>
-          <div class="l-ftp-vhosts m-flc">
-            <h2 class="m-body m-txt-g m-mt3 m-mb1"><?= $letter ?></h2>
-            <ul class="m-flc m-flg05">
-              <?php foreach ($vhosts as $vhost): ?>
-                <li class="l-ftp-vhost m-row m-flx m-flxc m-flg1">
-                  <a href="<?= $vhost['url'] ?>" target="_blank" class="m-flx m-lead e-txtsble"><?= $vhost['name'] ?></a>
-                  <?= get_vhost_login_url($vhost) ?>
-                </li>
-              <?php endforeach; ?>
-            </ul>
-          </div>
-        <?php endforeach; ?>
+        if ($vhostsGrouped):
+          foreach ($vhostsGrouped as $letter => $vhosts): ?>
+            <div class="l-ftp-vhosts m-flc">
+              <h2 class="m-body m-txt-g m-mt3 m-mb1"><?= $letter ?></h2>
+              <ul class="m-flc m-flg05">
+                <?php foreach ($vhosts as $vhost): ?>
+                  <li class="l-ftp-vhost m-row m-flx m-flxc m-flg1">
+                    <a href="<?= $vhost['url'] ?>" target="_blank" class="m-flx m-lead e-txtsble"><?= $vhost['name'] ?></a>
+                    <?= get_vhost_login_url($vhost) ?>
+                  </li>
+                <?php endforeach; ?>
+              </ul>
+            </div>
+          <?php endforeach; ?>
+        <?php else: ?>
+          <?php include  __DIR__ . '/parts/p__vhost-empty.php'; ?>
+        <?php endif; ?>
       </div>
 
 
@@ -83,7 +87,7 @@ include  __DIR__ . '/parts/p__head.php';
           <?php // Ajout des Projets sans Virtual Hosts
           ?>
 
-          <li class="l-ftp-flds m-acd m-flc">
+          <li class="l-ftp-flds m-acd m-flc e-off">
             <div class="m-acd-ttl  m-row m-flx m-flyc">
               <h2 class="m-lead"><?= _('Folders') ?></h2>
               <div class="m-acd-ico m-flx m-flyc m-flxc m-mla">
@@ -91,7 +95,7 @@ include  __DIR__ . '/parts/p__head.php';
               </div>
             </div>
             <div class="m-acd-wrp">
-              <div class="l-ftp-lnks m-flc m-flg05">
+              <div class="m-flc m-flg05">
                 <?php
                 $projects = get_projects();
                 foreach ($projects as $projectData): ?>
@@ -108,7 +112,7 @@ include  __DIR__ . '/parts/p__head.php';
           <?php // Ajout des Outils
           ?>
 
-          <li class="l-ftp-lnks m-acd m-flc e-on">
+          <li class="l-ftp-lnks m-acd m-flc e-off">
             <div class="m-acd-ttl  m-row m-flx m-flyc">
               <h2 class="m-lead"><?= _('Tools') ?></h2>
               <div class="m-acd-ico m-flx m-flyc m-flxc m-mla">
@@ -135,18 +139,6 @@ include  __DIR__ . '/parts/p__head.php';
       </div>
     </div>
 
-    <?php // Ajout du fake-footer
-    ?>
-
-    <div class="m-rom">
-      <div class="m-flc">
-        <span class="m-body-s"><i>Wampmono™</i>, a light Manager for <a href="https://wampserver.aviatechno.net/" target="_blank">Wampserver</a></span>
-        <span class="m-body-s">by <a href="https://crc.studio/" title="Meet CRC Studio ● Our design &amp; developement studio" target='_blank'>crc.studio:</a></span>
-        <span class="m-body-s">A design & developement studio</span>
-        <span class="m-body-s">グラフィックデザインとプログラミング</span>
-        <span class="m-body-s">Contact us: <a href="mailto:hello@crc.studio" target="_blank" title="Contact us at hello@crc.studio">hello@crc.studio</a></span>
-      </div>
-    </div>
   </section>
 
   <?php

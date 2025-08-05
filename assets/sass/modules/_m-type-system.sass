@@ -55,95 +55,26 @@ p a, a.m-u
 
 /// Stylise la justification des textes
 
-.m-r, .m-r *
-  text-align: right
+// .m-r, .m-r *
+//   text-align: right
 .m-c, .m-c *
   text-align: center
-.m-l, .m-l *
-  text-align: left
-p.m-j
-  text-align: justify
-  hyphens: auto
-p.m-j + p.m-j
-  margin: 0
-  text-indent: m(2)
+// .m-l, .m-l *
+//   text-align: left
+// p.m-j
+//   text-align: justify
+//   hyphens: auto
+// p.m-j + p.m-j
+//   margin: 0
+//   text-indent: m(2)
 
 /// Stylise les styles de paragraphe de Monobloc
 /// Exemple de HTML :
 ///   <h1 class="m-display-l">Something</h1>
 ///   <p class="m-body">Something else</p>
 
-.m-display-xxl, .m-display-xxl *
-  font-size: 4rem
-  line-height: 90%
-  @include respond('xxl')
-    font-size: 5rem
-  @include respond('xxxl')
-    font-size: 10rem
-
-.m-display-xl, .m-display-xl *
-  font-size: 4rem
-  line-height: 90%
-  @include respond('xxl')
-    font-size: 5rem
-  @include respond('xxxl')
-    font-size: 8rem
-
-.m-display-l, .m-display-l *
-  font-size: 4rem
-  line-height: 90%
-  @include respond('xxl')
-    font-size: 5rem
-  @include respond('xxxl')
-    font-size: 6rem
-
-.m-display, .m-display *
-  font-size: 4rem
-  line-height: 90%
-  @include respond('xxl')
-    font-size: 5rem
-
-.m-display-s, .m-display-s *
-  font-size: 4rem
-  line-height: 90%
-  @include respond('xxl')
-    font-size: 4.5rem
-
-.m-head-l, .m-head-l *
-  font-size: 3rem
-  @include respond('xxl')
-    font-size: 4.25rem
-
-.m-head, .m-head *
-  font-size: 3rem
-  @include respond('xxl')
-    font-size: 4rem
-
-.m-head-s, .m-head-s *
-  font-size: 3rem
-  @include respond('xxl')
-    font-size: 3.75rem
-
-.m-title-l, .m-title-l *
-  font-size: 3.5rem
-
-.m-title, .m-title *
-  font-size: 3rem
-
-.m-title-s, .m-title-s *
-  font-size: 2.5rem
-
-.m-lead-l, .m-lead-l *
-  font-size: 2.25rem
-
 .m-lead, .m-lead *
   font-size: 2rem
-
-.m-lead-s, .m-lead-s *
-  font-size: 1.75rem
-
-.m-body-l, .m-body-l *
-  font-size: 1.5rem
 
 .m-body, .m-body *
   font-size: 1.25rem
@@ -152,62 +83,8 @@ p.m-j + p.m-j
 .m-body-s, .m-body-s *
   font-size: 1rem
 
-.m-caption, .m-caption *
-  font-size: 0.75rem
-
-/// La class .m-wysiwyg permet de styliser les What You See Is What You Get
-///
-/// Exemple de HTML :
-///   <div class="m-wysiwyg m-body">
-///     <?php the_field('wysiwyg'); ?>
-///   </div>
-
-.m-wysiwyg
-  li::before
-    content: "—"
-    padding-right: m(0.5)
 
 // La class .m-txt__color permet d'ajouter une touche de couleur par endroit
 
-// .m-txt-c *,
-.m-txt-c
-  color: color('grey', 300)
-
 .m-txt-g
   color: color('grey')
-
-
-/// La classe .m-links permet d'ajouter dynamiquement des virgules
-/// entre des liens. Idéal pour des listes d'artistes ou d'articles.
-///
-///  Exemple de HTML :
-///    <span class="m-links">
-///      <a href="">Un artiste</a>
-///      <a href="">Un autre artiste</a>
-///      <a href="">Un artiste autre</a>
-///    </span>
-
-// .m-links
-//   a:nth-last-of-type(n+3)::after
-//     content: ', '
-
-//   a:last-of-type::before
-//     content: ' & '
-
-//   a:first-of-type::before
-//     content: ''
-
-  
-/// Stylise les balises HTML habituellement
-/// utilisée pour le bold et italic
-
-strong, strong *,
-b, b *
-  font-weight: 800 !important
-
-em, em *,
-i, i *
-  font-style: italic !important
-
-.m-uc
-  text-transform: uppercase

@@ -77,60 +77,62 @@ include  __DIR__ . '/parts/p__head.php';
       </div>
 
 
-      <ul class="l-ftp-asd m-acds m-flc m-flg05 m-mla">
+      <div class="l-ftp-asd m-acds m-flx m-mla">
+        <ul class="l-ftp-acds m-acds m-flc m-flg05">
 
-        <?php // Ajout des Projets sans Virtual Hosts
-        ?>
+          <?php // Ajout des Projets sans Virtual Hosts
+          ?>
 
-        <li class="m-acd m-flc">
-          <div class="m-acd-ttl  m-row m-flx m-flyc">
-            <h2 class="m-lead"><?= _('Folders') ?></h2>
-            <div class="m-acd-ico m-flx m-flyc m-flxc m-mla">
-              <?php the_ico('arrow_right') ?>
+          <li class="l-ftp-flds m-acd m-flc">
+            <div class="m-acd-ttl  m-row m-flx m-flyc">
+              <h2 class="m-lead"><?= _('Folders') ?></h2>
+              <div class="m-acd-ico m-flx m-flyc m-flxc m-mla">
+                <?php the_ico('arrow_right') ?>
+              </div>
             </div>
-          </div>
-          <div class="m-acd-wrp">
-            <div class="l-ftp-lnks m-flc m-flg05">
-              <?php
-              $projects = get_projects();
-              foreach ($projects as $projectData): ?>
-                <a href="<?= $projectData['url'] ?>" target="_blank" class="l-ftp-lnk m-flx m-flg05">
-                  <span class="m-body m-txt-g">/<?= $projectData['name'] ?></span>
-                  <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
-                </a>
-              <?php endforeach ?>
+            <div class="m-acd-wrp">
+              <div class="l-ftp-lnks m-flc m-flg05">
+                <?php
+                $projects = get_projects();
+                foreach ($projects as $projectData): ?>
+                  <a href="<?= $projectData['url'] ?>" target="_blank" class="l-ftp-lnk m-flx m-flg05">
+                    <span class="m-body m-txt-g">/<?= $projectData['name'] ?></span>
+                    <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
+                  </a>
+                <?php endforeach ?>
 
+              </div>
             </div>
-          </div>
-        </li>
+          </li>
 
-        <?php // Ajout des Outils
-        ?>
+          <?php // Ajout des Outils
+          ?>
 
-        <li class="l-ftp-lnks m-acd m-flc e-on">
-          <div class="m-acd-ttl  m-row m-flx m-flyc">
-            <h2 class="m-lead"><?= _('Tools') ?></h2>
-            <div class="m-acd-ico m-flx m-flyc m-flxc m-mla">
-              <?php the_ico('arrow_right') ?>
+          <li class="l-ftp-lnks m-acd m-flc e-on">
+            <div class="m-acd-ttl  m-row m-flx m-flyc">
+              <h2 class="m-lead"><?= _('Tools') ?></h2>
+              <div class="m-acd-ico m-flx m-flyc m-flxc m-mla">
+                <?php the_ico('arrow_right') ?>
+              </div>
+              <div id="l-ftp-mdy" class="m-flx m-flyc m-flxc m-mla m-vlt-btn e-hde" data-vltid="m-vlt-01">
+                <?php the_ico('settings'); ?>
+              </div>
             </div>
-            <div id="l-ftp-mdy" class="m-flx m-flyc m-flxc m-mla m-vlt-btn e-hde" data-vltid="m-vlt-01">
-              <?php the_ico('settings'); ?>
+            <div class="m-acd-wrp">
+              <div class="m-flc m-flg05">
+                <?php foreach (get_links() as $link): ?>
+                  <a href="<?= get_link_url($link) ?>" target="_blank" class="l-ftp-lnk m-flx m-flg05">
+                    <span class="m-body m-txt-g"><?= get_link_title($link) ?></span>
+                    <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
+                  </a>
+                <?php endforeach; ?>
+              </div>
             </div>
-          </div>
-          <div class="m-acd-wrp">
-            <div class="m-flc m-flg05">
-              <?php foreach (get_links() as $link): ?>
-                <a href="<?= get_link_url($link) ?>" target="_blank" class="l-ftp-lnk m-flx m-flg05">
-                  <span class="m-body m-txt-g"><?= get_link_title($link) ?></span>
-                  <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
-                </a>
-              <?php endforeach; ?>
-            </div>
-          </div>
-        </li>
+          </li>
 
 
-      </ul>
+        </ul>
+      </div>
     </div>
 
     <?php // Ajout du fake-footer

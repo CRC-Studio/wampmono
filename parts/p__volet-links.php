@@ -5,7 +5,7 @@
 
 ?>
 
-<div id="m-vlt-01" class="m-vlt m-vlt-r m-flc e-on">
+<div id="m-vlt-01" class="m-vlt m-vlt-r m-flc">
 
     <span class="m-lead m-my3">Edit Links</span>
     <form class="m-frm m-flc m-flh" action="<?= get_home_url(); ?>/fonctions/s__set-links.php" method="post">

@@ -58,29 +58,31 @@ $borderRadiusHover: var(--brh)
 ///   @include font-face('Graphik', './assets/fonts/graphik/graphik', 400, normal, [eot, woff, woff2] )
 ///   @include font-face('Graphik', './assets/fonts/graphik/graphik', bold, italic, [eot, woff, woff2] )
 
-@include font-face('Graphik', './assets/fonts/graphik/graphik', 400, normal, [eot, woff, woff2] )
-@include font-face('Monico', './assets/fonts/monico/monico', normal,  normal, [eot, svg, ttf,  woff] )
+// Ajout du Redaction
+@include font-face('Mono Serif', './assets/fonts/redaction/redaction', 400, normal, [ttf, otf, woff2] )
+@include font-face('Mono Serif', './assets/fonts/redaction/redaction-italic', 400, italic, [ttf, otf, woff2] )
+@include font-face('Mono Serif', './assets/fonts/redaction/redaction-bold', 600, normal, [ttf, otf, woff2] )
+
+// Ajout du Nimbus Sans
+@include font-face('Mono Sans', './assets/fonts/nimbus/nimbus', 400, normal, [ttf] )
+@include font-face('Mono Sans', './assets/fonts/nimbus/nimbus-italic', 400, italic, [ttf] )
+@include font-face('Mono Sans', './assets/fonts/nimbus/nimbus-bold', 600, normal, [ttf] )
+@include font-face('Mono Sans', './assets/fonts/nimbus/nimbus-bold-italic', 600, italic, [ttf] )
 
 
 /// La fonction font() permet d'ajouter de gérer les font-family de façon systémique.
-/// 
+///
 /// Exemple de SASS :
 ///   div
 ///     font-family: font('sans-serif')
 
 @function font($family)
-  @if $family == 'display'
-    @return 'Termina', Helvetica, sans-serif
-  @else if $family == 'serif'
-    @return 'Times New Roman', Georgia, serif
+  @if $family == 'serif'
+    @return 'Mono Serif', Georgia, serif
   @else if $family == 'sans-serif'
-    @return 'Graphik', Arial, Helvetica, sans-serif
+    @return 'Mono Sans', Helvetica, sans-serif
   @else if $family == 'ico'
-    @return Monico
-  // @else if $family == cursive
-  //   @return 'Knewave', 'cursive'
-  // @else if $family == 'mono'
-  //   @return 'Lucida Console', Courier, monospace
+    @return 'Monico'
 
 
 /// Les variables $fast et $slow permettre d'uniformiser

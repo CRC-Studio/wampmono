@@ -29,8 +29,8 @@ WampMono provides several useful features to enhance your local development envi
    ```apache
    <VirtualHost *:80>
        ServerName wampmono.lcl
-       DocumentRoot "C:/wamp64/www/wampmono"
-       <Directory "C:/wamp64/www/wampmono">
+       DocumentRoot "C:/wamp64/www/wampmono.lcl"
+       <Directory "C:/wamp64/www/wampmono.lcl/">
            Options Indexes FollowSymLinks MultiViews
            AllowOverride All
            Require all granted

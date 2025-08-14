@@ -28,6 +28,15 @@ html {
   --color-acc: var(--color-orange-500);
 }
 
+@media (prefers-color-scheme: dark) {
+  html {
+    --color-back: var(--color-grey-1000);
+    --color-lback: var(--color-grey-1000) , 0.95;
+    --color-lgrey: var(--color-grey-900);
+    --color-txt: var(--color-grey-500);
+    --color-acc: var(--color-orange-800);
+  }
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

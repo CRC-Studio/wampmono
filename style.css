@@ -564,7 +564,11 @@ p a:link, p a:visited, a.m-u:link, a.m-u:visited {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 1200;
+  pointer-events: none;
   overflow: hidden;
+}
+.m-mdl.e-on {
+  pointer-events: auto;
 }
 
 .m-mdl-dkns {

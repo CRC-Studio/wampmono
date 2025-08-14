@@ -13,7 +13,7 @@ WampMono™ is a lightweight manager designed to enhance your [WampServer](https
 4. [Usage](#usage)
 5. [Multilingual Support](#multilingual-support)
 6. [Contributing](#contributing)
-7. [About ToolToys™](#about-tooltoy)
+7. [About ToolToys™](#about-tooltoys)
 8. [About crc.studio](#about-crcstudio)
 
 ## Features
@@ -78,7 +78,7 @@ It’s easy — contact us and we’ll guide you through the process.
 We welcome feedback, ideas, and language contributions.  
 If you’d like to improve WampMono or add a new translation, feel free to reach out.
 
-## About ToolToys
+## About ToolToys™
 
 WampMono is one of [crc.studio](https://crc.studio/)’s ToolToys™, small web apps designed to make design and development faster, easier, and more joyful.
 

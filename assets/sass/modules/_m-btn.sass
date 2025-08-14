@@ -49,7 +49,6 @@ $btnBorder: 1px
   border-radius: $borderRadius
   cursor: pointer
   white-space: nowrap
-  @include box-shadow(0, 'grey')
   transition: $slow
   @include hover
     border-radius: m()
@@ -69,26 +68,8 @@ $btnBorder: 1px
 
 .m-btn-o
   background: none
-  color: color('grey', 1000)
-  border: $btnBorder solid color('grey', 1000)
-
-// Stylise les boutons Light
-// sans contour, ni fond
-
-.m-btn-l
   color: color('txt')
-  background: color('grey',1000,0)
-  border: $btnBorder solid color('grey',1000,0)
-
-  @include hover
-    color: color('back')
-    background: color('txt')
-    border: $btnBorder solid color('txt')
-
-  &.e-on
-    color: color('back')
-    background: color('txt')
-    border: $btnBorder solid color('txt')
+  border: $btnBorder solid color('txt')
 
 // Stylise les boutons avec des icones
 
@@ -101,10 +82,3 @@ $btnBorder: 1px
     width: m(1.5)
     height: m(1.5)
     fill: color('back')
-
-// Stylise les boutons temporairement désactivé
-
-.m-btn:disabled,
-.m-btn-load
-  pointer-events: none
-  opacity: .5

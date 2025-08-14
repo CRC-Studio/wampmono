@@ -19,6 +19,11 @@
             "TITLE": "Roadmapper",
             "URL": "https://road.crc.studio/",
             "ORDER": 4
+        },
+        {
+            "TITLE": "WampUpdate",
+            "URL": "https://wampserver.aviatechno.net/",
+            "ORDER": 5
         }
     ]
 }

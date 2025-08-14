@@ -16,6 +16,7 @@
 // Import les effets
 import * as eTextScramble from './effets/_e-text-scramble.js';
 import * as eOneByOne from './effets/_e-one-by-one.js';
+import * as eDenko from './effets/_e-denko.js';
 
 // Import les layouts
 import * as lFrontpage from './layouts/_l-frontpage.js';

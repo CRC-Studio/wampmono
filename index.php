@@ -8,6 +8,7 @@
  */
 
 include  __DIR__ . '/parts/p__head.php';
+admin_update_trad_file();
 ?>
 
 

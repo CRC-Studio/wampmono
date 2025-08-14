@@ -5,6 +5,7 @@
 
 export const voletHandleClick = (e) => {
   e.preventDefault();
+  e.stopPropagation();
 
   // Selectionne le volet à ouvrir
   voletId = e.currentTarget.getAttribute('data-vltid');

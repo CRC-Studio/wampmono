@@ -1,25 +1,30 @@
 # WampMono: A Light Manager for WampServer
+> A minimalist dashboard for WampServer. Fast, elegant, and multilingual.
 
-WampMono is a lightweight manager designed to enhance your [WampServer](https://www.wampserver.com/) experience. Created by [crc.studio](https://crc.studio/), a design and development studio, WampMono simplifies local development by offering an easy-to-use interface and seamless management of virtual hosts.
+
+WampMono™ is a lightweight manager designed to enhance your [WampServer](https://www.wampserver.com/) experience. Created by [crc.studio](https://crc.studio/), a design and development studio, WampMono simplifies local development by offering an easy-to-use interface and seamless management of virtual hosts.
 
 ![Wampmono](https://github.com/user-attachments/assets/2e82ac8b-ad9c-407a-bfd9-eea908a5ffab)
 
-# Table of Contents  
+## 📚 Table of Contents
 1. [Introduction](#wampmono-a-light-manager-for-wampserver)
 2. [Features](#features)
 3. [Installation](#installation)
 4. [Usage](#usage)
-5. [About ToolToy](#about-tooltoy)
-6. [About crc.studio](#about-crcstudio)
+5. [Multilingual Support](#multilingual-support)
+6. [Contributing](#contributing)
+7. [About ToolToys™](#about-tooltoy)
+8. [About crc.studio](#about-crcstudio)
 
 ## Features
 
-WampMono provides several useful features to enhance your local development environment:
+WampMono™ provides several useful features to enhance your local development environment:
 
-- Virtual Host Management – View and manage all your virtual hosts effortlessly.
-- Dark Theme / Light Theme – Customize the interface to your preference.
-- Custom Tool Section – Easily manage and access your development tools.
-- 🆕 Link to Login – Quickly access your CMS or admin login pages.
+- Virtual Host Management – Effortlessly view, create, and manage your virtual hosts
+- Dark / Light Theme – Switch between themes to suit your style or lighting conditions
+- Custom Tools Panel – Organize and access your favorite dev tools in one place
+- 🆕 Quick Login Links – Jump straight to your CMS or admin dashboards with one click
+- 🌍 Multilingual Support – Available in English, Français, and 日本語. Easily extendable: contact us to add your language!
 
 ## Installation
 
@@ -58,9 +63,24 @@ WampMono provides several useful features to enhance your local development envi
 - Access the WampMono Manager by visiting [http://wampmono.lcl/](http://wampmono.lcl/) in your browser.
 - To view the standard WampServer homepage, add `?wampmono=no` to the URL (e.g., `http://localhost/?wampmono=no`).
 
+## Multilingual Support
+
+WampMono is available in:
+- 🇬🇧 English
+- 🇫🇷 Français
+- 🇯🇵 日本語
+
+Want to help translate WampMono into another language?  
+It’s easy — contact us and we’ll guide you through the process.
+
+## Contributing
+
+We welcome feedback, ideas, and language contributions.  
+If you’d like to improve WampMono or add a new translation, feel free to reach out.
+
 ## About ToolToys
 
-WampMono is one of [crc.studio](https://crc.studio/)’s ToolToys, small web apps designed to make design and development faster, easier, and more joyful.
+WampMono is one of [crc.studio](https://crc.studio/)’s ToolToys™, small web apps designed to make design and development faster, easier, and more joyful.
 
 ## About crc.studio
 

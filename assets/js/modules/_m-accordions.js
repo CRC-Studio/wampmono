@@ -6,7 +6,6 @@
 
 export const acdToggle = (e, $accordion) => {
   if ($accordion) {
-    let $accordionWrp = $accordion.querySelector('.m-acd__wrp');
     $accordion.classList.toggle('e-on');
   }
 }

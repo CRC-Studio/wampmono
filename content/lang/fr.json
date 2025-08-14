@@ -2,8 +2,6 @@
     "Add a new Vhost": "Ajouter un Virtual Host",
     "Filter virtual hosts": "Filtrer les Virtual Hosts",
     "Back to Wamp": "Retour à Wamp",
-    "No": "Non",
-    "Yes": "Oui",
     "Hello World": "Bonjour",
     "Folders": "Dossiers",
     "Tools": "Outils",
@@ -15,5 +13,7 @@
     "New link": "Nouveau lien",
     "Cancel": "Annuler",
     "Save": "Enregistrer",
-    "Confirm deletion?": "Confirmer la suppression ?"
+    "Confirm deletion?": "Confirmer la suppression ?",
+    "Delete": "Supprimer",
+    "Warning": "Attention"
 }

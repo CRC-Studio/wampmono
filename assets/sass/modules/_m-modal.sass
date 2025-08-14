@@ -31,10 +31,26 @@
   border-radius: m()
   transform: translate(-50%, -50%)
   z-index: $zindex__modal
+  overflow: hidden
 
-.m-mdl-wrp
+.m-mdl-dkns
+  position: relative
+  flex: 0 0 auto
+  width: m(9)
+  background: color('txt')
+  color: color('back')
+  overflow: hidden
+
+.m-mdl-dkn
+    position: absolute
+    top: 100%
+    width: 100vh
+    display: block
+    transform: rotate(-90deg)
+    transform-origin: top left
 
 // Stylise l'overlay sous les modale
 
 .m-mdl-ovl
   z-index: $zindex__toast
+

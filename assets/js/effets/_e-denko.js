@@ -26,22 +26,24 @@ export const denkoAnimResume = (e) => {
 let $denkos
 export const denkoInit = () => {
   // Sélectionne les denkos
-  $denkos = document.querySelectorAll('.e-dnk');
+  $denkos = document.querySelectorAll('.e-dnk li');
 
   $denkos.forEach(($denko) => {
+
     // Calcule la largeur des éléments
     let w = $denko.offsetWidth;
     let screenWidth = window.innerWidth;
 
     // Gère la vitesse d'anmiation
     let a, s, t; // Accélaration, Speed, Temps
-    a = $denko.dataset.speed !== undefined ? $denko.dataset.speed : 1;
+    a = $denko.dataset.speed !== undefined ? parseFloat($denko.dataset.speed) : 1;
     s = 20;
     t = w / s / a;
     $denko.style.animationDuration = t + 's';
 
     // Calcule le nombre de clone nécessaire
     let cloneCount = Math.ceil(screenWidth / w);
+
     // Clône le contenu
     for (let i = 0; i < cloneCount; i++) {
       let clone = $denko.cloneNode(true);

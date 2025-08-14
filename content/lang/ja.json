@@ -6,8 +6,6 @@
     "Tools": "ツール",
     "Hello World": "",
     "Confirm deletion?": "消去しますか。",
-    "No": "いいえ",
-    "Yes": "はい",
     "No virtual hosts found": "Vhostが<br>見つかりませんでした。",
     "Wampmono didn’t detect any virtual host. <br>You can create one to start working on your projects.": "Vhostが見つかりませんでした。<br>プロジェクトを始めるために新しいVhostを作成してください。",
     "Edit Links": "リンクを編集する",
@@ -15,5 +13,7 @@
     "Cancel": "キャンセル",
     "Save": "保存する",
     "URL": "",
-    "Title": "タイトル"
+    "Title": "タイトル",
+    "Delete": "削除する",
+    "Warning": "警告"
 }

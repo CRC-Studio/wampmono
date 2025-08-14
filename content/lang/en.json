@@ -3,8 +3,6 @@
     "Back to Wamp": "",
     "Filter virtual hosts": "",
     "Add a new Vhost": "",
-    "No": "",
-    "Yes": "",
     "Folders": "",
     "Tools": "",
     "Title": "",
@@ -15,5 +13,7 @@
     "New link": "",
     "Cancel": "",
     "Save": "",
-    "Confirm deletion?": ""
+    "Confirm deletion?": "",
+    "Delete": "",
+    "Warning": ""
 }

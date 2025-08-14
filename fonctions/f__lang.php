@@ -26,9 +26,9 @@ function get_supported_locales()
  */
 function detect_locale()
 {
-    $accept = $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? 'fr';
+    $accept = $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? 'en';
     $lang = substr($accept, 0, 2);
-    return in_array($lang, get_supported_locales()) ? $lang : 'fr';
+    return in_array($lang, get_supported_locales()) ? $lang : 'en';
 }
 
 /**

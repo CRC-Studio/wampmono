@@ -25,6 +25,7 @@ import * as lVoletLinks from './parts/_p-volet_links';
 
 // Import les modules
 import * as mOverlay from './modules/_m-overlay.js';
+import * as mModal from './modules/_m-modal.js';
 import * as mVolet from './modules/_m-volet.js';
 import * as mSearch from './modules/_m-search.js';
 import * as mAccordions from './modules/_m-accordions.js';

@@ -6,22 +6,32 @@
 
 
 /**
- * Fonction Auto Include
+ * Auto Include
  */
 
 
-function auto_include()
+function auto_include($dir = null)
 {
   // Ajoute qq variable
-  $dossier = __DIR__ . '/fonctions/';
+  $dir = __DIR__ . '/fonctions/';
 
-  // Cherches les fichiers dans le dossier
-  $files = scandir($dossier);
+  // Vérifie que le dossier existe
+  if (!is_dir($dir)) return;
 
-  foreach ($files as $file) {
-    // Vérifier si le fichier est un fichier PHP
-    if (pathinfo($file, PATHINFO_EXTENSION) == 'php') {
-      require $dossier . $file;
+  // Cherche les fichiers dans le dossier
+  $items = scandir($dir);
+
+  // Ajoute les fichiers du dossier et sous-dossier
+  foreach ($items as $item) {
+    if ($item === '.' || $item === '..') continue;
+
+    $path = $dir . DIRECTORY_SEPARATOR . $item;
+
+    if (is_dir($path)) {
+      // Appel récursif
+      auto_include($path);
+    } elseif (str_starts_with($item, 'f__') && pathinfo($item, PATHINFO_EXTENSION) === 'php') {
+      require $path;
     }
   }
 }

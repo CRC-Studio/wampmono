@@ -5,26 +5,39 @@
 
 // Import les effets
 
-import * as eFade from '../effets/_e-fade';
+import * as eFade from '../effets/_e-fade.js';
 
 
 // Affiche la modal
 
 
-export const modalShow = () => {
-  $modal.classList.add('e-on');
-  eFade.fadeIn($modal);
+export const modalShow = (mdlName) => {
 
-  // Dispatch l'event requestmOverlayShow
-  document.dispatchEvent(new CustomEvent('requestmOverlayShow'));
+  // Sélectionne la modal
+  let $modal = document.querySelector(`.m-mdl[data-mdl="${mdlName}"]`);
+
+  // Vérifier si la modale existe
+  if ($modal) {
+    $modal.classList.add('e-on');
+    $overlay.classList.add('m-mdl-ovl');
+    eFade.fadeIn($modal, 500);
+
+    // Dispatch l'event requestmOverlayShow
+    document.dispatchEvent(new CustomEvent('requestmOverlayShow'));
+  }
 };
 
 // Masque la modal
 
 export const modalHide = () => {
 
-  $modal.classList.remove('e-on');
-  eFade.fadeOut($modal);
+  $modals.forEach(($modal) => {
+    $modal.classList.remove('e-on');
+    $modal.style.opacity = '0';
+    $modal.style.pointerEvents = 'none';
+  });
+
+  $overlay.classList.remove('m-mdl-ovl');
 
   // Dispatch l'event modalHide
   document.dispatchEvent(new CustomEvent('modalHide'));
@@ -35,20 +48,29 @@ export const modalHide = () => {
 * Initialise le module
 */
 
-export let $modal;
+export let $modals, $overlay;
 export const modalInit = () => {
   // Sélectionne la modal
-  $modal = document.querySelector('.m-mdl');
+  $modals = document.querySelectorAll('.m-mdl');
 
-  // Ferme le volet si l'overlay est fermé
+  // Sélectionne l'overlay
+  $overlay = document.querySelector('.m-ovl');
+
+  // Ferme la modale si l'overlay est fermé
   document.removeEventListener('mOverlayHide', modalHide);
   document.addEventListener('mOverlayHide', modalHide);
-};
 
-// Relance la fonction après un Call Ajax
-document.addEventListener('initAfterAjax', () => {
-  modalInit();
-});
+  // Ajoute le listener sur les boutons de fermeture
+  document.querySelectorAll('.m-mdl-cls').forEach(($btn) => {
+    $btn.removeEventListener('click', modalHide);
+    $btn.addEventListener('click', modalHide);
+  });
+
+  // Relance la fonction après un Call Ajax
+  document.addEventListener('initAfterAjax', () => {
+    modalInit();
+  });
+};
 
 // Initialisation
 modalInit();

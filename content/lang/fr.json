@@ -1,0 +1,19 @@
+{
+    "Add a new Vhost": "Ajouter un Virtual Host",
+    "Filter virtual hosts": "Filtrer les Virtual Hosts",
+    "Back to Wamp": "Retour à Wamp",
+    "No": "Non",
+    "Yes": "Oui",
+    "Hello World": "Bonjour",
+    "Folders": "Dossiers",
+    "Tools": "Outils",
+    "Title": "Titre",
+    "URL": "URL",
+    "No virtual hosts found": "Aucun Virtual Host trouvé",
+    "Wampmono didn’t detect any virtual host. <br>You can create one to start working on your projects.": "Wampmono n’a détecté aucun Virtual Host.<br>Vous pouvez en créer un pour commencer à travailler sur vos projets.",
+    "Edit Links": "Modifier les liens",
+    "New link": "Nouveau lien",
+    "Cancel": "Annuler",
+    "Save": "Enregistrer",
+    "Confirm deletion?": "Confirmer la suppression ?"
+}

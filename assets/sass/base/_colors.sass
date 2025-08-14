@@ -34,7 +34,7 @@ $colorTheme: ('orange':$orange)
 html
   @include getThemeColor($colorTheme)
   @include setColor('back', 'grey', 0)
-  @include setColor('lback', 'grey', 200)
+  @include setColor('lback', 'grey', 0, 0.95)
   @include setColor('txt', 'grey', 1000)
   @include setColor('acc', 'orange', 500)
 
@@ -44,7 +44,7 @@ html
 @media (prefers-color-scheme: dark)
   html
     @include setColor('back', 'grey', 1000)
-    @include setColor('lback', 'grey', 800)
+    @include setColor('lback', 'grey', 1000, 0.95)
     @include setColor('txt', 'grey', 500)
     @include setColor('acc', 'orange', 800)
 

@@ -1,0 +1,40 @@
+// main: ../../../style.sass
+
+/// Le module Modal permet d'ajouter des fenêtres rapidement
+///
+/// Attention : pensez à activer le module Modal
+/// dans le fichier assets/js/monobloc.js
+///
+///
+/// Exemple de HTML :
+/// <footer>
+///   <button class="m-btn" data-mdl="exemple">Ouvrir la modal</button>
+///   <div class="m-mdl" data-mdl="exemple">
+///       <div class="m-rom m-mdl-wrp m-flc m-flg2">
+///           <span class="m-lead m-c"><?= _("Confirm deletion?", "wampmono"); ?></span>
+///   
+///           <div class="m-flx m-flg05">
+///               <button id="m-mdl-no" class="m-row m-btn m-btn-o"><?= _("No", "wampmono"); ?></button>
+///               <button id="m-mdl-yes" class="m-row m-btn m-btn-p"><?= _("Yes", "wampmono"); ?></button>
+///           </div>
+///       </div>
+///   </div>
+/// </footer>
+
+.m-mdl
+  position: fixed
+  top: 50%
+  left: 50%
+  height: auto
+  text-align: center
+  background: color('back')
+  border-radius: m()
+  transform: translate(-50%, -50%)
+  z-index: $zindex__modal
+
+.m-mdl-wrp
+
+// Stylise l'overlay sous les modale
+
+.m-mdl-ovl
+  z-index: $zindex__toast

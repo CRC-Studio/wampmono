@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 
   if (!empty($links)) {
-    $json_path = __DIR__ . '/../content/links.json';
+    $json_path = __DIR__ . '/../content/links/links.json';
     $json = json_encode(['LINKS' => $links], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 
     if ($json !== false && is_writable($json_path)) {

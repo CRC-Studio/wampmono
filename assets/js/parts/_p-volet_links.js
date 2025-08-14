@@ -8,6 +8,7 @@
 import * as mInputChecker from '../modules/_m-input-checker.js';
 import * as mFormChecker from '../modules/_m-form-checker.js';
 import * as mFormLabel from '../modules/_m-form-label.js';
+import * as mModal from '../modules/_m-modal.js';
 
 
 // Permet d'ajouter des liens
@@ -58,13 +59,54 @@ export const linksAdd = (e) => {
 
 // Permet de supprimer des liens
 
-export const linksDelete = (e) => {
+export const linksDelete = async (e) => {
   e.preventDefault();
   const $btn = e.currentTarget;
   const id = $btn.dataset.id;
   const $target = document.getElementById(id);
-  if ($target) $target.remove();
-}
+  if (!$target) return;
+
+  try {
+    await confirmModal();
+    $target.remove();
+    mModal.modalHide();
+  } catch {
+    console.log('Suppression annulée');
+  }
+};
+
+
+export const confirmModal = () => {
+  return new Promise((resolve, reject) => {
+    // Affiche la modale
+    mModal.modalShow('cfr');
+
+    // Cible les boutons
+    const $yes = document.getElementById('m-mdl-yes');
+    const $close = document.querySelector('.m-mdl-cls');
+
+    // Nettoyage des listeners
+    const cleanUp = () => {
+      $yes.removeEventListener('click', onYes);
+      $close.removeEventListener('click', onCancel);
+      document.removeEventListener('modalHide', onCancel);
+    };
+
+    const onYes = () => {
+      cleanUp();
+      resolve(true);
+    };
+
+    const onCancel = () => {
+      cleanUp();
+      reject(false);
+    };
+
+    $yes.addEventListener('click', onYes);
+    $close.addEventListener('click', onCancel);
+    document.addEventListener('modalHide', onCancel);
+  });
+};
 
 
 // Permet de Drag & Drop

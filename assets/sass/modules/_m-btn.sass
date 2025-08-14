@@ -52,9 +52,8 @@ $btnBorder: 1px
   @include box-shadow(0, 'grey')
   transition: $slow
   @include hover
-    border-radius: $borderRadiusHover
+    border-radius: m()
     text-decoration: none
-    @include box-shadow(5, 'grey', 200)
     transition: $fast
 
 // Stylise les boutons Plain

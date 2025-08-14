@@ -59,14 +59,22 @@ export const searchAndHide = (string, $els) => {
 */
 
 export const searchEl = () => {
-  if ($search) {
-    let string = $search.value;
+  if ($search && $els) {
+    let string = $search.value.trim();
 
-    if (string && $els) {
+    if (string !== '') {
       searchAndHide(string, $els);
+    } else {
+      // Si la recherche est vide, on réaffiche tout
+      $els.forEach($el => {
+        $el.style.display = 'flex';
+      });
+
+      searchHideParents();
     }
   }
-}
+};
+
 
 
 /**

@@ -15,6 +15,10 @@
   ?>
   <div class="m-ovl e-fll e-off"></div>
 
+  <?php // Ajout de la modale
+  ?>
+  <?php include  __DIR__ . '/p__modal-confirme.php'; ?>
+
   <?php // Ajout du fake-footer
   ?>
 

@@ -20,7 +20,7 @@ $meta_img   = $meta_url . "assets/img/cover__rs.png";
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?= get_locale() ?>">
 
 <head>
 

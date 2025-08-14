@@ -1,0 +1,13 @@
+// main: ../../../style.sass
+
+/// La parts _p-volet-links permet de personnalisé l'affichage
+/// du volet permettant de modifier les liens perso
+
+@include is-hover
+  .m-frm-lnk
+    .m-btn
+      opacity: 0
+      transition: $fast
+    &:hover
+      .m-btn
+        opacity: 1

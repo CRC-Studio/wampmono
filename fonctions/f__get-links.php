@@ -11,7 +11,7 @@
 
 function get_links()
 {
-  $json_path = __DIR__ . '/../content/links.json';
+  $json_path = __DIR__ . '/../content/links/links.json';
   if (!file_exists($json_path)) return [];
 
   $data = json_decode(file_get_contents($json_path), true);

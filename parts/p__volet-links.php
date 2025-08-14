@@ -7,7 +7,7 @@
 
 <div id="m-vlt-01" class="m-vlt m-vlt-r m-flc">
 
-    <span class="m-lead m-my3">Edit Links</span>
+    <span class="m-lead m-my3"><?= __('Edit Links') ?></span>
     <form class="m-frm m-flc m-flh" action="<?= get_home_url(); ?>/fonctions/s__set-links.php" method="post">
         <div class="m-frm-lnks m-frm-wrp m-flc m-flh">
             <?php
@@ -24,9 +24,9 @@
             foreach (get_links() as $link) include __DIR__ . '/p__volet-link.php'; ?>
         </div>
         <div class="m-frm-grp m-flx m-flg05 m-mta">
-            <button class="m-btn-add m-btn m-btn-p m-mra">New link</button>
-            <button class="m-btn m-btn-p m-vlt-btn" data-vltid="m-vlt-01">Cancel</button>
-            <button type="submit" class="m-btn m-btn-p">Save</button>
+            <button class="m-btn-add m-btn m-btn-p m-mra"><?= __('New link') ?></button>
+            <button class="m-btn m-btn-p m-vlt-btn" data-vltid="m-vlt-01"><?= __('Cancel') ?></button>
+            <button type="submit" class="m-btn m-btn-p"><?= __('Save') ?></button>
         </div>
     </form>
 </div>

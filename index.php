@@ -24,21 +24,21 @@ include  __DIR__ . '/parts/p__head.php';
           <a href="http://localhost/?wampmono=no" class="m-btn m-btn-p m-btn-ico m-mta m-ttip-lnk" target="_blank">
             <?php the_ico('arrow_left'); ?>
             <div class="m-ttip m-ttip__is--tl">
-              <div class="m-ttip-wrp m-body-s"><?= _('Back to Wamp') ?></div>
+              <div class="m-ttip-wrp m-body-s"><?= __('Back to Wamp') ?></div>
             </div>
           </a>
 
           <div class="l-ftp-inp">
             <div class="m-frm-lbl">
-              <label for="vhost"><?= _('Filter virtual hosts') ?></label>
-              <input type="text" name="vhost" placeholder="<?= _('Filter virtual hosts') ?>" class="m-sch-inp" autofocus>
+              <label for="vhost"><?= __('Filter virtual hosts') ?></label>
+              <input type="text" name="vhost" placeholder="<?= __('Filter virtual hosts') ?>" class="m-sch-inp" autofocus>
             </div>
           </div>
 
           <a href="http://localhost/add_vhost.php?lang=french" class="m-btn m-btn-p m-btn-ico m-mta m-ttip-lnk">
             <?php the_ico('more'); ?>
             <div class="m-ttip m-ttip__is--tl">
-              <div class="m-ttip-wrp m-body-s"><?= _('Add a new Vhost') ?></div>
+              <div class="m-ttip-wrp m-body-s"><?= __('Add a new Vhost') ?></div>
             </div>
           </a>
 
@@ -89,7 +89,7 @@ include  __DIR__ . '/parts/p__head.php';
 
           <li class="l-ftp-flds m-acd m-flc e-off">
             <div class="m-acd-ttl  m-row m-flx m-flyc">
-              <h2 class="m-lead"><?= _('Folders') ?></h2>
+              <h2 class="m-lead"><?= __('Folders') ?></h2>
               <div class="m-acd-ico m-flx m-flyc m-flxc m-mla">
                 <?php the_ico('arrow_right') ?>
               </div>
@@ -114,7 +114,7 @@ include  __DIR__ . '/parts/p__head.php';
 
           <li class="l-ftp-lnks m-acd m-flc e-off">
             <div class="m-acd-ttl  m-row m-flx m-flyc">
-              <h2 class="m-lead"><?= _('Tools') ?></h2>
+              <h2 class="m-lead"><?= __('Tools') ?></h2>
               <div class="m-acd-ico m-flx m-flyc m-flxc m-mla">
                 <?php the_ico('arrow_right') ?>
               </div>

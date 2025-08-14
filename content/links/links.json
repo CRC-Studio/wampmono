@@ -6,24 +6,19 @@
             "ORDER": 1
         },
         {
-            "TITLE": "Nadine",
-            "URL": "http://localhost/nadine/",
+            "TITLE": "phpMyAdmin",
+            "URL": "http://localhost/phpmyadmin/",
             "ORDER": 2
         },
         {
-            "TITLE": "phpMyAdmin",
-            "URL": "http://localhost/phpmyadmin/",
+            "TITLE": "Nadine",
+            "URL": "http://localhost/nadine/",
             "ORDER": 3
         },
         {
             "TITLE": "Roadmapper",
             "URL": "https://road.crc.studio/",
             "ORDER": 4
-        },
-        {
-            "TITLE": "WampUpdate",
-            "URL": "https://wampserver.aviatechno.net/",
-            "ORDER": 5
         }
     ]
 }

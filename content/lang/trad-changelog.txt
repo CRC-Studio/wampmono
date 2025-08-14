@@ -1,0 +1,24 @@
+[2025-08-14 18:38:48] Locale: fr
+
+[2025-08-14 18:38:48] Locale: en
+
+[2025-08-14 18:38:48] Locale: ja
+  + Ajoutés:
+    - "Back to Wamp"
+    - "Filter virtual hosts"
+    - "Add a new Vhost"
+    - "Folders"
+    - "Tools"
+    - "Hello World"
+    - "Confirm deletion?"
+    - "No"
+    - "Yes"
+    - "No virtual hosts found"
+    - "Wampmono didn’t detect any virtual host. <br>You can create one to start working on your projects."
+    - "Edit Links"
+    - "New link"
+    - "Cancel"
+    - "Save"
+    - "URL"
+    - "Title"
+

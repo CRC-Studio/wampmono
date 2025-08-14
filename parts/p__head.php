@@ -85,7 +85,7 @@ $meta_img   = $meta_url . "assets/img/cover__rs.png";
     <?php // Style.css et script.js 
     ?>
     <link href='./style.min.css' media='all' rel='stylesheet' type='text/css'>
-    <script type="module" src="<?php the_home_url() ?>/assets/js/mono.js"></script>
+    <script type="module" src="<?= get_home_url(); ?>/assets/js/mono.js"></script>
 </head>
 
 <?php

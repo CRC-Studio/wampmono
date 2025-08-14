@@ -3,13 +3,13 @@
 // La page index.php est la première page a être chargée
 // au lancement du site.
 
-
 /**
  * Ajoute du Header
  */
 
 include  __DIR__ . '/parts/p__head.php';
 ?>
+
 
 <main class="main l-ftp" role="main">
 

@@ -5,7 +5,7 @@
 
 // Import les effets
 
-import * as eFade from '../effets/_e-fade';
+import * as eFade from '../effets/_e-fade.js';
 
 
 // Affiche l'overlay

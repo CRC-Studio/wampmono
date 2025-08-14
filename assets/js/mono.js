@@ -14,14 +14,14 @@
 
 
 // Import les effets
-import * as eTextScramble from './effets/_e-text-scramble';
+import * as eTextScramble from './effets/_e-text-scramble.js';
 import * as eOneByOne from './effets/_e-one-by-one.js';
 
 // Import les layouts
 import * as lFrontpage from './layouts/_l-frontpage.js';
 
 // Import les layouts
-import * as lVoletLinks from './parts/_p-volet_links';
+import * as lVoletLinks from './parts/_p-volet_links.js';
 
 // Import les modules
 import * as mOverlay from './modules/_m-overlay.js';

@@ -17,7 +17,7 @@
 
 function get_supported_locales()
 {
-    return ['fr', 'en'];
+    return ['fr', 'en', 'ja'];
 }
 
 

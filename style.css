@@ -215,7 +215,7 @@ img {
     --3m: 36px;
     --hh: calc(var(--m) * 18);
     --hhs:calc(var(--m) * 6);
-    --mx: var(--3m);
+    --mx: calc(var(--m) * 6);
     --mt: var(--2m);
     --mb: calc(var(--m) * 4);
   }

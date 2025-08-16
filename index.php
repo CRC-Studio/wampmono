@@ -52,7 +52,7 @@ include  __DIR__ . '/parts/p__head.php';
   ?>
 
   <section class="l-ftp-wrp m-wrpc-s">
-    <div class="m-rom m-flx m-flg2">
+    <div class="m-rom m-flx m-flgmx">
 
       <div class="m-row m-flc e-obo">
         <?php // Ajout des Virtual Hosts

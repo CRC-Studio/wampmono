@@ -3,7 +3,7 @@
 */
 
 // Permet de suivre l'état de l'animation de chaque élément
-let animationsInProgress = {};
+let animationsInProgress = new WeakMap();
 
 /**
 * Permet de générer des chaînes de caractères aléatoires
@@ -24,31 +24,59 @@ export const scramRandomString = (randomLength) => {
 */
 
 export const scramAnim = ($el) => {
-  // Vérifie si une animation est déjà en cours pour cet élément $el
-  if (animationsInProgress[$el]) return;
+  if (animationsInProgress.get($el)) return;
 
-  animationsInProgress[$el] = true; // Définit l'animation en cours pour cet élément
+  animationsInProgress.set($el, true);
 
-  // Ajoute quelques variables
   let originalText = $el.textContent;
-  let newText = '';
+  let textArray = originalText.split(''); // Transforme en tableau
+  let newTextArray = [...textArray]; // Copie du texte
 
-  for (let i = 1; i <= originalText.length; i++) {
+  for (let i = 1; i <= textArray.length; i++) {
     setTimeout(() => {
-      newText = originalText.substring(0, Math.min(i, originalText.length));
+      // Révèle progressivement les caractères, en gardant les espaces intacts
+      for (let j = 0; j < i; j++) {
+        if (textArray[j] !== ' ') {
+          newTextArray[j] = textArray[j];
+        }
+      }
 
-      let randomLength = originalText.length - i;
-      let randomString = scramRandomString(randomLength);
+      // Génère un scramble pour les caractères restants
+      for (let j = i; j < textArray.length; j++) {
+        if (textArray[j] !== ' ') {
+          newTextArray[j] = scramRandomString(1); // 1 seul caractère aléatoire
+        }
+      }
 
-      newText = newText + randomString;
-      $el.textContent = newText;
+      $el.textContent = newTextArray.join('');
 
-      if (i === originalText.length) {
-        // Réinitialise l'état de l'animation pour cet élément une fois terminée
-        animationsInProgress[$el] = false;
+      if (i === textArray.length) {
+        animationsInProgress.set($el, false);
       }
     }, i * v);
   }
+};
+
+
+/**
+* Permet filter les <br> des textes Scramble
+*/
+
+export const scramFilter = ($el) => {
+  // Si l'élément contient déjà des e-txtsble-line, on ne refait pas le traitement
+  if ($el.querySelector('.e-txtsble-line')) {
+    return Array.from($el.querySelectorAll('.e-txtsble-line'));
+  }
+
+  let html = $el.innerHTML;
+  let lines = html.split(/<br\s*\/?>/i); // Sépare en conservant les lignes
+
+  // Remplace le contenu par des spans pour chaque ligne
+  $el.innerHTML = lines
+    .map(line => `<span class="e-txtsble-line">${line}</span>`)
+    .join('<br>');
+
+  return Array.from($el.querySelectorAll('.e-txtsble-line'));
 };
 
 
@@ -58,8 +86,21 @@ export const scramAnim = ($el) => {
 
 export const scramAnimHover = (e) => {
   let $scramble = e.currentTarget.closest('.e-txtsble');
-  scramAnim($scramble);
-}
+  let $targets = $scramble.querySelectorAll('.e-txtsble-tar');
+
+  // Si aucun .e-txtsble-tar → on prend le parent
+  if (!$targets.length) {
+    $targets = [$scramble];
+  }
+
+  $targets.forEach(($target) => {
+    let $lines = scramFilter($target);
+    $lines.forEach(($line) => {
+      scramAnim($line);
+    });
+  });
+};
+
 
 /**
 * Initialisation

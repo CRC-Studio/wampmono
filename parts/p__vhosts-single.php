@@ -11,7 +11,11 @@
         <?php foreach ($vhosts as $vhost): ?>
             <li class="l-ftp-vhost m-row m-flx m-flxc m-flg1">
                 <a href="<?= $vhost['url'] ?>" target="_blank" class="m-flx m-lead e-txtsble"><?= $vhost['name'] ?></a>
-                <?= get_vhost_login_url($vhost) ?>
+                <?php if (get_vhost_login_url($vhost)): ?>
+                    <a href="<?= get_vhost_login_url($vhost) ?>" target="_blank" class="m-btn m-btn-p m-btn-ico m-mla e-hde">
+                        <?= get_ico('login') ?>
+                    </a>
+                <?php endif; ?>
             </li>
         <?php endforeach; ?>
     </ul>

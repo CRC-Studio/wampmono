@@ -42,12 +42,10 @@ function get_vhost_login_url($vhost)
 
     // Si trouvé, on retourne le lien formaté
     if ($loginUrl != '') {
-        return '<a href="' . $loginUrl . '" target="_blank" class="m-btn m-btn-p m-btn-ico e-hde">'
-            . get_ico('login') .
-            '</a>';
+        return $loginUrl;
     }
 
-    return null;
+    return false;
 }
 
 

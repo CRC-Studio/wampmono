@@ -111,7 +111,7 @@ let $scrambles, set, v;
 export const scramInit = () => {
   // Définit les variables
   $scrambles = document.querySelectorAll('.e-txtsble');
-  set = 'abcdefghijklmnopqrstuvwxyz';
+  set = 'abcdefhijklnopqrstuvxyz';
   v = 30; // Vitesse
 
   $scrambles.forEach(($scramble) => {

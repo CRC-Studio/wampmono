@@ -20,21 +20,11 @@ $btnBorder: 1px
 
 // Stylise les groupes de boutons
 
-.m-btn__grp
+.m-btn-bar
   display: inline-flex
-  flex-wrap: wrap
-  gap: m()
-  .m-btn
-    width: 100%
-  @include respond('m')
-    flex-direction: row
-    .m-btn
-      width: auto
-
-// .m-btn__grp
-//   margin: m() 0
-//   &>.m-btn:not(:first-child)
-//     margin-left: m(0.5)
+  border-radius: m(3)
+  background: color('grey', 1000)
+  transition: $fast
 
 // Stylse tous les boutons
 
@@ -81,4 +71,5 @@ $btnBorder: 1px
   svg
     width: m(1.5)
     height: m(1.5)
-    fill: color('back')
+    path
+      fill: color('back')

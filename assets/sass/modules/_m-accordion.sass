@@ -12,7 +12,7 @@
 ///       <div class="m-acd-ttl m-row m-flx m-flyc">
 ///         <h3>Ici, le titre de l'accordion</h3>
 ///         <div class="m-acd-ico m-flx m-fly cm-flxc m-mla">
-///           <?php the_ico('more') ?>
+///           <?= get_ico('more') ?>
 ///         </div>
 ///       </div>
 ///       <div class="m-acd-wrp">
@@ -41,18 +41,21 @@
   cursor: pointer
   padding: m() 0
   @include hover
-    svg
+    svg path
       fill: color('txt')
 
 // Stylise l'icone
 
 .m-acd-ico
   width: m(2)
+  height: m(2)
   svg
     transform: rotate(-365deg)
     transition: transform $fast
-    fill: color('grey', 500)
     width: m()
+    height: m()
+    path
+      fill: color('grey')
 
 // Stylise le Wrapper
 

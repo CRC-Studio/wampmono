@@ -25,7 +25,7 @@ html {
   --color-lback: var(--color-grey-0) , 0.95;
   --color-lgrey: var(--color-grey-100);
   --color-txt: var(--color-grey-1000);
-  --color-txtc: var(--color-grey-50);
+  --color-txtc: var(--color-grey-400);
   --color-acc: var(--color-orange-500);
 }
 
@@ -401,13 +401,14 @@ h1, h2, h3, h4, h5, h6, p, a, span {
   padding: var(--m) 0;
 }
 @media (hover) {
-  .m-acd-ttl:hover svg {
+  .m-acd-ttl:hover svg path {
     fill: hsl(var(--color-txt));
   }
 }
 
 .m-acd-ico {
   width: var(--2m);
+  height: var(--2m);
 }
 .m-acd-ico svg {
   -webkit-transform: rotate(-365deg);
@@ -416,8 +417,11 @@ h1, h2, h3, h4, h5, h6, p, a, span {
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
-  fill: hsl(var(--color-grey-500));
   width: var(--m);
+  height: var(--m);
+}
+.m-acd-ico svg path {
+  fill: hsl(var(--color-grey-500));
 }
 
 .m-acd-wrp {
@@ -512,7 +516,6 @@ h1, h2, h3, h4, h5, h6, p, a, span {
   width: 80vw;
   top: 0;
   bottom: 0;
-  padding: var(--mx);
   background: hsl(var(--color-back));
   -webkit-transition: 0.5s cubic-bezier(0.36, 0.79, 0.7, 0.93);
   transition: 0.5s cubic-bezier(0.36, 0.79, 0.7, 0.93);
@@ -526,7 +529,6 @@ h1, h2, h3, h4, h5, h6, p, a, span {
 }
 
 .m-vlt-r {
-  border-left: 1px solid hsl(var(--color-lgrey));
   right: -100vw;
 }
 .m-vlt-r.e-on {
@@ -578,6 +580,7 @@ h1, h2, h3, h4, h5, h6, p, a, span {
 }
 
 .m-row, .m-rox, .m-roy, .m-rom, .m-col {
+  position: relative;
   float: left;
   width: 100%;
   -webkit-transition: padding 0.5s;
@@ -791,27 +794,14 @@ h1, h2, h3, h4, h5, h6, p, a, span {
   height: 100%;
 }
 
-.m-btn__grp {
+.m-btn-bar {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: var(--m);
-}
-.m-btn__grp .m-btn {
-  width: 100%;
-}
-@media screen and (min-width: 900px) {
-  .m-btn__grp {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .m-btn__grp .m-btn {
-    width: auto;
-  }
+  border-radius: var(--3m);
+  background: hsl(var(--color-grey-1000));
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .m-btn {
@@ -866,6 +856,8 @@ h1, h2, h3, h4, h5, h6, p, a, span {
 .m-btn-ico svg {
   width: calc(var(--m) * 1.5);
   height: calc(var(--m) * 1.5);
+}
+.m-btn-ico svg path {
   fill: hsl(var(--color-back));
 }
 
@@ -1143,13 +1135,18 @@ select:-webkit-autofill:focus {
 }
 
 #l-ftp-mdy {
-  width: var(--m);
+  width: var(--2m);
+  height: var(--2m);
 }
 #l-ftp-mdy svg {
+  width: var(--m);
+  height: var(--m);
+}
+#l-ftp-mdy svg path {
   fill: hsl(var(--color-grey-500));
 }
 @media (hover) {
-  #l-ftp-mdy:hover svg {
+  #l-ftp-mdy svg:hover path {
     fill: hsl(var(--color-txt));
   }
 }
@@ -1171,21 +1168,35 @@ select:-webkit-autofill:focus {
   transition: 0s all;
 }
 .l-ftp-ico svg {
-  fill: hsl(var(--color-txt));
   width: calc(var(--m) * 1.25);
   height: calc(var(--m) * 1.25);
 }
+.l-ftp-ico svg path {
+  fill: hsl(var(--color-txt));
+}
 
-.l-ftp-vhost .m-btn-ico {
-  width: calc(var(--m) * 2.5);
-  height: calc(var(--m) * 2.5);
+.l-ftp-vhost {
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 @media (hover) {
-  .l-ftp-vhost:hover .m-btn-ico {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .l-ftp-vhost:hover {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
   }
+  .l-ftp-vhost:hover .l-ftp-btns {
+    opacity: 1;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+}
+
+.l-ftp-btns {
+  z-index: 1;
+}
+.l-ftp-btns .m-btn-ico {
+  width: calc(var(--m) * 2.5);
+  height: calc(var(--m) * 2.5);
 }
 
 .l-ftp-empt {

@@ -18,15 +18,15 @@ include  __DIR__ . '/parts/p__head.php';
 
   <section class="l-ftp-top m-row e-off">
     <div class="m-wrpc-s m-flx m-flg1">
-      <form class="m-rom m-frm m-flx">
-        <div class="m-row m-frm-grp m-flx m-flxc m-flg1">
+      <form class="m-rom m-frm m-flx m-flg1">
 
-          <a href="http://localhost/?wampmono=no" class="m-btn m-btn-p m-btn-ico m-mta m-ttip-lnk" target="_blank">
-            <?php the_ico('arrow_left'); ?>
-            <div class="m-ttip m-ttip__is--tl">
-              <div class="m-ttip-wrp m-body-s"><?= __('Back to Wamp') ?></div>
-            </div>
-          </a>
+        <a href="http://localhost/?wampmono=no" class="m-btn m-btn-p m-btn-ico m-mta m-ttip-lnk" target="_blank">
+          <?= get_ico('arrow_left'); ?>
+          <div class="m-ttip m-ttip__is--tl">
+            <div class="m-ttip-wrp m-body-s"><?= __('Back to Wamp') ?></div>
+          </div>
+        </a>
+        <div class="m-row m-frm-grp m-flx m-flxc">
 
           <div class="l-ftp-inp">
             <div class="m-frm-lbl">
@@ -34,14 +34,21 @@ include  __DIR__ . '/parts/p__head.php';
               <input type="text" name="vhost" placeholder="<?= __('Filter virtual hosts') ?>" class="m-sch-inp" autofocus>
             </div>
           </div>
-
-          <a href="http://localhost/add_vhost.php?lang=french" class="m-btn m-btn-p m-btn-ico m-mta m-ttip-lnk">
-            <?php the_ico('more'); ?>
+        </div>
+        <div class="m-btn-bar m-mta">
+          <a href="http://localhost/add_vhost.php?lang=french" class="m-btn m-btn-ico m-ttip-lnk">
+            <?= get_ico('more'); ?>
             <div class="m-ttip m-ttip__is--tl">
               <div class="m-ttip-wrp m-body-s"><?= __('Add a new Vhost') ?></div>
             </div>
           </a>
 
+          <span href="" class="m-btn m-btn-ico m-ttip-lnk">
+            <?= get_ico('notif'); ?>
+            <div class="m-ttip m-ttip__is--tl">
+              <div class="m-ttip-wrp m-body-s"><?= __('Everything is quiet') ?></div>
+            </div>
+          </span>
         </div>
       </form>
     </div>
@@ -53,6 +60,9 @@ include  __DIR__ . '/parts/p__head.php';
 
   <section class="l-ftp-wrp m-wrpc-s">
     <div class="m-rom m-flx m-flgmx">
+
+
+
 
       <div class="m-row m-flc e-obo">
         <?php // Ajout des Virtual Hosts
@@ -73,7 +83,7 @@ include  __DIR__ . '/parts/p__head.php';
             <div class="m-acd-ttl  m-row m-flx m-flyc">
               <h2 class="m-lead"><?= __('Folders') ?></h2>
               <div class="m-acd-ico m-flx m-flyc m-flxc m-mla">
-                <?php the_ico('arrow_right') ?>
+                <?= get_ico('arrow_right') ?>
               </div>
             </div>
             <div class="m-acd-wrp">
@@ -93,10 +103,10 @@ include  __DIR__ . '/parts/p__head.php';
             <div class="m-acd-ttl  m-row m-flx m-flyc">
               <h2 class="m-lead"><?= __('Tools') ?></h2>
               <div class="m-acd-ico m-flx m-flyc m-flxc m-mla">
-                <?php the_ico('arrow_right') ?>
+                <?= get_ico('arrow_right') ?>
               </div>
               <div id="l-ftp-mdy" class="m-flx m-flyc m-flxc m-mla m-vlt-btn e-hde" data-vltid="m-vlt-01">
-                <?php the_ico('settings'); ?>
+                <?= get_ico('settings'); ?>
               </div>
             </div>
             <div class="m-acd-wrp">

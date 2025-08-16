@@ -9,11 +9,17 @@
     "URL": "URL",
     "No virtual hosts found": "Aucun Virtual Host trouvé",
     "Wampmono didn’t detect any virtual host. <br>You can create one to start working on your projects.": "Wampmono n’a détecté aucun Virtual Host.<br>Vous pouvez en créer un pour commencer à travailler sur vos projets.",
-    "Edit Links": "Modifier les liens",
-    "New link": "Nouveau lien",
     "Cancel": "Annuler",
     "Save": "Enregistrer",
     "Confirm deletion?": "Confirmer la suppression ?",
     "Delete": "Supprimer",
-    "Warning": "Attention"
+    "Warning": "Attention",
+    "No projects found": "Aucun dossier trouvé",
+    "Add a folder to \/www to start working on a project.": "Ajoutez un dossier dans \/www pour démarrer un projet.",
+    "No tools found": "Aucun Outil trouvé",
+    "Add": "Ajouter",
+    "Add your favorite tools for quick access.": "Ajoutez vos outils favoris pour un accès rapide.",
+    "Add a new tool": "Ajouter un nouvel outil",
+    "Edit tools": "Modifier les outils",
+    "New tool": "Nouvel outil"
 }

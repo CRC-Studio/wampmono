@@ -8,12 +8,18 @@
     "Confirm deletion?": "消去しますか。",
     "No virtual hosts found": "Vhostが<br>見つかりませんでした。",
     "Wampmono didn’t detect any virtual host. <br>You can create one to start working on your projects.": "Vhostが見つかりませんでした。<br>プロジェクトを始めるために新しいVhostを作成してください。",
-    "Edit Links": "リンクを編集する",
-    "New link": "新しいリンク",
     "Cancel": "キャンセル",
     "Save": "保存する",
     "URL": "",
     "Title": "タイトル",
     "Delete": "削除する",
-    "Warning": "警告"
+    "Warning": "警告",
+    "No projects found": "",
+    "Add a folder to \/www to start working on a project.": "",
+    "No tools found": "",
+    "Add": "",
+    "Add your favorite tools for quick access.": "",
+    "Add a new tool": "",
+    "Edit tools": "",
+    "New tool": ""
 }

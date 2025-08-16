@@ -9,11 +9,17 @@
     "URL": "",
     "No virtual hosts found": "",
     "Wampmono didn’t detect any virtual host. <br>You can create one to start working on your projects.": "",
-    "Edit Links": "",
-    "New link": "",
     "Cancel": "",
     "Save": "",
     "Confirm deletion?": "",
     "Delete": "",
-    "Warning": ""
+    "Warning": "",
+    "No projects found": "",
+    "Add a folder to \/www to start working on a project.": "",
+    "No tools found": "",
+    "Add": "",
+    "Add your favorite tools for quick access.": "",
+    "Add a new tool": "",
+    "New tool": "",
+    "Edit tools": ""
 }

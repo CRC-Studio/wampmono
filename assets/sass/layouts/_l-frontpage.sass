@@ -41,12 +41,16 @@
       display: none
 
 #l-ftp-mdy
-  width: m(1)
+  width: m(2)
+  height: m(2)
   svg
-    fill: color('grey')
-  @include hover
-    svg
-      fill: color('txt')
+    width: m(1)
+    height: m(1)
+    path
+      fill: color('grey')
+    @include hover
+      path
+        fill: color('txt')
 
 .l-ftp-lnk
   @include hover
@@ -58,17 +62,24 @@
 
 .l-ftp-ico
   transition: 0s all
-  svg
-    fill: color('txt')
+  svg 
     width: m(1.25)
     height: m(1.25)
+    path
+      fill: color('txt')
 
 // Stylise les effets hover des liens
 
 .l-ftp-vhost
+  transition: $slow
+  @include hover
+    transition: $veryfast
+    .l-ftp-btns
+      opacity: 1
+      transition: $veryfast
+
+.l-ftp-btns
+  z-index: 1
   .m-btn-ico
     width: m(2.5)
     height: m(2.5)
-  @include hover
-    .m-btn-ico
-      display: flex

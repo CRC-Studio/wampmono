@@ -27,21 +27,6 @@ h1, h2, h3, h4, h5, h6, p, a, span
   font-weight: inherit
   transition: $fast
 
-p + p
-  margin-top: m()
-
-p a, a.m-u
-    &:link, &:visited
-      text-decoration: none
-      box-shadow: 0 1px 0 0 color('acc')
-      transition: $slow
-
-    @include hover
-      color: color('acc')
-      padding-bottom: 3px
-      box-shadow: 0 1px 0 0 color('acc')
-      transition: $fast
-
 /// Stylise les changements de font-family
 
 .m-ss, .m-ss *
@@ -90,4 +75,4 @@ p a, a.m-u
 // La class .m-txt__color permet d'ajouter une touche de couleur par endroit
 
 .m-txt-g
-  color: color('grey')
+  color: color('txtc')

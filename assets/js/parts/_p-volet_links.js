@@ -15,6 +15,7 @@ import * as mModal from '../modules/_m-modal.js';
 
 export const linksAdd = (e) => {
   e.preventDefault();
+
   const $container = document.querySelector(".m-frm-lnks");
   const $links = $container.querySelectorAll(".m-frm-lnk");
   let lastOrder = 0;
@@ -73,6 +74,9 @@ export const linksDelete = async (e) => {
   } catch {
     console.log('Suppression annulée');
   }
+
+  // Affiche ou nom le msg "aucun tool"
+  linksEmptyMsg();
 };
 
 
@@ -106,6 +110,18 @@ export const confirmModal = () => {
     $close.addEventListener('click', onCancel);
     document.addEventListener('modalHide', onCancel);
   });
+};
+
+// Permet d'afficher ou non la div avec le message
+// si aucun lien n'est trouvé
+
+export const linksEmptyMsg = () => {
+
+  const $links = document.querySelectorAll(".m-frm-lnk");
+  const $msg = document.querySelector(".m-vlt-empt");
+
+  // Afficher ou masquer le message
+  $msg.style.display = $links.length <= 0 ? "flex" : "none";
 };
 
 
@@ -156,11 +172,11 @@ export const linksInit = () => {
   }
 
   // Permet d'ajouter un lien
-  let $btnAdd = document.querySelector(".m-btn-add");
-  if ($btnAdd) {
+  let $btnAdds = document.querySelectorAll(".m-btn-add");
+  $btnAdds.forEach(($btnAdd) => {
     $btnAdd.removeEventListener('click', linksAdd);
     $btnAdd.addEventListener('click', linksAdd);
-  };
+  });
 
 
   // Permet de supprimer un lien
@@ -172,6 +188,9 @@ export const linksInit = () => {
 
   // Ajoute le Drag & Drop
   linksDragInit();
+
+  // Affiche ou nom le msg "aucun tool"
+  linksEmptyMsg();
 
   // Relance quelques fonctions
   mInputChecker.inputCheckerInit();

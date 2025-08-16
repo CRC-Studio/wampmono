@@ -54,35 +54,17 @@ include  __DIR__ . '/parts/p__head.php';
   <section class="l-ftp-wrp m-wrpc-s">
     <div class="m-rom m-flx m-flg2">
 
-      <?php // Ajout des Virtual Hosts
-      ?>
-
       <div class="m-row m-flc e-obo">
-        <?php
+        <?php // Ajout des Virtual Hosts
         $vhostsGrouped = get_vhosts();
-
-        if ($vhostsGrouped):
-          foreach ($vhostsGrouped as $letter => $vhosts): ?>
-            <div class="l-ftp-vhosts m-flc">
-              <h2 class="m-body m-txt-g m-mt3 m-mb1"><?= $letter ?></h2>
-              <ul class="m-flc m-flg05">
-                <?php foreach ($vhosts as $vhost): ?>
-                  <li class="l-ftp-vhost m-row m-flx m-flxc m-flg1">
-                    <a href="<?= $vhost['url'] ?>" target="_blank" class="m-flx m-lead e-txtsble"><?= $vhost['name'] ?></a>
-                    <?= get_vhost_login_url($vhost) ?>
-                  </li>
-                <?php endforeach; ?>
-              </ul>
-            </div>
-          <?php endforeach; ?>
-        <?php else: ?>
-          <?php include  __DIR__ . '/parts/p__vhost-empty.php'; ?>
-        <?php endif; ?>
+        include __DIR__ . '/parts/' . ($vhostsGrouped ? 'p__vhosts.php' : 'p__vhosts-empty.php');
+        ?>
       </div>
 
 
-      <div class="l-ftp-asd m-acds m-flx m-mla">
-        <ul class="l-ftp-acds m-acds m-flc m-flg05">
+
+      <div class="l-ftp-asd m-flx m-mla">
+        <ul class="l-ftp-acds m-row m-acds m-flc m-flg05">
 
           <?php // Ajout des Projets sans Virtual Hosts
           ?>
@@ -98,13 +80,8 @@ include  __DIR__ . '/parts/p__head.php';
               <div class="m-flc m-flg05">
                 <?php
                 $projects = get_projects();
-                foreach ($projects as $projectData): ?>
-                  <a href="<?= $projectData['url'] ?>" target="_blank" class="l-ftp-lnk m-flx m-flg05">
-                    <span class="m-body m-txt-g">/<?= $projectData['name'] ?></span>
-                    <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
-                  </a>
-                <?php endforeach ?>
-
+                include __DIR__ . '/parts/' . ($projects ? 'p__projects.php' : 'p__projects-empty.php');
+                ?>
               </div>
             </div>
           </li>
@@ -124,12 +101,10 @@ include  __DIR__ . '/parts/p__head.php';
             </div>
             <div class="m-acd-wrp">
               <div class="m-flc m-flg05">
-                <?php foreach (get_links() as $link): ?>
-                  <a href="<?= get_link_url($link) ?>" target="_blank" class="l-ftp-lnk m-flx m-flg05">
-                    <span class="m-body m-txt-g"><?= get_link_title($link) ?></span>
-                    <span class="l-ftp-ico m-mta e-off"><?php the_ico('arrow_top_right'); ?></span>
-                  </a>
-                <?php endforeach; ?>
+                <?php
+                $tools = get_tools();
+                include __DIR__ . '/parts/' . ($tools ? 'p__tools.php' : 'p__tools-empty.php');
+                ?>
               </div>
             </div>
           </li>
@@ -145,7 +120,7 @@ include  __DIR__ . '/parts/p__head.php';
   /**
    * Ajoute le volet de modification des liens
    */
-  include  __DIR__ . '/parts/p__volet-links.php';
+  include  __DIR__ . '/parts/p__volet-tools.php';
   ?>
 
 

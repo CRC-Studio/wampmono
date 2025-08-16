@@ -25,6 +25,7 @@ html {
   --color-lback: var(--color-grey-0) , 0.95;
   --color-lgrey: var(--color-grey-100);
   --color-txt: var(--color-grey-1000);
+  --color-txtc: var(--color-grey-50);
   --color-acc: var(--color-orange-500);
 }
 
@@ -34,6 +35,7 @@ html {
     --color-lback: var(--color-grey-1000) , 0.95;
     --color-lgrey: var(--color-grey-900);
     --color-txt: var(--color-grey-500);
+    --color-txtc: var(--color-grey-700);
     --color-acc: var(--color-orange-800);
   }
 }
@@ -341,28 +343,6 @@ h1, h2, h3, h4, h5, h6, p, a, span {
   transition: 0.5s;
 }
 
-p + p {
-  margin-top: var(--m);
-}
-
-p a:link, p a:visited, a.m-u:link, a.m-u:visited {
-  text-decoration: none;
-  -webkit-box-shadow: 0 1px 0 0 hsl(var(--color-acc));
-          box-shadow: 0 1px 0 0 hsl(var(--color-acc));
-  -webkit-transition: 2s;
-  transition: 2s;
-}
-@media (hover) {
-  p a:hover, a.m-u:hover {
-    color: hsl(var(--color-acc));
-    padding-bottom: 3px;
-    -webkit-box-shadow: 0 1px 0 0 hsl(var(--color-acc));
-            box-shadow: 0 1px 0 0 hsl(var(--color-acc));
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-  }
-}
-
 .m-ss, .m-ss * {
   font-family: "Mono Sans", Helvetica, sans-serif;
 }
@@ -397,7 +377,7 @@ p a:link, p a:visited, a.m-u:link, a.m-u:visited {
 }
 
 .m-txt-g {
-  color: hsl(var(--color-grey-500));
+  color: hsl(var(--color-txtc));
 }
 
 .m-acd.e-on .m-acd-ico svg {
@@ -1138,6 +1118,9 @@ select:-webkit-autofill:focus {
 
 .l-ftp-asd {
   width: 33%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 .l-ftp-acds {

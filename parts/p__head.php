@@ -9,7 +9,7 @@ include  __DIR__ . '/../fonctions.php';
 // Ajoute les info Meta
 
 $meta_title = "WampMono";
-$meta_desc  = "WampMono - Un thème conçu pour personnaliser la page d'accueil de WampServer, développé avec Monobloc par CRC Studio.";
+$meta_desc  = "WampMono - Un thème conçu pour personnaliser la page d'accueil de WampServer, développé avec Monobloc par crc.studio.";
 $meta_key   = "WampServer, thème personnalisé, Monobloc, CRC Studio, développement web";
 $meta_name  = "wampmono.lcl";
 $meta_url   = "http://wampmono.lcl/";
@@ -45,7 +45,7 @@ $meta_img   = $meta_url . "assets/img/cover__rs.png";
     <link rel="icon" type="image/svg+xml" href="<?= get_fav_path() ?>/favicon.svg" />
     <link rel="shortcut icon" href="<?= get_fav_path() ?>/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="<?= get_fav_path() ?>/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Wampmono™" />
+    <meta name="apple-mobile-web-app-title" content="WampMono™" />
 
     <?php // Themes colors 
     ?>

@@ -16,15 +16,14 @@
   <div class="m-ovl e-fll e-off"></div>
 
   <?php // Ajout de la modale
-  ?>
-  <?php include  __DIR__ . '/p__modal-confirme.php'; ?>
+  include  __DIR__ . '/p__modal-confirme.php'; ?>
 
   <?php // Ajout du fake-footer
   ?>
 
   <div class="l-fot-wrp m-wrpc-s e-off">
     <div class="m-rom m-flc">
-      <span class="m-body-s"><a href="https://github.com/crc-Studio/wampmono" target="_blank"><i class="e-txtsble">Wampmono™</i></a>, a light Manager for <a href="https://wampserver.aviatechno.net/" target="_blank" class="e-txtsble">Wampserver</a></span>
+      <span class="m-body-s"><a href="https://github.com/crc-Studio/wampmono" target="_blank"><i class="e-txtsble">WampMono™</i></a>, a light Manager for <a href="https://wampserver.aviatechno.net/" target="_blank" class="e-txtsble">Wampserver</a></span>
       <span class="m-body-s">by <a href="https://crc.studio/" title="Meet CRC Studio ● Our design &amp; developement studio" target='_blank' class="e-txtsble">crc.studio:</a></span>
       <span class="m-body-s">A design & developement studio</span>
       <span class="m-body-s">グラフィックデザインとプログラミング</span>

@@ -1,0 +1,48 @@
+// main: ../../../style.sass
+
+/// Le module Form__slider permet de modifier l'aspect des boutons radio
+/// pour en faire des boutons On/Off.
+///
+/// Attention : pensez à activer l'effet SASS e-fll.
+///
+///   <label class="m-frm-swt">
+///     <input type="checkbox">
+///     <span class="m-frm-sld e-fll"></span>
+///   </label>
+
+.m-frm-swt-wrp
+  height: $inputHeight
+
+.m-frm-swt
+  float: left
+  position: relative
+  display: inline-block
+  width: m(4) !important
+  height: m(2.5)
+
+  input
+    opacity: 0
+    width: 0
+    height: 0
+
+.m-frm-sld
+  cursor: pointer
+  border: $inputFocusBorderWidth solid $inputFocusBorderColor
+  transition: $fast
+  border-radius: m(2)
+  &:before
+    position: absolute
+    content: ""
+    left: m(.2)
+    height: m(2)
+    width: m(2)
+    background-color: $inputColor
+    border-radius: 50%
+    transition: $fast
+
+input
+  &:checked + .m-frm-sld
+    background-color: color('grey', 1000)
+  &:checked + .m-frm-sld:before
+    transform: translateX( m(1.5) )
+    background-color: color('back')

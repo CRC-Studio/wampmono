@@ -36,7 +36,7 @@ include  __DIR__ . '/parts/p__head.php';
           </div>
         </div>
         <div class="m-btn-bar m-mta">
-          <a href="http://localhost/add_vhost.php?lang=french" class="m-btn m-btn-ico m-ttip-lnk">
+          <a class="m-btn m-btn-ico m-ttip-lnk m-pnl-btn" data-vltid="m-pnl-03">
             <?= get_ico('more'); ?>
             <div class="m-ttip m-ttip__is--tl">
               <div class="m-ttip-wrp m-body-s"><?= __('Add a new Vhost') ?></div>
@@ -62,15 +62,13 @@ include  __DIR__ . '/parts/p__head.php';
     <div class="m-rom m-flx m-flgmx">
 
 
-
-
       <div class="m-row m-flc e-obo">
+
         <?php // Ajout des Virtual Hosts
         $vhostsGrouped = get_vhosts();
         include __DIR__ . '/parts/' . ($vhostsGrouped ? 'p__vhosts.php' : 'p__vhosts-empty.php');
         ?>
       </div>
-
 
 
       <div class="l-ftp-asd m-flx m-mla">
@@ -105,7 +103,7 @@ include  __DIR__ . '/parts/p__head.php';
               <div class="m-acd-ico m-flx m-flyc m-flxc m-mla">
                 <?= get_ico('arrow_right') ?>
               </div>
-              <div id="l-ftp-mdy" class="m-flx m-flyc m-flxc m-mla m-vlt-btn e-hde" data-vltid="m-vlt-01">
+              <div id="l-ftp-mdy" class="m-flx m-flyc m-flxc m-mla m-pnl-btn e-hde" data-vltid="m-pnl-01">
                 <?= get_ico('settings'); ?>
               </div>
             </div>
@@ -128,9 +126,11 @@ include  __DIR__ . '/parts/p__head.php';
 
   <?php
   /**
-   * Ajoute le volet de modification des liens
+   * Ajoute les volets
    */
-  include  __DIR__ . '/parts/p__volet-tools.php';
+  include  __DIR__ . '/parts/p__panel-tools.php';
+  include  __DIR__ . '/parts/p__panel-vhost-add.php';
+  include  __DIR__ . '/parts/p__panel-vhost-modify.php';
   ?>
 
 

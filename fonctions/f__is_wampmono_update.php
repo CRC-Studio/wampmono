@@ -3,7 +3,7 @@
 /**
  * Fonction is_wampmono_update()
  * 
- * Vérifie si une nouvelle version de Wampmono
+ * Vérifie si une nouvelle version de WampMono
  * a été poussée sur la branche main du repo GitHub.
  * Stocke les infos dans content/update/update.json
  * 
@@ -11,7 +11,7 @@
  *   if (is_wampmono_update()) {
  *     Nouvelle version détectée !";
  *   } else {
- *   Rien de nouveau sur Wampmono.";
+ *   Rien de nouveau sur WampMono.";
  *   }
  */
 

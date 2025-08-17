@@ -1,5 +1,5 @@
 /**
- * Layout : Frontpage
+ * Part : Panel Edit Tool
 *
 */
 
@@ -118,7 +118,7 @@ export const confirmModal = () => {
 export const linksEmptyMsg = () => {
 
   const $links = document.querySelectorAll(".m-frm-lnk");
-  const $msg = document.querySelector(".m-vlt-empt");
+  const $msg = document.querySelector(".m-pnl-empt");
 
   // Afficher ou masquer le message
   $msg.style.display = $links.length <= 0 ? "flex" : "none";

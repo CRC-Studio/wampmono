@@ -1,0 +1,51 @@
+// main: ../../../style.sass
+
+/// Le module Menu permet de créer des menus secondaire
+///
+/// Attention : pensez à activer le module Menu
+/// dans le fichier assets/js/monobloc.js
+///
+///
+/// Exemple de HTML :
+///    <div class="m-men">  
+///     <button type="button" class="m-men-btn m-btn m-btn-l m-btn-ico">
+///       <?php the_ico('more_vert') ?>
+///     </button>  
+///     <ul class="m-men-itms e-off">
+///         <li class="m-men-itm"><a>Something</a></li>
+///         <li class="m-men-itm m-men-dvr"><a>Something</a></li>
+///         <li class="m-men-itm"><a>Something</a></li>
+///     </ul>
+///   </div> 
+
+
+.m-men
+
+.m-men-itms
+  position: absolute
+  top: m(3)
+  right: 0
+  min-width: m(10)
+  border-radius: m(.5)
+  background: color('txt')
+  opacity: 0
+  overflow: hidden
+  z-index: $zindex__menu
+  pointer-events: none
+  transition: $veryfast
+
+  &.e-on
+    opacity: 1
+    pointer-events: auto
+    transition: $veryfast
+
+.m-men-itm
+  a
+    display: block
+    padding: m(.5) m(1)
+    cursor: pointer
+    width: 100%
+    color: color('back')
+
+    @include hover
+      background: color('grey')

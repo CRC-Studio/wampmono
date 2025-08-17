@@ -8,8 +8,25 @@
 import * as eFade from '../effets/_e-fade.js';
 
 
-// Affiche la modal
+const modalToggle = (e) => {
+  const $btn = e.currentTarget;
+  const mdlName = $btn.getAttribute('data-mdl');
+  if (!mdlName) return;
 
+
+  const $modal = document.querySelector(`.m-mdl[data-mdl="${mdlName}"]`);
+  if (!$modal) return;
+
+  if ($modal.classList.contains('e-on')) {
+    modalHide();
+  } else {
+    modalShow(mdlName);
+  }
+
+};
+
+
+// Affiche la modal
 
 export const modalShow = (mdlName) => {
 
@@ -62,8 +79,8 @@ export const modalInit = () => {
 
   // Ajoute le listener sur les boutons de fermeture
   document.querySelectorAll('.m-mdl-cls').forEach(($btn) => {
-    $btn.removeEventListener('click', modalHide);
-    $btn.addEventListener('click', modalHide);
+    $btn.removeEventListener('click', modalToggle);
+    $btn.addEventListener('click', modalToggle);
   });
 
   // Relance la fonction après un Call Ajax

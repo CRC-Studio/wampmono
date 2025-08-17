@@ -5,7 +5,7 @@
 
 ?>
 
-<section id="m-vlt-01" class="m-vlt m-vlt-r m-flx">
+<section id="m-pnl-01" class="m-pnl m-pnl-r m-flx">
     <div class="m-mdl-dkns">
         <div class="m-mdl-dkn">
             <div class="e-dnks">
@@ -18,7 +18,7 @@
         </div>
     </div>
 
-    <div class="m-vlt-wrp m-flc m-rom">
+    <div class="m-pnl-wrp  m-rom m-flc">
         <form class="m-frm m-flc m-flh" action="<?= get_home_url(); ?>/fonctions/s__set-tools.php" method="post">
             <div class="m-frm-lnks m-frm-wrp m-flc m-flh">
                 <?php
@@ -29,16 +29,16 @@
                     "URL" => "",
                     "ORDER" => 0
                 ];
-                include __DIR__ . '/p__volet-tools-single.php';
+                include __DIR__ . '/p__panel-tools-single.php';
 
                 // Ajoute les liens de l'utilisateur
-                foreach (get_tools() as $tool) include __DIR__ . '/p__volet-tools-single.php';
-                include __DIR__ . '/p__volet-tools-empty.php';
+                foreach (get_tools() as $tool) include __DIR__ . '/p__panel-tools-single.php';
+                include __DIR__ . '/p__panel-tools-empty.php';
                 ?>
             </div>
             <div class="m-frm-grp m-flx m-flg05 m-mta">
-                <button class="m-btn-add m-btn m-btn-p m-mra"><?= __('New tool') ?></button>
-                <button class="m-btn m-btn-p m-vlt-btn" data-vltid="m-vlt-01"><?= __('Cancel') ?></button>
+                <button class="m-btn-add m-btn m-btn-p m-mra"><?= __('Add tool') ?></button>
+                <button class="m-btn m-btn-p m-pnl-btn" data-vltid="m-pnl-01"><?= __('Cancel') ?></button>
                 <button type="submit" class="m-btn m-btn-p"><?= __('Save') ?></button>
             </div>
         </form>

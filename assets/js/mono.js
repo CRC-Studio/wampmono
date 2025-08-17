@@ -21,13 +21,15 @@ import * as eDenko from './effets/_e-denko.js';
 // Import les layouts
 import * as lFrontpage from './layouts/_l-frontpage.js';
 
-// Import les layouts
-import * as lVoletLinks from './parts/_p-volet_links.js';
+// Import les parts
+import * as pPanelTools from './parts/_p-panel_tools.js';
+import * as pPanelAdd from './parts/_p-panel_add.js';
 
 // Import les modules
 import * as mOverlay from './modules/_m-overlay.js';
 import * as mModal from './modules/_m-modal.js';
-import * as mVolet from './modules/_m-volet.js';
+import * as mMenu from './modules/_m-menu.js';
+import * as mPanel from './modules/_m-panel.js';
 import * as mSearch from './modules/_m-search.js';
 import * as mAccordions from './modules/_m-accordions.js';
 import * as mInputChecker from './modules/_m-input-checker.js';

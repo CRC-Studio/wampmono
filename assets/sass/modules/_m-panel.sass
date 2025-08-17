@@ -9,9 +9,9 @@
 /// Exemple de HTML :
 ///   <main>
 ///
-///   <button class="m-btn m-btn-o m-vlt-btn" data-vltid="m-vlt-01"><button>
+///   <button class="m-btn m-btn-o m-pnl-btn" data-vltid="m-pnl-01"><button>
 ///
-///     <div id="m-vlt-01" class="m-vlt m-vlt-l">
+///     <div id="m-pnl-01" class="m-pnl m-pnl-l">
 ///       <ul>
 ///         <li></li>
 ///         <li></li>
@@ -19,7 +19,7 @@
 ///       </ul>
 ///     </div>
 ///  
-///     <div id="m-vlt-02" class="m-vlt m-vlt-r">
+///     <div id="m-pnl-02" class="m-pnl m-pnl-r">
 ///       <ul>
 ///         <li></li>
 ///         <li></li>
@@ -39,7 +39,7 @@ $mx-volet: m(2)
 
 // Stylise les volet
 
-.m-vlt
+.m-pnl
   position: fixed
   width: 80vw
   top: 0
@@ -53,7 +53,9 @@ $mx-volet: m(2)
 
 // Stylise les volets sité à droite de l'écran
 
-.m-vlt-r
+.m-pnl-r
   right: -100vw
   &.e-on
     right: 0
+
+

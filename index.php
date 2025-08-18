@@ -45,9 +45,25 @@ include  __DIR__ . '/parts/p__head.php';
 
           <span href="" class="m-btn m-btn-ico m-ttip-lnk">
             <?= get_ico('notif'); ?>
-            <div class="m-ttip m-ttip__is--tl">
-              <div class="m-ttip-wrp m-body-s"><?= __('Everything is quiet') ?></div>
-            </div>
+            <?php
+
+            $diff = get_update_diff();
+
+            if ($diff === false): ?>
+              <div class="m-ttip m-ttip__is--tl">
+                <div class="m-ttip-wrp m-body-s"><?= __('Everything is quiet') ?></div>
+              </div>
+            <?php else: ?>
+              <div class="m-ttip m-ttip__is--tl">
+                <div class="m-ttip-wrp m-flc">
+                  <span class="m-body m-mb1"><?= __('Updates available:') ?></span>
+                  <?php foreach ($diff as $key => $info): ?>
+                    <span class="m-body-s m-txt-g"><?= $key ?> <?= $info['latest'] ?></span>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+              <div class="e-ntf"></div>
+            <?php endif; ?>
           </span>
         </div>
       </form>
@@ -63,7 +79,6 @@ include  __DIR__ . '/parts/p__head.php';
 
 
       <div class="m-row m-flc e-obo">
-
         <?php // Ajout des Virtual Hosts
         $vhostsGrouped = get_vhosts();
         include __DIR__ . '/parts/' . ($vhostsGrouped ? 'p__vhosts.php' : 'p__vhosts-empty.php');

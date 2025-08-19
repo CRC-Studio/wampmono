@@ -837,7 +837,7 @@ h1, h2, h3, h4, h5, h6, p, a, span {
   display: -ms-inline-flexbox;
   display: inline-flex;
   border-radius: var(--3m);
-  background: hsl(var(--color-grey-1000));
+  background: hsl(var(--color-txt));
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }

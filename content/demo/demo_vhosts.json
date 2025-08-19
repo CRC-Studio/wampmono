@@ -1,0 +1,92 @@
+{
+    "A": [
+        {
+            "name": "adibidez.eu.lcl",
+            "folder": "C:/wampmono/www/adibidez.eu.lcl",
+            "url": "http://adibidez.eu.lcl"
+        }
+    ],
+    "B": [
+        {
+            "name": "beispiel.de.lcl",
+            "folder": "C:/wampmono/www/beispiel.de.lcl",
+            "url": "http://beispiel.de.lcl"
+        }
+    ],
+    "C": [
+        {
+            "name": "contoh.id.lcl",
+            "folder": "C:/wampmono/www/contoh.id.lcl",
+            "url": "http://contoh.id.lcl"
+        }
+    ],
+    "E": [
+        {
+            "name": "ejemplo.es.lcl",
+            "folder": "C:/wampmono/www/ejemplo.es.lcl",
+            "url": "http://ejemplo.es.lcl"
+        },
+        {
+            "name": "eksempel.dk.lcl",
+            "folder": "C:/wampmono/www/eksempel.dk.lcl",
+            "url": "http://eksempel.dk.lcl"
+        },
+        {
+            "name": "example.com.lcl",
+            "folder": "C:/wampmono/www/example.com.lcl",
+            "url": "http://example.com.lcl"
+        },
+        {
+            "name": "exemple.fr.lcl",
+            "folder": "C:/wampmono/www/exemple.fr.lcl",
+            "url": "http://exemple.fr.lcl"
+        }
+    ],
+    "M": [
+        {
+            "name": "mfano.ke.lcl",
+            "folder": "C:/wampmono/www/mfano.ke.lcl",
+            "url": "http://mfano.ke.lcl"
+        }
+    ],
+    "N": [
+        {
+            "name": "naide.ee.lcl",
+            "folder": "C:/wampmono/www/naide.ee.lcl",
+            "url": "http://naide.ee.lcl"
+        }
+    ],
+    "O": [
+        {
+            "name": "ornek.tr.lcl",
+            "folder": "C:/wampmono/www/ornek.tr.lcl",
+            "url": "http://ornek.tr.lcl"
+        }
+    ],
+    "P": [
+        {
+            "name": "paradeigma.gr.lcl",
+            "folder": "C:/wampmono/www/paradeigma.gr.lcl",
+            "url": "http://paradeigma.gr.lcl"
+        },
+        {
+            "name": "pelda.hu.lcl",
+            "folder": "C:/wampmono/www/pelda.hu.lcl",
+            "url": "http://pelda.hu.lcl"
+        }
+    ],
+    "R": [
+        {
+            "name": "rei.jp.lcl",
+            "folder": "C:/wampmono/www/rei.jp.lcl",
+            "url": "http://rei.jp.lcll"
+        }
+    ],
+    "U": [
+        {
+            "name": "udaharan.in.lcl",
+            "folder": "C:/wampmono/www/udaharan.in.lcl",
+            "url": "http://udaharan.in.lcl"
+        }
+    ]
+}

@@ -2,7 +2,7 @@
 > A minimalist dashboard for WampServer. Fast, elegant, and multilingual.
 
 
-WampMono™ is a lightweight manager designed to enhance your [WampServer](https://www.wampserver.com/) experience. Created by [crc.studio](https://crc.studio/), a design and development studio, WampMono simplifies local development by offering an easy-to-use interface and seamless management of virtual hosts.
+WampMono is a lightweight manager designed to enhance your [WampServer](https://www.wampserver.com/) experience. Created by [crc.studio](https://crc.studio/), a design and development studio, WampMono simplifies local development by offering an easy-to-use interface and seamless management of virtual hosts.
 
 ![Wampmono](https://github.com/user-attachments/assets/2e82ac8b-ad9c-407a-bfd9-eea908a5ffab)
 
@@ -18,7 +18,7 @@ WampMono™ is a lightweight manager designed to enhance your [WampServer](https
 
 ## Features
 
-WampMono™ provides several useful features to enhance your local development environment:
+WampMono provides several useful features to enhance your local development environment:
 
 - Virtual Host Management – Effortlessly view, create, and manage your virtual hosts
 - Dark / Light Theme – Switch between themes to suit your style or lighting conditions
@@ -47,7 +47,7 @@ WampMono™ provides several useful features to enhance your local development e
    Update the `index.php` file in your WampServer root directory (typically `C:/wamp64/www/`) with the following lines at the top:
 
    ```php
-   // Redirects to WampMono™, a light Manager for WampServer
+   // Redirects to WampMono, a light Manager for WampServer
    // by CRC Studio: A design & development studio
    if (!isset($_GET['wampmono']) || $_GET['wampmono'] !== 'no') {
        header("Location: http://wampmono.lcl/");

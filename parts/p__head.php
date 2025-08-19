@@ -3,8 +3,7 @@
 // Ce fichier est le premier a être exécuté lors de la construction
 // des pages. C'est ici que tout commence...
 
-// Ajoute le fichier de fonctions
-include  __DIR__ . '/../fonctions.php';
+
 
 // Ajoute les info Meta
 
@@ -45,7 +44,7 @@ $meta_img   = $meta_url . "assets/img/cover__rs.png";
     <link rel="icon" type="image/svg+xml" href="<?= get_fav_path() ?>/favicon.svg" />
     <link rel="shortcut icon" href="<?= get_fav_path() ?>/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="<?= get_fav_path() ?>/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="WampMono™" />
+    <meta name="apple-mobile-web-app-title" content="WampMono" />
 
     <?php // Themes colors 
     ?>

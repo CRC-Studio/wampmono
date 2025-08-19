@@ -28,7 +28,8 @@ function detect_locale()
 {
     $accept = $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? 'en';
     $lang = substr($accept, 0, 2);
-    return in_array($lang, get_supported_locales()) ? $lang : 'en';
+    //return in_array($lang, get_supported_locales()) ? $lang : 'en';
+    return 'ja';
 }
 
 /**

@@ -11,6 +11,11 @@
 function get_update()
 {
 
+  // Vérifie si Wampmono est en mode Demo
+  if (WAMPMONO_DEMO_MODE) {
+    return;
+  }
+
   // Récupère les data
   $data = get_update_json();
   if ($data === null) {
@@ -19,22 +24,22 @@ function get_update()
 
   // Vérifie la date du dernier check
   $lastCheck = $data['LASTCHECK'] ?? 0;
-  if (is_update_check_recent($lastCheck)) {
-    return;
+  if (!is_update_check_recent($lastCheck)) {
+    // Met à jour la date du dernier check
+    $data['LASTCHECK'] = time();
+
+    // Récupère les dernières versions en ligne
+    $latestWampMono = get_update_latest_wampmono();
+    $latestWampServer = get_update_latest_wampserver();
+
+    //Formate les données
+    $data['LATESTONLINE'][0]['WAMPMONO'] = $latestWampMono;
+    $data['LATESTONLINE'][0]['WAMPSERVER'] = $latestWampServer;
   }
 
-  // Récupère les dernières versions en ligne
+  // Récupère les versions en local
   $localConfig = get_update_local_config();
-  $latestWampMono = get_update_latest_wampmono();
-  $latestWampServer = get_update_latest_wampserver();
-
-  // Met à jour les données dans LATESTONLINE
   $data['LOCALCONFIG'] = $localConfig['LOCALCONFIG'];
-  $data['LATESTONLINE'][0]['WAMPMONO'] = $latestWampMono;
-  $data['LATESTONLINE'][0]['WAMPSERVER'] = $latestWampServer;
-
-  // Met à jour la date du dernier check
-  $data['LASTCHECK'] = time();
 
   // Sauvegarde le JSON mis à jour
   set_update_json($data);

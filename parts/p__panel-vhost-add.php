@@ -21,7 +21,7 @@
     <div class="m-pnl-wrp m-rom m-flc m-flyc m-flg05">
         <div class="m-flc m-flyc">
             <span class="m-lead m-c"><?= __('Coming soon') ?></span>
-            <span class="m-body-l m-txt-g m-c"><?= __('WampMono™ is still under development.<br>This feature will be available soon.') ?></span>
+            <span class="m-body-l m-txt-g m-c"><?= __('WampMono is still under development.<br>This feature will be available soon.') ?></span>
 
             <div class="m-flc m-flxc m-mt1">
                 <a href="http://localhost/add_vhost.php" class="m-btn m-btn-p" target="_blank">
@@ -75,7 +75,7 @@
 
                 <div id="p-pnl-adv" class="l-ftp-empt m-flc m-flg05 m-flxc m-flyc m-mt2 e-hde">
                     <span class="m-body m-c"><?= __('Coming soon') ?></span>
-                    <span class="m-body m-txt-g m-c"><?= __('WampMono™ is still under development.<br>This feature will be available soon.') ?></span>
+                    <span class="m-body m-txt-g m-c"><?= __('WampMono is still under development.<br>This feature will be available soon.') ?></span>
                     <div class="m-flc m-flxc m-mt1">
                         <a href="http://localhost/add_vhost.php" class="m-btn m-btn-p" target="_blank">
                             Use Default UI

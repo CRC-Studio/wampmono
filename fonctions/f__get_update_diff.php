@@ -12,6 +12,9 @@ function get_update_diff(): ?array
 {
   $updates = [];
 
+  // Mets à jour le fichier update.json
+  get_update();
+
   // Récupère les données JSON
   $data = get_update_json();
   if ($data === null) {

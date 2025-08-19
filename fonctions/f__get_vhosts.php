@@ -10,6 +10,12 @@
 
 function get_vhosts()
 {
+
+  // Vérifie si Wampmono est en mode Demo
+  if (WAMPMONO_DEMO_MODE) {
+    return get_demo_data('vhosts.json');
+  }
+
   // Chemin vers le fichier de configuration des VirtualHost
   $apache_version = get_last_apache_version();
   $vhostFile = __DIR__ . '/../../../bin/apache/' . $apache_version . '/conf/extra/httpd-vhosts.conf';

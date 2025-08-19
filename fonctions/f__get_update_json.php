@@ -9,6 +9,12 @@
 
 function get_update_json()
 {
+
+  // Vérifie si Wampmono est en mode Demo
+  if (WAMPMONO_DEMO_MODE) {
+    return get_demo_data('update.json');
+  }
+
   $jsonPath = __DIR__ . '/../content/update/update.json';
 
   // Vérification de l'existence du fichier
@@ -31,5 +37,6 @@ function get_update_json()
     return null;
   }
 
+  // Retourne le résultat au template
   return $data;
 }

@@ -1,0 +1,27 @@
+[
+    {
+        "TITLE": "phpMyAdmin",
+        "URL": "http://localhost/phpmyadmin/",
+        "ORDER": 1
+    },
+    {
+        "TITLE": "GitHub",
+        "URL": "https://github.com/crc-studio/wampmono",
+        "ORDER": 2
+    },
+    {
+        "TITLE": "Notion",
+        "URL": "https://www.notion.so/",
+        "ORDER": 3
+    },
+    {
+        "TITLE": "WampForum",
+        "URL": "http://forum.wampserver.com/",
+        "ORDER": 4
+    },
+    {
+        "TITLE": "WampUpdate",
+        "URL": "https://wampserver.aviatechno.net/",
+        "ORDER": 5
+    }
+]

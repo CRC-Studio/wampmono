@@ -11,9 +11,16 @@
 
 function get_tools()
 {
+  // Vérifie si Wampmono est en mode Demo
+  if (WAMPMONO_DEMO_MODE) {
+    return get_demo_data('tools.json');
+  }
+
   $json_path = __DIR__ . '/../content/tools/tools.json';
   if (!file_exists($json_path)) return [];
 
   $data = json_decode(file_get_contents($json_path), true);
-  return !empty($data['TOOLS']) ? $data['TOOLS'] : false;
+
+  // Retourne le résultat au template
+  return is_array($data) ? $data : false;
 }

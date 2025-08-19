@@ -10,6 +10,12 @@
 
 function get_projects()
 {
+
+  // Vérifie si Wampmono est en mode Demo
+  if (WAMPMONO_DEMO_MODE) {
+    return get_demo_data('projects.json');
+  }
+
   // Ajoute qq variables
   $projects = [];
 

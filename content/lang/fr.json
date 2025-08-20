@@ -43,5 +43,7 @@
     "Virtual host URL": "",
     "Virtual host path": "",
     "WampMono didn’t detect any virtual host. <br>You can create one to start working on your projects.": "",
-    "Modify": ""
+    "Modify": "",
+    "Demo Mode: no real actions will be performed.": "",
+    "Enable MonoWamp": ""
 }

@@ -1237,16 +1237,22 @@ input:checked + .m-frm-sld:before {
 .l-dem {
   margin-top: calc(var(--m) * 6);
 }
+.l-dem .m-pnl {
+  top: calc(var(--m) * 6);
+}
 
 .l-dem-ban {
   position: fixed;
   height: calc(var(--m) * 6);
   top: 0;
   background: hsl(var(--color-acc));
-  z-index: 1300;
+  z-index: 1000;
 }
 .l-dem-ban svg path {
   fill: hsl(var(--color-grey-1000));
+}
+.l-dem-ban .m-frm-swt-wrp {
+  position: relative;
 }
 .l-dem-ban .m-frm-sld {
   border: 1px solid hsl(var(--color-grey-1000));

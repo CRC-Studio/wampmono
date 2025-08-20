@@ -23,5 +23,6 @@ if (!WAMPMONO_DEMO_MODE) {
       <input id="p-inp-adv" type="checkbox" checked>
       <span class="m-frm-sld m-flx m-flxc e-fll"></span>
     </label>
+    <a href="https://lab.crc.studio/tool/wampmono/uivanilla/" class="e-fll"></a>
   </div>
 </section>

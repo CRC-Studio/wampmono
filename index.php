@@ -7,18 +7,18 @@
 include('fonctions.php');
 
 // Ajoute le Head
-include  __DIR__ . '/parts/p__head.php';
+include(__DIR__ . '/parts/p__head.php');
 ?>
 
 
 <main class="main l-ftp" role="main">
 
   <?php // Ajout le beandeau de demo
-  include  __DIR__ . '/parts/p__demo-banner.php';
+  include(__DIR__ . '/parts/p__demo-banner.php');
   ?>
 
   <?php // Ajout la barre de recherches
-  include  __DIR__ . '/parts/p__navbar.php';
+  include(__DIR__ . '/parts/p__navbar.php');
   ?>
 
 
@@ -32,7 +32,7 @@ include  __DIR__ . '/parts/p__head.php';
       <div class="m-row m-flc e-obo">
         <?php // Ajout des Virtual Hosts
         $vhostsGrouped = get_vhosts();
-        include __DIR__ . '/parts/' . ($vhostsGrouped ? 'p__vhosts.php' : 'p__vhosts-empty.php');
+        include(__DIR__ . '/parts/' . ($vhostsGrouped ? 'p__vhosts.php' : 'p__vhosts-empty.php'));
         ?>
       </div>
 
@@ -54,7 +54,7 @@ include  __DIR__ . '/parts/p__head.php';
               <div class="m-flc m-flg05">
                 <?php
                 $projects = get_projects();
-                include __DIR__ . '/parts/' . ($projects ? 'p__projects.php' : 'p__projects-empty.php');
+                include(__DIR__ . '/parts/' . ($projects ? 'p__projects.php' : 'p__projects-empty.php'));
                 ?>
               </div>
             </div>
@@ -77,7 +77,7 @@ include  __DIR__ . '/parts/p__head.php';
               <div class="m-flc m-flg05">
                 <?php
                 $tools = get_tools();
-                include __DIR__ . '/parts/' . ($tools ? 'p__tools.php' : 'p__tools-empty.php');
+                include(__DIR__ . '/parts/' . ($tools ? 'p__tools.php' : 'p__tools-empty.php'));
                 ?>
               </div>
             </div>
@@ -94,14 +94,14 @@ include  __DIR__ . '/parts/p__head.php';
   /**
    * Ajoute les volets
    */
-  include  __DIR__ . '/parts/p__panel-tools.php';
-  include  __DIR__ . '/parts/p__panel-vhost-add.php';
-  include  __DIR__ . '/parts/p__panel-vhost-modify.php';
+  include(__DIR__ . '/parts/p__panel-tools.php');
+  include(__DIR__ . '/parts/p__panel-vhost-add.php');
+  include(__DIR__ . '/parts/p__panel-vhost-modify.php');
   ?>
 
   <?php
   /**
    * Ajoute du Footer
    */
-  include  __DIR__ . '/parts/p__footer.php';
+  include(__DIR__ . '/parts/p__footer.php');
   ?>

@@ -1234,6 +1234,27 @@ input:checked + .m-frm-sld:before {
   padding: var(--2m);
 }
 
+.l-dem {
+  margin-top: calc(var(--m) * 6);
+}
+
+.l-dem-ban {
+  position: fixed;
+  height: calc(var(--m) * 6);
+  top: 0;
+  background: hsl(var(--color-acc));
+  z-index: 1300;
+}
+.l-dem-ban svg path {
+  fill: hsl(var(--color-grey-1000));
+}
+.l-dem-ban .m-frm-sld {
+  border: 1px solid hsl(var(--color-grey-1000));
+}
+.l-dem-ban input:checked + .m-frm-sld:before {
+  background-color: hsl(var(--color-acc));
+}
+
 .l-ftp-top {
   position: fixed;
   background: hsl(var(--color-back));

@@ -77,23 +77,8 @@ $meta_img   = $meta_url . "assets/img/cover__rs.png";
 
     <?php // Style.css et script.js 
     ?>
-    <link href='./style.min.css' media='all' rel='stylesheet' type='text/css'>
-    <script type="module" src="<?= get_home_url(); ?>/assets/js/mono.js"></script>
+    <link href='<?= get_asset_path(); ?>/style.min.css' media='all' rel='stylesheet' type='text/css'>
+    <script type="module" src="<?= get_asset_path(); ?>/assets/js/mono.js"></script>
 </head>
 
-<?php
-// Formate les class du <body> et selectionne le template
-$bodyClass = (is_admin()) ? 'l-body is--admin' : 'l-body';
-$bodyClass .= ' m-flc';
-?>
-
-<body class="<?= $bodyClass; ?>">
-
-
-    <?php
-    /**
-     * Ajoute du Header
-     */
-
-    //include  __DIR__ . '/t__header.php';
-    ?>
+<body class="<?= get_body_class() ?>">

@@ -22,14 +22,14 @@ function get_supported_locales()
 
 
 /**
+ * 
  * Détecte la langue préférée de l'utilisateur
  */
 function detect_locale()
 {
     $accept = $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? 'en';
     $lang = substr($accept, 0, 2);
-    //return in_array($lang, get_supported_locales()) ? $lang : 'en';
-    return 'ja';
+    return in_array($lang, get_supported_locales()) ? $lang : 'en';
 }
 
 /**

@@ -28,7 +28,7 @@ function get_update_latest_wampserver()
 
     // Tableau des composants à extraire
     $components = [
-        "Wampserver" => null,
+        "WampServer" => null,
         "Apache" => null,
         "PHP" => null,
         "Tray Menu Manager" => null,

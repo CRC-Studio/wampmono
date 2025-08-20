@@ -16,7 +16,7 @@ function get_scrap_wamp_changelog()
         "PHP" => null,
         "xDebug" => null,
         "Adminer" => null,
-        "Update Wampserver" => null,
+        "Update WampServer" => null,
         "Apache" => null,
         "PhpMyAdmin" => null
     ];

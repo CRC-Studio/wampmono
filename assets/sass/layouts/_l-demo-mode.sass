@@ -1,0 +1,27 @@
+// main: ../../../style.sass
+
+/// Le layout Demo-Mode permet de modifier l'affichage
+/// WampMono si le mode demo est activé
+///
+/// Exemple de HTML :
+/// <body class="l-dem">
+
+.l-dem
+  margin-top: m(6)
+
+.l-dem-ban
+  position: fixed
+  height: m(6)
+  top: 0
+  background: color('acc')
+  z-index: $zindex__top
+
+  svg path
+    fill: color('grey', 1000)
+
+  .m-frm-sld
+    border: 1px solid color('grey', 1000)
+
+  input
+    &:checked + .m-frm-sld:before
+      background-color: color('acc')

@@ -1,8 +1,11 @@
 # WampMono: A Light Manager for WampServer
 > A minimalist dashboard for WampServer. Fast, elegant, and multilingual.
 
+WampMono is a lightweight manager designed to enhance your [WampServer](https://www.wampserver.com/) experience. It simplifies localhost development with an intuitive interface and seamless virtual host management.
+[WampServer](https://www.wampserver.com/) is an iconic Windows dev tool. It’s simple, lightweight and still powering localhost projects.
 
-WampMono is a lightweight manager designed to enhance your [WampServer](https://www.wampserver.com/) experience. Created by [crc.studio](https://crc.studio/), a design and development studio, WampMono simplifies local development by offering an easy-to-use interface and seamless management of virtual hosts.
+👉 [Live Demo](https://lab.crc.studio/tool/wampmono/demo/)
+
 
 ![Wampmono](https://github.com/user-attachments/assets/2e82ac8b-ad9c-407a-bfd9-eea908a5ffab)
 
@@ -13,18 +16,23 @@ WampMono is a lightweight manager designed to enhance your [WampServer](https://
 4. [Usage](#usage)
 5. [Multilingual Support](#multilingual-support)
 6. [Contributing](#contributing)
-7. [About ToolToys™](#about-tooltoys)
-8. [About crc.studio](#about-crcstudio)
+7. [About ToolToys™ and crc.studio](#about-tooltoys-and-crcstudio)
+
 
 ## Features
 
 WampMono provides several useful features to enhance your local development environment:
 
-- Virtual Host Management – Effortlessly view, create, and manage your virtual hosts
-- Dark / Light Theme – Switch between themes to suit your style or lighting conditions
-- Custom Tools Panel – Organize and access your favorite dev tools in one place
-- 🆕 Quick Login Links – Jump straight to your CMS or admin dashboards with one click
-- 🌍 Multilingual Support – Available in English, Français, and 日本語. Easily extendable: contact us to add your language!
+- Simplified Vhost Management
+- Instant Vhost Search
+- Quick Login Links
+- Git-aware
+- Dark / Light Theme
+- Custom Tools Panel
+- Update Checker
+- Multilingual Support
+
+👉 [Read More](https://lab.crc.studio/tooltoys/wampmono)
 
 ## Installation
 
@@ -61,7 +69,7 @@ WampMono provides several useful features to enhance your local development envi
 ## Usage
 
 - Access the WampMono Manager by visiting [http://wampmono.lcl/](http://wampmono.lcl/) in your browser.
-- To view the standard WampServer homepage, add `?wampmono=no` to the URL (e.g., `http://localhost/?wampmono=no`).
+- To view the standard WampServer homepage, add `?wampmono=no` to the URL, like `http://localhost/?wampmono=no`.
 
 ## Multilingual Support
 
@@ -71,17 +79,15 @@ WampMono is available in:
 - 🇯🇵 日本語
 
 Want to help translate WampMono into another language?  
-It’s easy — contact us and we’ll guide you through the process.
+It’s easy: contact us and we’ll guide you through the process.
 
 ## Contributing
 
 We welcome feedback, ideas, and language contributions.  
 If you’d like to improve WampMono or add a new translation, feel free to reach out.
 
-## About ToolToys™
+## About ToolToys™ and crc.studio
 
 WampMono is one of [crc.studio](https://crc.studio/)’s ToolToys™, small web apps designed to make design and development faster, easier, and more joyful.
-
-## About crc.studio
 
 [crc.studio](https://crc.studio/) is a design & development studio founded in 2019 by Yoko Homareda and Rémi B. Loizeau. Based in France, we collaborate with artists and designers worldwide to design timeless visual identities, websites, posters, books, packaging, and merchandise. Our work explores the intersections of print and digital, tradition and innovation, guided by a strong sense of composition, materiality, and code.

@@ -11,7 +11,7 @@
 
 function get_asset_path(): string
 {
-  return !WAMPMONO_DEMO_MODE
+  return WAMPMONO_DEMO_MODE
     ? get_home_url() . '/tool/wampmono/demo/'
     : get_home_url();
 }

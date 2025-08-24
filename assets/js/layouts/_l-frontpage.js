@@ -5,7 +5,10 @@
 
 // Ajoute des modules
 
+
+import * as mToast from '../modules/_m-toast.js';
 import * as eFade from '../effets/_e-fade.js';
+
 
 export const ftpInit = () => {
   let $head = document.querySelector(".l-ftp-top");

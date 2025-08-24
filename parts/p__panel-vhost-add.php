@@ -19,7 +19,7 @@
     </div>
 
     <div class="m-pnl-wrp m-rom m-flc m-flyc m-flg05">
-        <div class="m-flc m-flyc">
+        <div class="m-pnl-msg m-flc m-flyc">
             <span class="m-lead m-c"><?= __('Coming soon') ?></span>
             <span class="m-body-l m-txt-g m-c"><?= __('WampMono is still under development.<br>This feature will be available soon.') ?></span>
 
@@ -31,7 +31,7 @@
         </div>
 
 
-        <form class="m-frm m-flc e-hde">
+        <form class="m-pnl-dem m-frm m-flc e-hde">
             <div class="m-frm-wrp m-flc">
                 <div class="m-frm-grp m-row m-flx m-flxc m-flg1">
                     <div class="m-frm-lbl">

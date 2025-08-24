@@ -56,7 +56,7 @@ WampMono provides several useful features to enhance your local development envi
 
    ```php
    // Redirects to WampMono, a light Manager for WampServer
-   // by CRC Studio: A design & development studio
+   // by crc.studio: A design & development studio
    if (!isset($_GET['wampmono']) || $_GET['wampmono'] !== 'no') {
        header("Location: http://wampmono.lcl/");
        exit;

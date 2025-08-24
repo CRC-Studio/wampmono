@@ -9,7 +9,7 @@
 
 $meta_title = "WampMono";
 $meta_desc  = "WampMono - Un thème conçu pour personnaliser la page d'accueil de WampServer, développé avec Monobloc par crc.studio.";
-$meta_key   = "WampServer, thème personnalisé, Monobloc, CRC Studio, développement web";
+$meta_key   = "WampServer, thème personnalisé, Monobloc, crc.studio, développement web";
 $meta_name  = "wampmono.lcl";
 $meta_url   = "http://wampmono.lcl/";
 $meta_img   = $meta_url . "assets/img/cover__rs.png";

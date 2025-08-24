@@ -12,6 +12,8 @@
 * Import des modules
 */
 
+// Import la fonctions
+//import * as lang from './fonctions/_f-lang.js';
 
 // Import les effets
 import * as eTextScramble from './effets/_e-text-scramble.js';
@@ -27,6 +29,7 @@ import * as pPanelAdd from './parts/_p-panel_add.js';
 
 // Import les modules
 import * as mOverlay from './modules/_m-overlay.js';
+import * as mToast from './modules/_m-toast.js';
 import * as mModal from './modules/_m-modal.js';
 import * as mMenu from './modules/_m-menu.js';
 import * as mPanel from './modules/_m-panel.js';
@@ -35,3 +38,6 @@ import * as mAccordions from './modules/_m-accordions.js';
 import * as mInputChecker from './modules/_m-input-checker.js';
 import * as mFormChecker from './modules/_m-form-checker.js';
 import * as mFormLabel from './modules/_m-form-label.js';
+
+// Import les fonctions de base
+import * as bVar from './base/_b-var.js';

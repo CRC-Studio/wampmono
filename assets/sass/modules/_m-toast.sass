@@ -1,0 +1,35 @@
+// main: ../../../style.sass
+
+/// Le module Toast permet gérer l'affichage de petites notification
+/// dans un coin de l'écran
+///
+/// Attention : pensez à activer le module Toast
+/// dans le fichier assets/js/monobloc.js.
+///
+/// Exemple de HTML :
+///   <footer>
+///     <div class="m-tst">
+///       <div class="m-tst-wrp subheading">
+///         <?php _e("Mais c'est un Taost ?","monobloc") ?>
+///       </div>
+///     </div>
+///   </footer>
+
+.m-tst
+  opacity: 0
+  position: fixed
+  padding: m() m(1.5)
+  background: color('txt')
+  border: 3px solid color('txt')
+  border-radius: m()
+  top: $row__mx
+  right: $row__mx
+  overflow: hidden
+  z-index: $zindex__toast
+  transition: $fast
+
+.m-tst-wrp
+  opacity: 0
+  color: color('back')
+  white-space: nowrap
+  transition: $fast

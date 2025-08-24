@@ -22,7 +22,7 @@
     "Edit tools": "",
     "Everything is quiet": "",
     "Updates available:": "",
-    "WampMono by CRC Studio ● A lightweight UI manager for WampServer": "",
+    "WampMono by crc.studio ● A lightweight UI manager for WampServer": "",
     "a light Manager for": "",
     "Official WampServer site ● Tools, updates & documentation": "",
     "Explore the WampMono repository on GitHub": "",
@@ -42,8 +42,11 @@
     "Modify a virual host": "",
     "Virtual host URL": "",
     "Virtual host path": "",
-    "WampMono didn’t detect any virtual host. <br>You can create one to start working on your projects.": "",
+    "WampMono didn’t detect any virtual host.<br>You can create one to start working on your projects.": "",
     "Modify": "",
     "Demo Mode: no real actions will be performed.": "",
-    "Enable MonoWamp": ""
+    "Enable MonoWamp": "",
+    "Something went wrong": "",
+    "Virtual host added": "",
+    "Tools updated": ""
 }

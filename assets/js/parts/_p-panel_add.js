@@ -3,8 +3,7 @@
 *
 */
 
-
-const setupPanelToggles = () => {
+export const setupPanelToggles = () => {
   const toggles = [
     { inputId: 'p-inp-ctms', panelId: 'p-pnl-ctms', inverse: true },
     { inputId: 'p-inp-adv', panelId: 'p-pnl-adv', inverse: false },
@@ -20,6 +19,7 @@ const setupPanelToggles = () => {
         const shouldShow = inverse ? !$input.checked : $input.checked;
         $panel.classList.toggle('e-on', shouldShow);
         $panel.classList.toggle('e-hde', !shouldShow);
+        console.log('update');
       };
 
       // Init + listener
@@ -29,3 +29,4 @@ const setupPanelToggles = () => {
   });
 };
 setupPanelToggles();
+

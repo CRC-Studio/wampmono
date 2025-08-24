@@ -583,6 +583,29 @@ h1, h2, h3, h4, h5, h6, p, a, span {
   z-index: 1100;
 }
 
+.m-tst {
+  opacity: 0;
+  position: fixed;
+  padding: var(--m) calc(var(--m) * 1.5);
+  background: hsl(var(--color-txt));
+  border: 3px solid hsl(var(--color-txt));
+  border-radius: var(--m);
+  top: var(--mx);
+  right: var(--mx);
+  overflow: hidden;
+  z-index: 1100;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.m-tst-wrp {
+  opacity: 0;
+  color: hsl(var(--color-back));
+  white-space: nowrap;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .m-men-itms {
   position: absolute;
   top: var(--3m);
@@ -1239,6 +1262,14 @@ input:checked + .m-frm-sld:before {
 }
 .l-dem .m-pnl {
   top: calc(var(--m) * 6);
+}
+.l-dem .m-pnl-dem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.l-dem .m-pnl-msg {
+  display: none;
 }
 
 .l-dem-ban {

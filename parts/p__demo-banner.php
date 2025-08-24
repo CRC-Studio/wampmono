@@ -20,7 +20,7 @@ if (!WAMPMONO_DEMO_MODE) {
 
   <div class="m-frm-swt-wrp m-frm-grp m-flx m-flxc">
     <label class="m-frm-swt">
-      <input id="p-inp-adv" type="checkbox" checked>
+      <input type="checkbox" checked>
       <span class="m-frm-sld m-flx m-flxc e-fll"></span>
     </label>
     <a href="https://lab.crc.studio/tool/wampmono/uivanilla/" class="e-fll"></a>

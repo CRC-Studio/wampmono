@@ -11,6 +11,7 @@
 </main>
 
 <footer class="l-fot">
+
   <?php // Module Overlay 
   ?>
   <div class="m-ovl e-fll e-off"></div>
@@ -18,13 +19,21 @@
   <?php // Ajout de la modale
   include  __DIR__ . '/p__modal-confirme.php'; ?>
 
-  <?php // Ajout du fake-footer
+  <?php // Module Toast 
+  ?>
+
+  <div class="m-tst">
+    <div class="m-tst-wrp m-body">This is a toast</div>
+  </div>
+
+
+  <?php // Contenu du Footer 
   ?>
 
   <div class="l-fot-wrp m-wrpc-s e-off">
     <div class="m-rom m-flc">
       <span class="m-body-s">
-        <a href="https://lab.crc.studio/tooltoys/wampmono" target="_blank" title="<?= __('WampMono by CRC Studio ● A lightweight UI manager for WampServer') ?>">
+        <a href="https://lab.crc.studio/tooltoys/wampmono" target="_blank" title="<?= __('WampMono by crc.studio ● A lightweight UI manager for WampServer') ?>">
           <i class="e-txtsble">WampMono</i>
         </a>, <?= __('a light Manager for') ?>
         <a href="https://wampserver.aviatechno.net/" target="_blank" class="e-txtsble" title="<?= __('Official WampServer site ● Tools, updates & documentation') ?>">WampServer</a>

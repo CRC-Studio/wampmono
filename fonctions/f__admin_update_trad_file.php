@@ -68,8 +68,13 @@ function admin_get_strings_to_trad($path)
 
     $rii = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
     foreach ($rii as $file) {
-        if (!$file->isDir() && $file->getExtension() === 'php') {
+        if ($file->isDir()) continue;
+
+        $ext = $file->getExtension();
+        if ($ext === 'php' || $ext === 'js') {
             $code = file_get_contents($file->getPathname());
+
+            // Expression régulière pour __() dans PHP et JS
             preg_match_all("/__\(['\"](.*?)['\"]\)/", $code, $matches);
             foreach ($matches[1] as $match) {
                 $strings[$match] = true;
@@ -77,6 +82,7 @@ function admin_get_strings_to_trad($path)
         }
     }
 
+    // Retourne le résultat au template
     return array_keys($strings);
 }
 

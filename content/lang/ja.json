@@ -46,7 +46,7 @@
     "Enable MonoWamp": "MonoWamp を有効にする",
     "WampMono by crc.studio ● A lightweight UI manager for WampServer": "WampMono by crc.studio ● WampServerの軽量UIマネージャー",
     "WampMono didn’t detect any virtual host.<br>You can create one to start working on your projects.": "Vhostを検出しませんでした。<br>Vhostを作成して、プロジェクトの作業を開始できます。",
-    "Something went wrong": "",
-    "Virtual host added": "",
-    "Tools updated": ""
+    "Something went wrong": "問題が発生しました。",
+    "Virtual host added": "VhostVhostが作成されました。",
+    "Tools updated": "ツールがアップデートされました。"
 }

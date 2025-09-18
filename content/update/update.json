@@ -1,5 +1,5 @@
 {
-    "LASTCHECK": 1755532116,
+    "LASTCHECK": 1757770402,
     "LOCALCONFIG": [
         {
             "WAMPMONO": {
@@ -27,10 +27,10 @@
             "WAMPSERVER": {
                 "WAMPSERVER": "3.3.8",
                 "APACHE": "2.4",
-                "PHP": "8.3.24",
+                "PHP": "8.3.25",
                 "TRAYMENUMANAGER": "3.2.7",
-                "ADMINER": "5.3.0",
-                "PHPMYADMIN": "5.3.0"
+                "ADMINER": "5.4.0",
+                "PHPMYADMIN": "5.4.0"
             }
         }
     ]

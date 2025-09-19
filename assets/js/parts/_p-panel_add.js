@@ -19,7 +19,6 @@ export const setupPanelToggles = () => {
         const shouldShow = inverse ? !$input.checked : $input.checked;
         $panel.classList.toggle('e-on', shouldShow);
         $panel.classList.toggle('e-hde', !shouldShow);
-        console.log('update');
       };
 
       // Init + listener

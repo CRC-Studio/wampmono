@@ -74,11 +74,11 @@ WampMono provides several useful features to enhance your local development envi
 ## Multilingual Support
 
 WampMono is available in:
-- English, by crc.studio
-- Español, by Ivan Ceballos
-- Français, by crc.studio
-- Latviešu, by Dana Shelll
-- 日本語, by crc.studio
+- English, by [crc.studio](https://crc.studio/)
+- Español, by [Ivan Ceballos](https://www.instagram.com/ceballos.design)
+- Français, by [crc.studio](https://crc.studio/)
+- Latviešu, by Dana Shelkovnikova
+- 日本語, by [crc.studio](https://crc.studio/)
 
 Want to help translate WampMono into another language?  
 It’s easy: contact us and we’ll guide you through the process.

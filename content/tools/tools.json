@@ -6,7 +6,7 @@
     },
     {
         "TITLE": "phpMyAdmin",
-        "URL": "http://localhost/phpmyadmin/",
+        "URL": "http://localhost/phpmyadmin5.2.3/",
         "ORDER": 2
     },
     {

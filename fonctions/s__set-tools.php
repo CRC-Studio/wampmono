@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       if ($url !== '' && $title !== '') {
         $tools[] = [
           'TITLE' => $title,
-          'URL' => $url,
+          'URL'   => $url,
           'ORDER' => count($tools) + 1
         ];
       }
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if (!empty($tools)) {
     $json_path = __DIR__ . '/../content/tools/tools.json';
-    $json = json_encode(['TOOLS' => $tools], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+    $json = json_encode($tools, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 
     if ($json !== false && is_writable($json_path)) {
       file_put_contents($json_path, $json);

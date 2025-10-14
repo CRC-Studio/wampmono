@@ -1,36 +1,36 @@
 {
-    "LASTCHECK": 1757770402,
+    "LASTCHECK": 1760445893,
     "LOCALCONFIG": [
         {
             "WAMPMONO": {
-                "SUMMARY": "\ud83e\udd16 Wampmono__v037",
-                "BUILD": "2025-08-18T22:59:00",
+                "SUMMARY": "\ud83e\udd16 Wampmono__v047",
+                "BUILD": "2025-09-18T14:35:00",
                 "COMMIT": ""
             },
             "WAMPSERVER": {
-                "WAMPSERVER": "3.3.7",
+                "WAMPSERVER": "3.3.8",
                 "APACHE": "2.4.62.1",
-                "PHP": "8.4.1",
-                "TRAYMENUMANAGER": "3.2.6.7",
-                "ADMINER": "4.8.4",
-                "PHPMYADMIN": "5.2.1"
+                "PHP": "8.3.7",
+                "TRAYMENUMANAGER": "3.2.7.3",
+                "ADMINER": "5.4.1",
+                "PHPMYADMIN": null
             }
         }
     ],
     "LATESTONLINE": [
         {
             "WAMPMONO": {
-                "SUMMARY": "\ud83e\udd16 Wampmono__v033",
-                "BUILD": "2025-08-14T23:06:15Z",
-                "COMMIT": "445b551058dfd0755815740c8fd806d79635f9b7"
+                "SUMMARY": "\ud83e\udd16 Wampmono__v047\n\nBump version to v048 and update build date in VERSION and update.json. Add trad-changelog.txt for translation changes. Fix escape characters in Latvian translations. Remove debug log from _p-panel_add.js. Comment out forced 'lv' locale in f__lang.php.",
+                "BUILD": "2025-09-19T10:04:32Z",
+                "COMMIT": "90cab9cff8dc19425424e0da01b7ad27c928714b"
             },
             "WAMPSERVER": {
                 "WAMPSERVER": "3.3.8",
                 "APACHE": "2.4",
-                "PHP": "8.3.25",
+                "PHP": "8.3.26",
                 "TRAYMENUMANAGER": "3.2.7",
-                "ADMINER": "5.4.0",
-                "PHPMYADMIN": "5.4.0"
+                "ADMINER": "5.4.1",
+                "PHPMYADMIN": "5.4.1"
             }
         }
     ]

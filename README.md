@@ -4,7 +4,7 @@
 WampMono is a lightweight manager designed to enhance your [WampServer](https://www.wampserver.com/) experience. It simplifies localhost development with an intuitive interface and seamless virtual host management.
 [WampServer](https://www.wampserver.com/) is an iconic Windows dev tool. It’s simple, lightweight and still powering localhost projects.
 
-👉 [Live Demo](https://lab.crc.studio/tool/wampmono/demo/)
+👉 [Live Demo](https://lab.crc.studio/tools/wampmono/demo/)
 
 
 ![Wampmono](https://github.com/user-attachments/assets/2e82ac8b-ad9c-407a-bfd9-eea908a5ffab)

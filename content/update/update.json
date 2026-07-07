@@ -1,5 +1,5 @@
 {
-    "LASTCHECK": 1760445893,
+    "LASTCHECK": 1783057612,
     "LOCALCONFIG": [
         {
             "WAMPMONO": {
@@ -20,17 +20,17 @@
     "LATESTONLINE": [
         {
             "WAMPMONO": {
-                "SUMMARY": "\ud83e\udd16 Wampmono__v047\n\nBump version to v048 and update build date in VERSION and update.json. Add trad-changelog.txt for translation changes. Fix escape characters in Latvian translations. Remove debug log from _p-panel_add.js. Comment out forced 'lv' locale in f__lang.php.",
-                "BUILD": "2025-09-19T10:04:32Z",
-                "COMMIT": "90cab9cff8dc19425424e0da01b7ad27c928714b"
+                "SUMMARY": "Update README.md",
+                "BUILD": "2026-04-11T13:59:40Z",
+                "COMMIT": "f4fe042ef0e9c715345b0f6fdd8812f4c6aa7e16"
             },
             "WAMPSERVER": {
-                "WAMPSERVER": "3.3.8",
+                "WAMPSERVER": "3.4.0",
                 "APACHE": "2.4",
-                "PHP": "8.3.26",
+                "PHP": "8.2.32",
                 "TRAYMENUMANAGER": "3.2.7",
-                "ADMINER": "5.4.1",
-                "PHPMYADMIN": "5.4.1"
+                "ADMINER": "5.4.2",
+                "PHPMYADMIN": "5.4.2"
             }
         }
     ]
